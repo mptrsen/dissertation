@@ -6,6 +6,7 @@ $(name).pdf: $(name).tex $(chapters)
 
 clean:
 	$(RM) $(name).aux $(name).bbl $(name).blg $(name).out $(name).toc
+	$(RM) chapters/*.aux
 
 mrproper: clean
 	$(RM) $(name).pdf
