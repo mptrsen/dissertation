@@ -22,7 +22,7 @@
 % \doublespacing
 
 % include each chapter...
-\setcounter{chapter}{-1}  % start chapter numbering at 0
+\setcounter{chapter}{0}  % start chapter numbering at 0
 \include{chapters/introduction}
 %\include{chapters/chapter1}
 %\include{chapters/chapter2}
@@ -35,10 +35,10 @@
 \backmatter
 
 % \clearpage
-% \bibliography{references}
-% \addcontentsline{toc}{chapter}{References}
-% \bibliographystyle{apalike2}
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{apalike2}
+\bibliography{references}
 
-% \include{endmatter/colophon}
+%\include{endmatter/colophon}
 
 \end{document}
