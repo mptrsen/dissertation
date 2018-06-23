@@ -2,7 +2,7 @@
 %  @LaTeX-class-file{
 %     filename        = "Dissertate.cls",
 %     version         = "2.0",
-%     date            = "25 March 2014",
+%     date            = "25 March 2018",
 %     codetable       = "ISO/ASCII",
 %     keywords        = "LaTeX, Dissertate",
 %     supported       = "Send email to suchow@post.harvard.edu.",
@@ -233,7 +233,7 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \copyright \small 2014\hspace{3pt}-- \theauthor \\
+	\scshape \noindent \small \copyright \small 2018\hspace{3pt}-- \theauthor \\
 	\noindent all rights reserved.
 	\vspace*{\fill}
 	\newpage
