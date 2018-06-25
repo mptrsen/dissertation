@@ -97,6 +97,7 @@
                 tablewithin=chapter]{caption}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \RequirePackage{microtype}
+\RequirePackage{booktabs}
 
 
 % Headings and headers.
