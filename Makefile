@@ -1,7 +1,7 @@
 chapters := $(wildcard chapters/*.tex)
 name := dissertation
 
-$(name).pdf: $(name).tex $(chapters) references.bib
+$(name).pdf: $(name).tex $(chapters) references.bib Dissertate.cls
 	bash scripts/build
 
 clean:

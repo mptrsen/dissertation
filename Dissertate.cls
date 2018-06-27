@@ -98,6 +98,7 @@
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \RequirePackage{microtype}
 \RequirePackage{booktabs}
+\RequirePackage{ccicons} % for CC license icons
 
 
 % Headings and headers.
@@ -206,7 +207,8 @@
 	\copyrightpage
 	\abstractpage
 	\tableofcontents
-	% \listoffigures % optional
+	\listoffigures % optional
+	\listoftables % optional
 	\dedicationpage
 	\acknowledgments
 }
@@ -234,7 +236,7 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \copyright \small 2018\hspace{3pt}-- \theauthor \\
+	\scshape \noindent \small \ccbyncndeu ~ \small 2018\hspace{3pt}-- \theauthor \\
 	\noindent all rights reserved.
 	\vspace*{\fill}
 	\newpage
