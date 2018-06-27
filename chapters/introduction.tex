@@ -32,8 +32,8 @@ implications. Neither is it sufficient to analyse the genes and draw
 conclusions based on their composition and structure. Profound
 understanding of any system can only be gained by studying it from
 multiple angles and with interdisciplinary approaches. One such approach
-is to sequence and analyse the genome of a species: the source code of
-life that defines, by a manifold of means, its appearance, features,
+is to sequence and analyse the genome of a species: the ``source code of
+life'' that defines, by a manifold of means, its appearance, features,
 behaviour and interactions with the environment.
 
 The genome, that is, the entirety of DNA of an organism is a composition
@@ -55,7 +55,8 @@ repeats, is formed by transposable elements (45 \% of the genome).
 \includegraphics[width=0.3\textwidth]{human}
 \caption{Composition of the human genome. Almost half of the three
 billion base pairs in the genome is attributed to transposable elements
-of various classes. Source: \citet{Lander2001}}
+of various classes (DNA transposons, LTR retrotransposons, LINEs,
+SINEs). Data source: \citet{Lander2001}}
 \label{fig:human-genome}
 \end{figure}
 
@@ -87,6 +88,32 @@ but the fact that amoeba have genomes with up to a staggering 670 Gbp
 contradiction was named the ``C-value paradox'' and later renamed to
 ``C-value enigma'' \citep{Gregory2007}, as still a connection between
 genome size and organismic complexity appears absent.
+
+\begin{table}[h]
+\centering
+\caption{Genome size spread in Eukaryotes. Values are in picogram DNA;
+one pg is approx. 978 mega-basepairs (Mbp). Data from the Genome Size
+Database \citep{Gregory2018}, \url{http://www.genomesize.com}, accessed
+2018-05-07.}
+\label{tab:genome-size-spread}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Subphylum  & Class              & Min  & Max    & $\Delta$fold  \\
+\midrule
+Crustacea  & Branchiopoda       & 0.16 &   2.91 &  18.19        \\
+Crustacea  & Copepoda           & 0.14 &  14.68 & 104.86        \\
+Crustacea  & Malacostraca       & 0.68 &  64.62 &  95.03        \\
+Crustacea  & Ostracoda          & 0.46 &   3.13 &   6.80        \\
+Hexapoda   & Insecta            & 0.07 &  16.93 & 241.86        \\
+Vertebrata & Amphibia           & 0.95 & 120.60 & 126.95        \\
+Vertebrata & Aves               & 0.91 &   2.16 &   2.37        \\
+Vertebrata & Chondrichthyes     & 1.51 &  17.05 &  11.29        \\
+Vertebrata & Mammalia           & 1.63 &   8.40 &   5.15        \\
+Vertebrata & Osteichthyes       & 0.34 & 132.83 & 390.68        \\
+Vertebrata & Reptilia           & 1.05 &   5.44 &   5.18        \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 The genome needs to be maintained: repair mechanisms and transcription
 machinery as well as error correction use energy. The error rate
@@ -121,35 +148,18 @@ recombination \citep{Lim1988, Gray2000, Fiston-Lavier2007}, thus
 increasing the likelihood for segmental duplications, deletions, and
 inversions \citep{Mathiopoulos1998, Remnant2013}. On the one hand, TEs
 are obviously a source of potentially deleterious mutations. On the
-other hand, there have been observations of TEs being ``domesticated''
-and genes exapted from TE sequence in insects \citep{Gahan2001,
-Daborn2002, Aminetzach2005, Chen2007}, documenting that TE activity can
-also have beneficial effects on the host genome.
+other hand, TEs can be ``domesticated'' and genes exapted from TE
+sequence \citep{Gahan2001, Daborn2002, Aminetzach2005, Chen2007},
+inferring novel functions to the host. These observations document that
+TE activity can also have beneficial effects on the host genome, and
+should not be entirely subdued.
 
-\begin{table}[h]
-\centering
-\caption{Genome size spread in Eukaryotes. Values are in picogram DNA;
-one pg is approx. 978 mega-basepairs (Mbp). Data from the Genome Size
-Database \citep{Gregory2018}, \url{http://www.genomesize.com}, accessed
-2018-05-07.}
-\label{tab:genome-size-spread}
-\begin{tabular}{@{}llrrr@{}}
-\toprule
-Subphylum  & Class              & Min  & Max    & $\Delta$fold  \\
-\midrule
-Crustacea  & Branchiopoda       & 0.16 &   2.91 &  18.19        \\
-Crustacea  & Copepoda           & 0.14 &  14.68 & 104.86        \\
-Crustacea  & Malacostraca       & 0.68 &  64.62 &  95.03        \\
-Crustacea  & Ostracoda          & 0.46 &   3.13 &   6.80        \\
-Hexapoda   & Insecta            & 0.07 &  16.93 & 241.86        \\
-Vertebrata & Amphibia           & 0.95 & 120.60 & 126.95        \\
-Vertebrata & Aves               & 0.91 &   2.16 &   2.37        \\
-Vertebrata & Chondrichthyes     & 1.51 &  17.05 &  11.29        \\
-Vertebrata & Mammalia           & 1.63 &   8.40 &   5.15        \\
-Vertebrata & Osteichthyes       & 0.34 & 132.83 & 390.68        \\
-Vertebrata & Reptilia           & 1.05 &   5.44 &   5.18        \\
-\bottomrule
-\end{tabular}
-\end{table}
+The host genome has defenses against TE proliferation.
+\begin{itemize}
+\item Methylation \citep{Lisch2009}
+\item RNAi
+\item piRNA
+\item ???
+\end{itemize}
 
-
+TE activity models: equilibrium vs burst
