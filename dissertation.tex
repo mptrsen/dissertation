@@ -1,27 +1,20 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-
 \documentclass{Dissertate}
 
 \newcommand{\species}[1]{\textit{#1}}
 
 \begin{document}
 
-% the front matter
-\input{frontmatter/personalize}
-% \maketitle
-% \copyrightpage
+% the front matter:
+% title page, license page, abstract page,
+% tables of contents, figures, and tables
+% dedication, acknowledgements
+
+% make sure you personalize frontmatter/personalize.tex
 \frontmatter
 \setstretch{\dnormalspacing}
-% \abstractpage
-% \tableofcontents
-% %\authorlist
-% \listoffigures
-% \dedicationpage
-% \acknowledgments
-
-% \doublespacing
 
 % include each chapter...
 \setcounter{chapter}{0}  % start chapter numbering at 0

@@ -7,6 +7,7 @@ $(name).pdf: $(name).tex $(chapters) references.bib Dissertate.cls
 clean:
 	$(RM) $(name).aux $(name).bbl $(name).blg $(name).out $(name).toc
 	$(RM) chapters/*.aux
+	$(RM) .logged
 
 mrproper: clean
 	$(RM) $(name).pdf
