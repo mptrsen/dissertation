@@ -112,6 +112,7 @@
 \setcounter{tocdepth}{1}
 \usepackage[titles]{tocloft}
 \usepackage[titletoc]{appendix}
+\usepackage{pdfpages} % for adding entire PDF pages to the appendix
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchapfont}{\normalsize \scshape}
 %\renewcommand\listfigurename{Listing of figures}
@@ -288,6 +289,7 @@
 \renewcommand{\backmatter}{
     \begin{appendices}
         \include{chapters/appendixA}
+        \include{chapters/appendixB}
     \end{appendices}
     \input{endmatter/personalize}
     \clearpage
