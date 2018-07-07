@@ -24,7 +24,7 @@ urgency, is fading from public awareness \citep{Kusmanoff2017}.
 Conservation efforts require intimate knowledge of the systems they aim
 to preserve: Of course, we cannot save what we do not know. The road
 towards understanding the biology and the interaction of species is,
-however, traveled on multiple levels. It is not enough to observe the
+however, travelled on multiple levels. It is not enough to observe the
 behaviour or the feeding preferences of an animal to understand the
 impact of it being removed from its habitat. It is also not enough to
 describe functional morphology to gain insight on ecological
@@ -81,6 +81,7 @@ the spread is around 240-fold (Figure \ref{fig:genome-size-spread},
 Table \ref{tab:genome-size-spread} on page
 \pageref{tab:genome-size-spread}). This immense variation surpasses that
 of amphibians, where some species have huge genomes of up to 118 Gbp,
+<<<<<<< HEAD
 and is paralleled only by the group of bony fishes (Osteichthyes), which
 exhibit a genome size spread of around 390-fold. Before the discovery of
 TEs and non-coding DNA, such as introns, in the genome, it was assumed
@@ -90,6 +91,18 @@ but the fact that amoeba have genomes with up to a staggering 670 Gbp
 contradiction was named the ``C-value paradox'' and later renamed to
 ``C-value enigma'' \citep{Gregory2007a}, as still a connection between
 genome size and organismic complexity appears absent.
+=======
+and is paralleled only by the group of bony fishes (Osteichthyes,
+excluding lungfishes), which exhibit a genome size spread of around
+220-fold. Before the discovery of TEs and non-coding DNA, such as
+introns, in the genome, it was assumed that genome size should correlate
+with perceived organismic complexity, but the fact that amoeba have
+genomes with up to a staggering 670 Gbp \citep{Parfrey2008} did not fit
+well with that assumption. This apparent contradiction was named the
+``C-value paradox'' and later renamed to ``C-value enigma''
+\citep{Gregory2007}, as still a connection between genome size and
+organismic complexity appears absent.
+>>>>>>> office
 
 \begin{figure}
 \centering
@@ -109,21 +122,26 @@ Values are in picogram DNA; one pg is approx. 978 mega-basepairs (Mbp).
 Data from the Genome Size Database \citep{Gregory2018},
 \url{http://www.genomesize.com}, accessed 2018-05-07.}
 \label{tab:genome-size-spread}
-\begin{tabular}{@{}llrrr@{}}
+\begin{tabular}{@{}lllrrrr@{}}
 \toprule
-Subphylum  & Class              & Min  & Max    & $\Delta$fold  \\
+Phylum     & Subphylum   & Class          & n    & min  & max   & $\Delta$fold \\
 \midrule
-Crustacea  & Branchiopoda       & 0.16 &   2.91 &  18.19        \\
-Crustacea  & Copepoda           & 0.14 &  14.68 & 104.86        \\
-Crustacea  & Malacostraca       & 0.68 &  64.62 &  95.03        \\
-Crustacea  & Ostracoda          & 0.46 &   3.13 &   6.80        \\
-Hexapoda   & Insecta            & 0.07 &  16.93 & 241.86        \\
-Vertebrata & Amphibia           & 0.95 & 120.60 & 126.95        \\
-Vertebrata & Aves               & 0.91 &   2.16 &   2.37        \\
-Vertebrata & Chondrichthyes     & 1.51 &  17.05 &  11.29        \\
-Vertebrata & Mammalia           & 1.63 &   8.40 &   5.15        \\
-Vertebrata & Osteichthyes       & 0.34 & 132.83 & 390.68        \\
-Vertebrata & Reptilia           & 1.05 &   5.44 &   5.18        \\
+Annelida   & --          & Oligochaeta    & 35   & 0.43 & 7.64  & 17.77  \\
+Annelida   & --          & Polychaeta     & 100  & 0.06 & 7.2   & 120    \\
+Arthropoda & Chelicerata & Arachnida      & 148  & 0.08 & 7.5   & 93.75  \\
+Arthropoda & Crustacea   & Branchiopoda   & 68   & 0.16 & 2.91  & 18.19  \\
+Arthropoda & Crustacea   & Copepoda       & 73   & 0.14 & 14.68 & 104.86 \\
+Arthropoda & Crustacea   & Malacostraca   & 241  & 0.68 & 64.62 & 95.03  \\
+Arthropoda & Hexapoda    & Insecta        & 1353 & 0.07 & 16.93 & 241.86 \\
+Chordata   & Vertebrata  & Amphibia       & 932  & 0.95 & 120.6 & 126.95 \\
+Chordata   & Vertebrata  & Aves           & 903  & 0.91 & 2.16  & 2.37   \\
+Chordata   & Vertebrata  & Chondrichthyes & 199  & 1.51 & 17.05 & 11.29  \\
+Chordata   & Vertebrata  & Mammalia       & 816  & 1.63 & 8.4   & 5.15   \\
+Chordata   & Vertebrata  & Osteichthyes   & 1909 & 0.34 & 74.86 & 220.18 \\
+Chordata   & Vertebrata  & Reptilia       & 423  & 1.05 & 5.44  & 5.18   \\
+Mollusca   & --          & Bivalvia       & 108  & 0.65 & 5.4   & 8.31   \\
+Mollusca   & --          & Gastropoda     & 149  & 0.43 & 7.85  & 18.26  \\
+Nematoda   & --          & Secernentea    & 72   & 0.02 & 2.5   & 125    \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -224,8 +242,33 @@ given that TE abundance is a predictor for genome size
 \citep{Alfsnes2017, Petersen2018a}.
 
 Insects are among the most speciose groups of organisms on earth (Figure
-\ref{fig:biodiversity}) and can be found in all habitats except for
-saltwater
+\ref{fig:biodiversity}) and, since their appearance approximately 480
+million years ago (Mya) \citep{Misof2014}, have conquered land,
+freshwater, and air (but not saltwater). Protected by their hard
+exoskeleton, insect representatives have invaded virtually all
+conceivable habitat types including human habitations
+\citep{Bertone2016}. Insects are immensely diverse in morphology
+\citep{Grimaldi2005} and often highly specialized towards a specific
+food source, habitat, or lifestyle. Bees, wasps, ants, and termites, for
+example, form eusocial communities with a complex caste system. As
+disease vectors, mosquitoes are responsible for more human deaths than
+all other animals combined \citep{WHO2017, Linnell2011, Lamarque2009,
+DeMaddalena2008, Kasturiratne2008, Packer2005}. They are an important
+source of food for livestock and humans alike as well as a pest with
+high economic impact \citep{Oliveira2014}. Obviously, insects play
+pivotal roles in most ecosystems of the planet. Insect population
+diversity and abundance, however, is declining \citep{Vogel2017} as a
+result of widespread human influence (see above), with disastrous
+reverberations at all levels of the local food chains. In order to mount
+efficient conservation efforts, a thorough understanding of insect
+biology is required.
+
+Despite their mega-diversity and ecological importance, insects are
+astonishingly understudied on the genomic level compared to other
+animals: On 2018-07-06, there were 1115 published non-insect animal
+genome sequences in the NCBI database (about 0.3 \% of the total species
+diversity; Figure \ref{fig:biodiversity}) and 493 insect genomes (about
+0.065 \%; about five times less genomes per species).
 
 \begin{figure}
 \centering
