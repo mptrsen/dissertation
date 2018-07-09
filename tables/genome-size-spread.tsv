@@ -1,0 +1,18 @@
+Phylum	Sub Phylum	Class	n	min	max	fold
+Annelida	NA	Oligochaeta	35	0.43	7.64	17.77
+Annelida	NA	Polychaeta	100	0.06	7.2	120
+Arthropoda	Chelicerata	Arachnida	148	0.08	7.5	93.75
+Arthropoda	Crustacea	Branchiopoda	68	0.16	2.91	18.19
+Arthropoda	Crustacea	Copepoda	73	0.14	14.68	104.86
+Arthropoda	Crustacea	Malacostraca	241	0.68	64.62	95.03
+Arthropoda	Hexapoda	Insecta	1353	0.07	16.93	241.86
+Chordata	Vertebrata	Amphibia	932	0.95	120.6	126.95
+Chordata	Vertebrata	Aves	903	0.91	2.16	2.37
+Chordata	Vertebrata	Chondrichthyes	199	1.51	17.05	11.29
+Chordata	Vertebrata	Mammalia	816	1.63	8.4	5.15
+Chordata	Vertebrata	Osteichthyes	1909	0.34	74.86	220.18
+Chordata	Vertebrata	Reptilia	423	1.05	5.44	5.18
+Mollusca	NA	Bivalvia	108	0.65	5.4	8.31
+Mollusca	NA	Gastropoda	149	0.43	7.85	18.26
+Nematoda	NA	Secernentea	72	0.02	2.5	125
+Platyhelminthes	NA	Turbellaria	61	0.06	20.52	342
