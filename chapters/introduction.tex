@@ -249,20 +249,27 @@ the fact that for many species, there is no genomic sequence information
 available.  Additionally, comparative analyses have to take the
 evolutionary history of the species into consideration \todo{cite},
 usually in the form of a phylogenetic tree that conveys information on
-the species' relationships. Among the approaches to infer a phylogenetic
-species tree, the most informed, because based on matrices with data
-points numbering in the millions, is reconstruction from amino acid or
-nucleotide sequences. Phylogenetic species tree reconstruction, however,
-regardless the method, is no simple task and relies on sophisticated
-methods on all stages of the analysis (\eg, \citep{Misof2014,
-Peters2017, Johnson2018}). Perhaps most of all, selection of the
-phylogenetic markers (the features that distinguish species and define
-their level of relatedness) is paramount. Most modern genomic studies
-use single-copy genes that are found in all (or almost all) species. The
-implied assumption is that these genes share a common ancestry and are
-related via speciation events, that is, they are \emph{orthologous} to
-one another \citep{Koonin2005} and their phylogeny reflects the species
-phylogeny.
+the species' relationships. An undisputed phylogenetic tree on family
+level does not exist for insects so far. \citep{Misof2014} have inferred
+a robust backbone phylogeny for most major insect orders, and several
+publications have inferred order-level phylogenies, for example for
+beetles \citep{McKenna2015}, Hymenoptera \citep{Peters2017,
+Branstetter2017}, butterflies \citep{Breinholt2018}, and Hemiptera
+\citep{Johnson2018}.
+
+Among the approaches to infer a phylogenetic species tree, the most
+informed, because based on matrices with data points numbering in the
+millions, is reconstruction from amino acid or nucleotide sequences.
+Phylogenetic species tree reconstruction, however, regardless the
+method, is no simple task and relies on sophisticated methods on all
+stages of the analysis (\eg, \citep{Misof2014}). Perhaps most of all,
+selection of the phylogenetic markers (the features that distinguish
+species and define their level of relatedness) is paramount.  Most
+modern genomic studies use single-copy genes that are found in all (or
+almost all) species. The implied assumption is that these genes share a
+common ancestry and are related via speciation events, that is, they are
+\emph{orthologous} to one another \citep{Koonin2005} and their phylogeny
+reflects the species phylogeny.
 
 Several commonly used methods to identify orthologous genes rely on
 clustering nucleotide or amino acid sequences based on their similarity
@@ -275,8 +282,18 @@ can be assumed to be orthologous. By clustering genes that share BRH
 relations, one can form clusters of orthologous genes (COGs), or simply
 orthologous groups (OGs) \citep{Altenhoff2012}. This approach has been
 implemented in several software packages for use in genomic datasets
-(\eg, \citep{Li2003, Tatusov2003, Berglund2008, Zdobnov2017}).
-
+(\eg, \citep{Li2003, Tatusov2003, Berglund2008, Zdobnov2017}). Obtaining
+a complete genome sequence is, however, associated with technical
+difficulties and a cost that depends on the genome size. For these
+reasons, many phylogenetic studies employ transcriptomes: the nucleotide
+sequences of transcripts present in the sample at the time of RNA
+fixation \citep{Wang2009}. In contrast to genomes, however,
+transcriptomes are inherently incomplete with regard to the gene set,
+simply because not all genes are expressed all the time and may
+therefore be missing from the sequenced RNA. While this is usually not a
+problem for phylogenetic analyses \citep{Wiens2006}, it means that
+methods to \emph{de novo} infer orthology designed for genomes should
+not be used on transcriptomic data. 
 
 \begin{figure}
 \centering
