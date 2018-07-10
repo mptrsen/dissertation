@@ -150,8 +150,8 @@ Kofler2015}. As a famous example, the melanism in the British peppered
 moth --- which evolved camouflage matching the birch trees blackened as
 a result of industrialisation --- is caused by TEs \citep{Hof2016}.
 These observations document that TE activity can also have beneficial
-effects on the host genome (especially in times of stress\todo{cite}),
-and should therefore not be entirely subdued.
+effects on the host genome (especially in times of stress
+\citep{Chenais2012}), and should therefore not be entirely subdued.
 
 To keep the TE population in check, defenses that remove or silence TEs
 have developed in host organisms. In many groups of organisms, a
@@ -227,7 +227,7 @@ biology is required.
 
 Despite their mega-diversity and ecological importance, insects are
 astonishingly understudied on the genomic level compared to other
-animals: On 2018-07-06, there were 1115 published non-insect animal
+animals: On 2018-07-06, there were 1,115 published non-insect animal
 genome sequences in the NCBI database \citep{OLeary2016} (about \p{0.3}
 of the total non-insect species diversity; Figure
 \ref{fig:biodiversity}) and 493 insect genomes (\p{0.065}; about five
@@ -247,53 +247,68 @@ Comparative genomics studies --- that is, investigations comparing
 genomic features of more than one species --- are not only limited by
 the fact that for many species, there is no genomic sequence information
 available.  Additionally, comparative analyses have to take the
-evolutionary history of the species into consideration \todo{cite},
+evolutionary history of the species into consideration \citep{Dunn2018},
 usually in the form of a phylogenetic tree that conveys information on
-the species' relationships. An undisputed phylogenetic tree on family
-level does not exist for insects so far. \citep{Misof2014} have inferred
-a robust backbone phylogeny for most major insect orders, and several
-publications have inferred order-level phylogenies, for example for
-beetles \citep{McKenna2015}, Hymenoptera \citep{Peters2017,
-Branstetter2017}, butterflies \citep{Breinholt2018}, and Hemiptera
-\citep{Johnson2018}.
+the species' relationships. An undisputed phylogenetic tree down to
+family level does not exist for insects so far. \citet{Misof2014} and
+the 1KITE project \citep{1KITE2018} have inferred a robust backbone
+phylogeny for most major insect orders from transcriptomic data (see
+below), and several publications have presented order-level phylogenies,
+for example for beetles \citep{McKenna2015}, Hymenoptera
+\citep{Peters2017, Branstetter2017}, butterflies \citep{Breinholt2018},
+and Hemiptera \citep{Johnson2018}. However, accurately reconstructing
+species ancestry remains a challenge that has obstructed reliable
+comparative analyses in insects so far.
 
 Among the approaches to infer a phylogenetic species tree, the most
 informed, because based on matrices with data points numbering in the
 millions, is reconstruction from amino acid or nucleotide sequences.
 Phylogenetic species tree reconstruction, however, regardless the
 method, is no simple task and relies on sophisticated methods on all
-stages of the analysis (\eg, \citep{Misof2014}). Perhaps most of all,
-selection of the phylogenetic markers (the features that distinguish
-species and define their level of relatedness) is paramount.  Most
-modern genomic studies use single-copy genes that are found in all (or
-almost all) species. The implied assumption is that these genes share a
-common ancestry and are related via speciation events, that is, they are
-\emph{orthologous} to one another \citep{Koonin2005} and their phylogeny
-reflects the species phylogeny.
+stages of the analysis (proposed by \citet{Misof2014}, for example).
+Perhaps most of all, selection of the phylogenetic markers (the features
+that distinguish species and define their level of relatedness) is
+paramount.  Most modern genomic studies use single-copy genes that are
+found in all (or almost all) species. The implied assumption is that
+these genes share a common ancestry and are related via speciation
+events, that is, they are \emph{orthologous} to one another
+\citep{Koonin2005} and their phylogeny reflects the species phylogeny.
 
 Several commonly used methods to identify orthologous genes rely on
 clustering nucleotide or amino acid sequences based on their similarity
 \citep{Chen2007a}. Since orthologs tend to be more similar to each other
 than to all other genes in the genomes under comparison
 \citep{Altenhoff2012a}, the orthology hypothesis can be tested via a
-bi-directional search applying a best reciprocal hit (BRH) criterion:
-Only if the gene in question returns the best hit in both directions it
-can be assumed to be orthologous. By clustering genes that share BRH
-relations, one can form clusters of orthologous genes (COGs), or simply
-orthologous groups (OGs) \citep{Altenhoff2012}. This approach has been
-implemented in several software packages for use in genomic datasets
-(\eg, \citep{Li2003, Tatusov2003, Berglund2008, Zdobnov2017}). Obtaining
-a complete genome sequence is, however, associated with technical
-difficulties and a cost that depends on the genome size. For these
-reasons, many phylogenetic studies employ transcriptomes: the nucleotide
-sequences of transcripts present in the sample at the time of RNA
-fixation \citep{Wang2009}. In contrast to genomes, however,
-transcriptomes are inherently incomplete with regard to the gene set,
-simply because not all genes are expressed all the time and may
-therefore be missing from the sequenced RNA. While this is usually not a
-problem for phylogenetic analyses \citep{Wiens2006}, it means that
-methods to \emph{de novo} infer orthology designed for genomes should
-not be used on transcriptomic data. 
+bi-directional search for similarity applying a best reciprocal hit
+(BRH) criterion: Only if the gene in question returns the best hit in
+both directions (\ie, the genes are more similar to each other than to
+all other genes) it can be assumed to be orthologous. By grouping genes
+that share BRH relations, one can form clusters of orthologous genes
+(COGs), or simply orthologous groups (OGs) \citep{Altenhoff2012}.  This
+approach has been implemented in several software packages for use
+in genomic datasets (\eg, \citep{Li2003, Tatusov2003, Berglund2008,
+Zdobnov2017}). Obtaining a complete genome sequence is, however,
+associated with technical difficulties and a cost that depends on the
+genome size. For these reasons, many phylogenetic studies employ
+transcriptomes: the nucleotide sequences of transcripts present in the
+sample at the time of RNA fixation \citep{Wang2009}. In contrast to
+genomes, however, transcriptomes are inherently incomplete with regard
+to the gene set, simply because not all genes are expressed all the time
+and may therefore be missing from the sequenced RNA. While this is
+usually not a problem for phylogenetic analyses \citep{Wiens2006}, it
+means that methods to \emph{de novo} infer orthology designed for
+genomes cannot not be used on transcriptomic data. To infer orthology
+among transcripts, one usually applies a reference-based strategy,
+mapping transcripts to known OGs. \citet{Misof2014} used a software that
+implements this approach \citep{Ebersberger2009}, however, during the
+analyses, it became obvious that it had several design issues that were
+non-trivial to fix. Therefore, I concepted and wrote a re-implementation
+of the reference-based BRH orthology inference strategy that mitigates
+these issues while delivering equal performance \citep{Petersen2017}.
+The software, Orthograph, has been used in several co-authored studies
+\citep{Mayer2016, Pauli2016, Bank2017, Dowling2017, Peters2017,
+Gillung2018, Johnson2018} that are in the appendix
+\ref{papers-using-orthograph}.
 
 \begin{figure}
 \centering
