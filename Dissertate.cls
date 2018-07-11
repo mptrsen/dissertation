@@ -208,6 +208,7 @@
 	\maketitle
 	\copyrightpage
 	\abstractpage
+	\currentpdfbookmark{\contentsname}{contents}
 	\tableofcontents
 	\cleardoublepage
 	\phantomsection
@@ -277,6 +278,7 @@
 }
 
 \newcommand{\acknowledgments}{
+	\addcontentsline{toc}{chapter}{Acknowledgments}
 	\chapter*{Acknowledgments}
 	\noindent
 	\input{frontmatter/thanks}
@@ -290,7 +292,7 @@
     \input{endmatter/personalize}
     \clearpage
     \bibliography{references}
-    \addcontentsline{toc}{chapter}{References}
+    \addcontentsline{toc}{chapter}{\bibname}
     \bibliographystyle{apalike2}
     \include{endmatter/colophon}
 }
