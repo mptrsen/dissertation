@@ -204,26 +204,36 @@ given that TE abundance is a predictor for genome size
 \citep{Alfsnes2017, Petersen2018a}.
 
 Insects are among the most speciose groups of organisms on earth (Figure
-\ref{fig:biodiversity}) and, since their appearance approximately 480
-million years ago (Mya) \citep{Misof2014}, have conquered land,
-freshwater, and air (but not saltwater). Protected by their hard
-exoskeleton, insect representatives have invaded virtually all
-conceivable ecosystems including human habitations \citep{Bertone2016}.
-Insects are immensely diverse in morphology \citep{Grimaldi2005} and
-often highly specialized towards a specific food source, habitat, or
-lifestyle. Bees, wasps, ants, and termites, for example, form eusocial
-communities with a complex caste system. As disease vectors, mosquitoes
-are responsible for more human deaths than all other animals combined
-\citep{WHO2017, Linnell2011, Lamarque2009, DeMaddalena2008,
-Kasturiratne2008, Packer2005}. Beetles and grasshoppers are an important
-source of food for livestock and humans alike as well as a pest with
-high economic impact \citep{Oliveira2014}. Obviously, insects play
-pivotal roles in most ecosystems of the planet. Insect population
-diversity and abundance, however, is declining \citep{Vogel2017} as a
-result of widespread human influence (see above), with disastrous
-reverberations at all levels of the local food chains.  In order to
-mount efficient conservation efforts, a thorough understanding of insect
-biology is required.
+\ref{fig:biodiversity} on page \pageref{fig:biodiversity}) and, since
+their appearance approximately 480 million years ago (Mya)
+\citep{Misof2014}, have conquered land, freshwater, and air (but not
+saltwater). Protected by their hard exoskeleton, insect representatives
+have invaded virtually all conceivable ecosystems including human
+habitations \citep{Bertone2016}.  Insects are immensely diverse in
+morphology \citep{Grimaldi2005} and often highly specialized towards a
+specific food source, habitat, or lifestyle. Bees, wasps, ants, and
+termites, for example, form eusocial communities with a complex caste
+system. As disease vectors, mosquitoes are responsible for more human
+deaths than all other animals combined \citep{WHO2017, Linnell2011,
+Lamarque2009, DeMaddalena2008, Kasturiratne2008, Packer2005}. Beetles,
+cicadas, and grasshoppers are examples for an important source of food
+for livestock and humans alike as well as a pest with high economic
+impact \citep{Oliveira2014}. Obviously, insects play pivotal roles in
+most ecosystems of the planet. Insect population diversity and
+abundance, however, is declining \citep{Vogel2017} as a result of
+widespread human influence (see above), with disastrous reverberations
+at all levels of the local food chains.  In order to mount efficient
+conservation efforts, a thorough understanding of insect biology is
+required.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{number-of-species}
+\caption[Biodiversity by numbers of species]
+{Insects contribute more than half of the currently known species
+diversity.}
+\label{fig:biodiversity}
+\end{figure}
 
 Despite their mega-diversity and ecological importance, insects are
 astonishingly understudied on the genomic level compared to other
@@ -283,18 +293,18 @@ bi-directional search for similarity applying a best reciprocal hit
 (BRH) criterion: Only if the gene in question returns the best hit in
 both directions (\ie, the genes are more similar to each other than to
 all other genes) it can be assumed to be orthologous. By grouping genes
-that share BRH relations, one can form clusters of orthologous genes
-(COGs), or simply orthologous groups (OGs) \citep{Altenhoff2012}.  This
-approach has been implemented in several software packages for use
-in genomic datasets (\eg, \citep{Li2003, Tatusov2003, Berglund2008,
-Zdobnov2017}). Obtaining a complete genome sequence is, however,
-associated with technical difficulties and a cost that depends on the
-genome size. For these reasons, many phylogenetic studies employ
-transcriptomes: the nucleotide sequences of transcripts present in the
-sample at the time of RNA fixation \citep{Wang2009}. In contrast to
-genomes, however, transcriptomes are inherently incomplete with regard
-to the gene set, simply because not all genes are expressed all the time
-and may therefore be missing from the sequenced RNA. While this is
+that share BRH relations, one can form clusters of orthologous genes or
+simply orthologous groups (OGs) \citep{Altenhoff2012}. This approach
+has been implemented in several software packages for use in genomic
+datasets (\eg, \citet{Li2003, Tatusov2003, Berglund2008, Zdobnov2017}).
+Obtaining a complete genome sequence is, however, associated with
+technical difficulties and a cost that depends on the genome size. For
+these reasons, many phylogenetic studies employ transcriptomes: the
+nucleotide sequences of transcripts present in the sample at the time of
+RNA fixation \citep{Wang2009}. In contrast to genomes, however,
+transcriptomes are inherently incomplete with regard to the gene set,
+simply because not all genes are expressed all the time and may
+therefore be missing from the sequenced RNA sample. While this is
 usually not a problem for phylogenetic analyses \citep{Wiens2006}, it
 means that methods to \emph{de novo} infer orthology designed for
 genomes cannot not be used on transcriptomic data. To infer orthology
@@ -305,19 +315,10 @@ analyses, it became obvious that it had several design issues that were
 non-trivial to fix. Therefore, I concepted and wrote a re-implementation
 of the reference-based BRH orthology inference strategy that mitigates
 these issues while delivering equal performance \citep{Petersen2017}.
-The software, Orthograph, has been used in several co-authored studies
-\citep{Mayer2016, Pauli2016, Bank2017, Dowling2017, Peters2017,
-Gillung2018, Johnson2018} that are in the appendix
-\ref{papers-using-orthograph}.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\textwidth]{number-of-species}
-\caption[Biodiversity by numbers of species]
-{Insects contribute more than half of the currently known species
-diversity.}
-\label{fig:biodiversity}
-\end{figure}
+The software, Orthograph (described in chapter \ref{orthograph}), has
+been used in several co-authored studies \citep{Mayer2016, Pauli2016,
+Bank2017, Dowling2017, Peters2017, Gillung2018, Johnson2018} that are in
+the appendix \ref{papers-using-orthograph}.
 
 \section{Roadmap}
 
