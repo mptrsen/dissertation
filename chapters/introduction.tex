@@ -232,7 +232,9 @@ required.
 \includegraphics[width=0.75\textwidth]{biodiversity}
 \caption[Biodiversity by numbers of species]
 {Insects contribute more than half of the currently known species
-diversity. Data source: \citet{IUCN2018}}
+diversity. Data source: \citet{IUCN2018}; animal pictures:
+\href{https://pixabay.com}{Pixabay}, all available under the Creative
+Commons license (\ccZero).}
 \label{fig:biodiversity}
 \end{figure}
 
@@ -317,10 +319,38 @@ analyses, it became obvious that it had several design issues that were
 non-trivial to fix. Therefore, I concepted and wrote a re-implementation
 of the reference-based BRH orthology inference strategy that mitigates
 those issues while delivering equal performance \citep{Petersen2017}.
-The software, Orthograph (described in chapter \ref{cha:orthograph}),
-has been used in several co-authored studies \citep{Mayer2016,
-Pauli2016, Bank2017, Dowling2017, Peters2017, Gillung2018, Johnson2018}
-that are in the appendix \ref{app:papers-using-orthograph}.
+The software, Orthograph, is described in chapter \ref{cha:orthograph}.
+
+\begin{table}
+\centering\footnotesize
+\caption[Genome size spread in Metazoa]{Genome size spread in Metazoa.
+Values are in picogram DNA; one pg is approx. 978 mega-basepairs (Mbp).
+Data from the Genome Size Database \citep{Gregory2018},
+\url{http://www.genomesize.com}, accessed 2018-05-07.}
+\label{tab:genome-size-spread}
+\begin{tabular}{@{}lllrrrr@{}}
+\toprule
+Phylum     & Subphylum   & Class          & n    & min  & max   & $\Delta$fold \\
+\midrule
+Annelida   & --          & Oligochaeta    & 35   & 0.43 & 7.64  & 17.77  \\
+Annelida   & --          & Polychaeta     & 100  & 0.06 & 7.2   & 120    \\
+Arthropoda & Chelicerata & Arachnida      & 148  & 0.08 & 7.5   & 93.75  \\
+Arthropoda & Crustacea   & Branchiopoda   & 68   & 0.16 & 2.91  & 18.19  \\
+Arthropoda & Crustacea   & Copepoda       & 73   & 0.14 & 14.68 & 104.86 \\
+Arthropoda & Crustacea   & Malacostraca   & 241  & 0.68 & 64.62 & 95.03  \\
+Arthropoda & Hexapoda    & Insecta        & 1353 & 0.07 & 16.93 & 241.86 \\
+Chordata   & Vertebrata  & Amphibia       & 932  & 0.95 & 120.6 & 126.95 \\
+Chordata   & Vertebrata  & Aves           & 903  & 0.91 & 2.16  & 2.37   \\
+Chordata   & Vertebrata  & Chondrichthyes & 199  & 1.51 & 17.05 & 11.29  \\
+Chordata   & Vertebrata  & Mammalia       & 816  & 1.63 & 8.4   & 5.15   \\
+Chordata   & Vertebrata  & Osteichthyes   & 1909 & 0.34 & 74.86 & 220.18 \\
+Chordata   & Vertebrata  & Reptilia       & 423  & 1.05 & 5.44  & 5.18   \\
+Mollusca   & --          & Bivalvia       & 108  & 0.65 & 5.4   & 8.31   \\
+Mollusca   & --          & Gastropoda     & 149  & 0.43 & 7.85  & 18.26  \\
+Nematoda   & --          & Secernentea    & 72   & 0.02 & 2.5   & 125    \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \section{Research questions}
 
@@ -355,6 +385,35 @@ correlated with the phylogeny. The chapter also discusses a trend
 towards genome size stability despite varying rates of DNA removal in
 insects.
 
+In chapter \ref{cha:orthograph}, I present the software Orthograph as a
+tool for orthology assessment in transcriptomic --- or other coding
+nucleotide sequence --- datasets. Building on and incorporating existing
+software packages for sequence similarity search and comparison, it
+implements an algorithm that uses the BRH criterion to map transcripts
+to clusters of genes with known orthology. The software is written in a
+modular fashion to make it flexible and portable. The chapter discusses the
+issues that previous implementations of the BRH mapping strategy suffer
+from and shows that Orthograph overcomes them by employing a relational
+database backend system that enables it to compare millions of search
+results in short time. Orthograph represents a powerful, versatile, and
+future-proof application which has been used in several co-authored
+studies \citep{Mayer2016, Pauli2016, Bank2017, Dowling2017, Peters2017,
+Gillung2018, Johnson2018} that are in appendix
+\ref{app:papers-using-orthograph}.
+
+\subsection{Not sure if I should leave this:}
+
+Appendix \ref{app:other-publications} lists an additional eight
+co-authored publications. Among others, \citet{Misof2014} (page
+\pageref{app:Misof2014}) consummates the inference of a robust
+phylogenetic backbone tree of 145 insect species from all major insect
+orders. The analysis includes node dating with a comprehensive
+calibration dataset of 37 fossils. The study presents a semi-automated
+and documented reproducible workflow that facilitates phylogeny
+inference from transcriptomic data of many species. It also provides the
+backbone phylogeny and node dates for the study in chapter
+\ref{cha:dynamics} and the breeding ground for the development of
+Orthograph (chapter \ref{cha:orthograph}).
 
 \section{Roadmap}
 
@@ -366,34 +425,3 @@ Orthograph identifies orthologs in transcriptomes --- Research questions
 evolution in insects --- chapter 1: Mobilome --- chapter 2: Genome size
 dynamics --- chapter 3: Orthograph --- papers using Orthograph are in
 appendix
-
-\begin{table}
-\centering\footnotesize
-\caption[Genome size spread in Metazoa]{Genome size spread in Metazoa.
-Values are in picogram DNA; one pg is approx. 978 mega-basepairs (Mbp).
-Data from the Genome Size Database \citep{Gregory2018},
-\url{http://www.genomesize.com}, accessed 2018-05-07.}
-\label{tab:genome-size-spread}
-\begin{tabular}{@{}lllrrrr@{}}
-\toprule
-Phylum     & Subphylum   & Class          & n    & min  & max   & $\Delta$fold \\
-\midrule
-Annelida   & --          & Oligochaeta    & 35   & 0.43 & 7.64  & 17.77  \\
-Annelida   & --          & Polychaeta     & 100  & 0.06 & 7.2   & 120    \\
-Arthropoda & Chelicerata & Arachnida      & 148  & 0.08 & 7.5   & 93.75  \\
-Arthropoda & Crustacea   & Branchiopoda   & 68   & 0.16 & 2.91  & 18.19  \\
-Arthropoda & Crustacea   & Copepoda       & 73   & 0.14 & 14.68 & 104.86 \\
-Arthropoda & Crustacea   & Malacostraca   & 241  & 0.68 & 64.62 & 95.03  \\
-Arthropoda & Hexapoda    & Insecta        & 1353 & 0.07 & 16.93 & 241.86 \\
-Chordata   & Vertebrata  & Amphibia       & 932  & 0.95 & 120.6 & 126.95 \\
-Chordata   & Vertebrata  & Aves           & 903  & 0.91 & 2.16  & 2.37   \\
-Chordata   & Vertebrata  & Chondrichthyes & 199  & 1.51 & 17.05 & 11.29  \\
-Chordata   & Vertebrata  & Mammalia       & 816  & 1.63 & 8.4   & 5.15   \\
-Chordata   & Vertebrata  & Osteichthyes   & 1909 & 0.34 & 74.86 & 220.18 \\
-Chordata   & Vertebrata  & Reptilia       & 423  & 1.05 & 5.44  & 5.18   \\
-Mollusca   & --          & Bivalvia       & 108  & 0.65 & 5.4   & 8.31   \\
-Mollusca   & --          & Gastropoda     & 149  & 0.43 & 7.85  & 18.26  \\
-Nematoda   & --          & Secernentea    & 72   & 0.02 & 2.5   & 125    \\
-\bottomrule
-\end{tabular}
-\end{table}
