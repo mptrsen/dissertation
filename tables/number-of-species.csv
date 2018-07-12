@@ -1,0 +1,22 @@
+group	Phylum	Class	n
+Other animals	Vertebrates	Mammals	5487
+Other animals	Vertebrates	Birds	11122
+Other animals	Vertebrates	Reptiles	10711
+Other animals	Vertebrates	Amphibians	7866
+Other animals	Vertebrates	Fish	33900
+Insects	Invertebrates	Insects	1000000
+Other animals	Invertebrates	Molluscs	85000
+Other animals	Invertebrates	Crustaceans	47000
+Other animals	Invertebrates	Corals	2175
+Other animals	Invertebrates	Arachnida	102248
+Other animals	Invertebrates	Others	68827
+Plants	Plants	Mosses	16236
+Plants	Plants	Ferns and allies	12000
+Plants	Plants	Gymnosperms	1052
+Plants	Plants	Amniosperms	268000
+Plants	Plants	Green algae	6050
+Plants	Plants	Red algae	7104
+Fungi, lichen	Fungi & protists	Lichens	17000
+Fungi, lichen	Fungi & protists	Mushrooms	31496
+Protists	Fungi & protists	Brown algae	3784
+foo	foo	foo	0
