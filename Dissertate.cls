@@ -11,7 +11,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{Dissertate}[2014/03/25 v2.0 Dissertate Class]
-\LoadClass[12pt, oneside, letterpaper]{book}
+\LoadClass[12pt, oneside, a4paper]{book}
 
 %
 % Options
@@ -62,7 +62,7 @@
     {\endoldenumerate\end{spacing}}
 
 % Text layout.
-\RequirePackage[width=5.75in, letterpaper]{geometry}
+\RequirePackage[a4paper]{geometry}
 \usepackage{ragged2e}
 \RaggedRight
 \RequirePackage{graphicx}
@@ -245,7 +245,7 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \ccbyncndeu ~ \small 2018\hspace{3pt}-- \theauthor \\
+	\scshape \noindent \small \href{https://creativecommons.org/licenses/by-nc-nd/4.0}{\ccbyncsaeu} ~ \small 2018\hspace{3pt}-- \theauthor \\
 	\noindent all rights reserved.
 	\vspace*{\fill}
 	\newpage
