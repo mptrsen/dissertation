@@ -245,8 +245,7 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \href{https://creativecommons.org/licenses/by-nc-nd/4.0}{\ccbyncsaeu} ~ \small 2018\hspace{3pt}-- \theauthor \\
-	\noindent all rights reserved.
+	\scshape \noindent \small \href{https://creativecommons.org/licenses/by-nc-nd/4.0}{\ccbyncsaeu} ~ \small 2018\hspace{3pt}-- \theauthor
 	\vspace*{\fill}
 	\newpage
 	\rm
