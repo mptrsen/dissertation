@@ -126,6 +126,7 @@
 \RequirePackage[super,comma,numbers]{natbib}
 %\RequirePackage[comma,authoryear]{natbib}
 \RequirePackage{bibentry}
+\nobibliography*
 \renewcommand{\bibnumfmt}[1]{[#1]}
 \RequirePackage[palatino]{quotchap}
 \renewcommand*{\chapterheadstartvskip}{\vspace*{-0.5\baselineskip}}
@@ -257,7 +258,7 @@
 	\pagenumbering{roman}
 	\setcounter{page}{3}
 	\pagestyle{fancy}
-	\lhead{Thesis advisor: Professor \@advisor} \rhead{\@author}
+	\lhead{Thesis advisor: \@advisor} \rhead{\@author}
 	\renewcommand{\headrulewidth}{0.0pt}
 	\vspace*{35pt}
 	\begin{center}
