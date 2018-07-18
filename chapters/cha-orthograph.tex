@@ -321,13 +321,15 @@ single-copy orthologs.
 % Please add the following required packages to the document preamble:
 % \usepackage{booktabs}
 \begin{sidewaystable}[h!]
-\caption{Results from the tests that compare Orthograph performance to
-HaMStR \citep{Ebersberger2009}.  Sensitivity is defined as the ratio of
-true positives (TP) to TP plus false negatives (FN). Accuracy is defined
-as the ratio of TP plus true negatives (TN) to the total number of genes
-in the official gene set (OGS). FP, false positives. Note that the
-results are meant to demonstrate equality in performance despite
-algorithmic differences.}\label{tab:orthograph-tests}
+\caption[Orthograph performance compared to
+HaMStR\citep{Ebersberger2009}]{Results from the tests that compare
+Orthograph performance to HaMStR \citep{Ebersberger2009}.  Sensitivity
+is defined as the ratio of true positives (TP) to TP plus false
+negatives (FN). Accuracy is defined as the ratio of TP plus true
+negatives (TN) to the total number of genes in the official gene set
+(OGS). FP, false positives. Note that the results are meant to
+demonstrate equality in performance despite algorithmic
+differences.}\label{tab:orthograph-tests}
 \begin{tabular}{@{}llrlrrrrrrr@{}}
 \toprule
 Software   & Test        & Genes  & Species                & OGS       & Found  & TP    & FP & FN & Sens.       & Acc.  \\
