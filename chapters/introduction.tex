@@ -299,28 +299,30 @@ bi-directional search for similarity applying a best reciprocal hit
 both directions (\ie, the genes are more similar to each other than to
 all other genes) it can be assumed to be orthologous. By grouping genes
 that share BRH relations, one can form clusters of orthologous genes or
-simply orthologous groups (OGs) \citep{Altenhoff2012}. This approach
-has been implemented in several software packages for use in genomic
-datasets (\eg, \citet{Li2003, Tatusov2003, Berglund2008, Zdobnov2017}).
+simply orthologous groups (OGs) \citep{Altenhoff2012}. This approach has
+been implemented in several software packages for use in genomic
+datasets \citep{Li2003, Tatusov2003, Berglund2008, Zdobnov2017}.
 Obtaining a complete and accurate genome sequence is, however,
 associated with technical difficulties and a cost that depends on the
 genome size. For these reasons, many phylogenetic studies employ
 transcriptomes: the nucleotide sequences of transcripts present in the
-sample at the time of RNA fixation \citep{Wang2009}. In contrast to
-genomes, however, transcriptomes are inherently incomplete with regard
-to the gene set, simply because not all genes are expressed all the time
-and may therefore be missing from the sequenced RNA sample. While this
-is usually not a problem for phylogenetic analyses \citep{Wiens2006}, it
+sample at the time of RNA fixation \citep{Wang2009}. Transcriptomes can
+be sequenced at a fixed cost, however, in contrast to genomes,
+transcriptomes are inherently incomplete with regard to the gene set,
+simply because not all genes are expressed all the time and may
+therefore be missing from the sequenced RNA sample. While this is
+usually not a problem for phylogenetic analyses \citep{Wiens2006}, it
 means that methods to \emph{de novo} infer orthology designed for
 genomes cannot not be used on transcriptomic data. To infer orthology
 among transcripts, one usually applies a reference-based strategy,
-mapping transcripts to known OGs. \citet{Misof2014} used a software that
-implements this approach \citep{Ebersberger2009}, however, during the
-analyses, it became obvious that it had several design issues that were
-non-trivial to fix. Therefore, I concepted and wrote a re-implementation
-of the reference-based BRH orthology inference strategy that mitigates
-those issues while delivering equal performance \citep{Petersen2017}.
-The software, Orthograph, is described in chapter \ref{cha:orthograph}.
+mapping transcripts to known OGs. In the study by \citet{Misof2014}, we
+used a software that implements this approach \citep{Ebersberger2009},
+however, during the analyses, it became obvious that it had several
+design issues that were non-trivial to fix. Therefore, I concepted and
+wrote a re-implementation of the reference-based BRH orthology inference
+strategy that mitigates those issues while delivering equal performance
+\citep{Petersen2017}.  The software, Orthograph, is described in chapter
+\ref{cha:orthograph}.
 
 \begin{table}
 \centering\footnotesize
@@ -397,14 +399,14 @@ issues that previous implementations of the BRH mapping strategy suffer
 from and shows that Orthograph overcomes them by employing a relational
 database backend system that enables it to compare millions of search
 results in short time. Orthograph represents a powerful, versatile, and
-future-proof application which has been used in several co-authored
+future-proof application which has been used in seven co-authored
 studies \citep{Mayer2016, Pauli2016, Bank2017, Dowling2017, Peters2017,
 Gillung2018, Johnson2018} that are in appendix
 \ref{app:papers-using-orthograph}.
 
 \subsection{Not sure if I should leave this:}
 
-Appendix \ref{app:other-publications} lists an additional eight
+Appendix \ref{app:other-publications} lists an additional seven
 co-authored publications. Among others, \citet{Misof2014} (page
 \pageref{app:Misof2014}) consummates the inference of a robust
 phylogenetic backbone tree of 145 insect species from all major insect
