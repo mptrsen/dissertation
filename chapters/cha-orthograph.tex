@@ -157,8 +157,10 @@ that no transcript is assigned more than once. It additionally
 identifies all transcripts (splice variants and inparalogs) present in
 an assembled transcript library that are putatively homologous to a
 given OG. The specific transcript orthology assignment algorithm is as
-follows (Figure 1); note that steps 1 through 3 are only required once
-since their output can be used for all subsequent analyses:
+follows (Figure \ref{fig:orthograph-workflow} on page
+\pageref{fig:orthograph-workflow}); note that steps 1 through 3 are only
+required once since their output can be used for all subsequent
+analyses:
 
 \begin{enumerate}
 \item
@@ -200,21 +202,6 @@ since their output can be used for all subsequent analyses:
   again. Each entry in the database is evaluated in this manner.
 \end{enumerate}
 
-\begin{figure}[h!]
-\caption[Orthograph workflow]{Orthograph workflow. From a set of
-	reference proteins (1), the proteins are clustered to form orthologous groups
-	(OGs) (2). These OGs are aligned to construct profile hidden Markov models
-	(pHMMs) (3). The pHMMs are used to search for candidate orthologs in the
-	target library (4). Each of the obtained hit amino acid sequences (5) is used
-	as a query for a BLAST search in a database comprising all reference proteins
-	(including the ones forming OGs) (6). Search results from both forward and
-	reverse searches (7) are collated and sorted by bit score, with the reverse
-	search result order being subordinated to the forward result order (8). This
-	list is evaluated in descending order: if the reverse search hit a protein
-	that is part of the OG used for the forward search, the candidate ortholog is
-	mapped to the OG (9).}
-\end{figure}
-
 Orthograph performs several post-processing steps on transcripts
 assigned to OGs. By aligning the transcript fulfilling the BRH criterion
 to the most similar orthologous amino acid sequence of a reference
@@ -230,6 +217,25 @@ given OG to simplify downstream analyses (\emph{e.g.}, phylogenomic
 investigations). In all above analysis steps, the user can fine-tune all
 relevant search and evaluation parameters using configuration files for
 clarity, documentation, and reproducibility.
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\textwidth]{orthograph-workflow}
+\caption[Orthograph workflow]{Orthograph workflow. From a set of
+	reference proteins (1), the proteins are clustered to form orthologous groups
+	(OGs) (2). These OGs are aligned to construct profile hidden Markov models
+	(pHMMs) (3). The pHMMs are used to search for candidate orthologs in the
+	target library (4). Each of the obtained hit amino acid sequences (5) is used
+	as a query for a BLAST search in a database comprising all reference proteins
+	(including the ones forming OGs) (6). Search results from both forward and
+	reverse searches (7) are collated and sorted by bit score, with the reverse
+	search result order being subordinated to the forward result order (8). This
+	list is evaluated in descending order: if the reverse search hit a protein
+	that is part of the OG used for the forward search, the candidate ortholog is
+	mapped to the OG (9).}
+	\label{fig:orthograph-workflow}
+\end{center}
+\end{figure}
 
 Orthograph has been developed with user friendliness in mind. As a
 result, it is easy to install and runs on any Unix/Linux system
@@ -277,21 +283,21 @@ in two sets: one without entries from \species{A. mellifera}, and one
 without entries from \species{H.  saltator}). Of the 4,625
 protein-coding genes that we searched for, Orthograph identified 4,582
 (99.07 \%) in the RGS of \species{A. mellifera} and 4,590 (99.24 \%) in
-the RGS of \species{H. saltator} (Table 1). In the case of \species{A.
-mellifera}, five proteins were assigned to other OGs than they were
-assigned by OrthoDB. We found a similar result for three proteins of the
-RGS of \species{H. saltator}. Visual inspection of these proteins
-suggested that the orthology assignment of these proteins in the OrthoDB
-database is not correct (for an in-depth assessment and discussion of an
-example see Supplemental Material, Figure S5). The low fraction (less
-than 1 \%) of non-recalled genes were caused by a comparable effect
-(Figure S5). Thus, the sensitivity (true positive rate), defined as the
-ratio of true positives to true positives plus false negatives, was
-0.9896 for the \species{A. mellifera} RGS and 0.9918 for the \species{H.
-saltator} RGS. The accuracy, defined as the ratio of true positives plus
-true negatives to the total number of genes in the RGS, was 0.9965 for
-the \species{A. mellifera} RGS and 0.9978 for the \species{H. saltator}
-RGS.
+the RGS of \species{H. saltator} (Table \ref{tab:orthograph-tests} on page
+\pageref{tab:orthograph-tests}). In the case of \species{A.  mellifera},
+five proteins were assigned to other OGs than they were assigned by
+OrthoDB. We found a similar result for three proteins of the RGS of
+\species{H. saltator}. Visual inspection of these proteins suggested
+that the orthology assignment of these proteins in the OrthoDB database
+is not correct (for an in-depth assessment and discussion of an example
+see Supplemental Material, Figure S5). The low fraction (less than 1 \%)
+of non-recalled genes were caused by a comparable effect (Figure S5).
+Thus, the sensitivity (true positive rate), defined as the ratio of true
+positives to true positives plus false negatives, was 0.9896 for the
+\species{A. mellifera} RGS and 0.9918 for the \species{H.  saltator}
+RGS. The accuracy, defined as the ratio of true positives plus true
+negatives to the total number of genes in the RGS, was 0.9965 for the
+\species{A. mellifera} RGS and 0.9978 for the \species{H. saltator} RGS.
 
 For comparison, HaMStR v13.2.3 was run on the same datasets with
 comparable parameters. HaMStR identified 4,589 genes (99.22 \%) in the
@@ -314,16 +320,28 @@ single-copy orthologs.
 
 % Please add the following required packages to the document preamble:
 % \usepackage{booktabs}
-\begin{table}[h!]
-\caption{Results from the tests that compare Orthograph performance to HaMStR
-\citep{Ebersberger2009}.}
-\par\flushleft
-Sensitivity is defined as the ratio of true positives (TP) to TP plus false
-negatives (FN). Accuracy is defined as the ratio of TP plus true negatives (TN)
-to the total number of genes in the official gene set (OGS). FP, false
-positives. Note that the results are meant to demonstrate equality in
-performance despite algorithmic differences.
-\end{table}
+\begin{sidewaystable}[h!]
+\caption{Results from the tests that compare Orthograph performance to
+HaMStR \citep{Ebersberger2009}.  Sensitivity is defined as the ratio of
+true positives (TP) to TP plus false negatives (FN). Accuracy is defined
+as the ratio of TP plus true negatives (TN) to the total number of genes
+in the official gene set (OGS). FP, false positives. Note that the
+results are meant to demonstrate equality in performance despite
+algorithmic differences.}\label{tab:orthograph-tests}
+\begin{tabular}{@{}llrlrrrrrrr@{}}
+\toprule
+Software   & Test        & Genes  & Species                & OGS       & Found  & TP    & FP & FN & Sens.       & Acc.  \\
+\midrule
+Orthograph & single-copy & 4,625  & \textit{A. mellifera}  & 15,314    & 4,582  & 4,577 & 5  & 48 & 0.990       & 0.996 \\
+Orthograph & single-copy & 4,625  & \textit{H. saltator}   & 18,564    & 4,590  & 4,587 & 3  & 38 & 0.992       & 0.997 \\
+HaMStR     & single-copy & 4,625  & \textit{A. mellifera}  & 15,314    & 4,589  & 4,588 & 3  & 39 & 0.992       & 0.997 \\
+HaMStR     & single-copy & 4,625  & \textit{H. saltator}   & 18,564    & 4,573  & 4,571 & 2  & 54 & 0.988       & 0.996 \\
+Orthograph & isoforms    & 8      & \textit{C. floridanus} & 17,064    & 7      & 7     & 0  & 1  & 0.875       & 0.999 \\
+HaMStR     & isoforms    & 8      & \textit{C. floridanus} & 17,064    & 7      & 7     & 0  & 1  & 0.875       & 0.999 \\
+Orthograph & inparalogs  & 647    & \textit{A. cephalotes} & 18,093    & 583    & 583   & 0  & 6  & 0.901       & 0.996 \\
+\bottomrule
+\end{tabular}
+\end{sidewaystable}
 
 \subsection{Identification of splice variants or
 isoforms}\label{identification-of-splice-variants-or-isoforms}
@@ -556,7 +574,7 @@ explicitly predicting them. Orthograph does, however, report transcripts
 that are potential alternative transcripts or splice variants in order
 to allow researchers to further investigate them.
 
-\section{Conclusion}\label{conclusion}
+\section{Conclusion}\label{orthograph-conclusion}
 
 With Orthograph, we provide a software solution to accurately assign
 transcripts (and other coding sequences) to known groups (clusters) of

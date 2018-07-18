@@ -16,7 +16,7 @@ Authors: Malte Petersen, David Armisén, Richard A. Gibbs, Lars Hering,
 Abderrahman Khila, Georg Mayer, Stephen Richards, Oliver Niehuis, and
 Bernhard Misof
 
-\section{Introduction}\label{introduction}
+\section{Introduction}\label{mobilome-introduction}
 
 Repetitive elements, including transposable elements (TEs), are a major
 sequence component of eukaryote genomes. In vertebrate genomes, for
@@ -215,22 +215,22 @@ species-specific repeat libraries.
 \subsection{Diversity of TE content in arthropod
 genomes}\label{diversity-of-te-content-in-arthropod-genomes}
 
-TE content varies greatly among the analyzed species (Fig. 1,
-supplemental table S1) and differs even between species belonging the
-same order. In the insect order Diptera, for example, the TE content
-varies from around 55 \% in the yellow fever mosquito \species{Aedes
-aegypti} to less than 1 \% in \species{B. antarctica}. Even among
-closely related \species{Drosophila} species, the TE content ranges from
-40 \% (in \species{D. ananassae}) to 10 \% (in \species{D. miranda} and
-\species{D.  simulans}). The highest TE content (60 \%) was found in the
-large genome (6.5 Gbp) of the migratory locust \species{Locusta
-migratoria} (Orthoptera), while the smallest known insect genome, that
-of the antarctic midge \species{Belgica antarctica} (Diptera, 99 Mbp),
-was found to contain less than 1 \% TEs. The TE content of the majority
-of the genomes was spread around a median of 24.4 \% with a standard
-deviation of 12.5 \%.
+TE content varies greatly among the analyzed species (Figure
+\ref{fig:te-coverage}, supplemental table S1) and differs even between
+species belonging the same order. In the insect order Diptera, for
+example, the TE content varies from around 55 \% in the yellow fever
+mosquito \species{Aedes aegypti} to less than 1 \% in \species{B.
+antarctica}. Even among closely related \species{Drosophila} species,
+the TE content ranges from 40 \% (in \species{D. ananassae}) to 10 \%
+(in \species{D. miranda} and \species{D.  simulans}). The highest TE
+content (60 \%) was found in the large genome (6.5 Gbp) of the migratory
+locust \species{Locusta migratoria} (Orthoptera), while the smallest
+known insect genome, that of the antarctic midge \species{Belgica
+antarctica} (Diptera, 99 Mbp), was found to contain less than 1 \% TEs.
+The TE content of the majority of the genomes was spread around a median
+of 24.4 \% with a standard deviation of 12.5 \%.
 
-\begin{figure}[h!]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\textwidth]{te-coverage-in-insect-genomes-both}
 \caption[TE coverage in arthropod genomes]{{Genome assembly size, total
@@ -239,6 +239,7 @@ retrotransposons in arthropod genomes and a representative of
 Onychophora as an outgroup. Also shown is the genomic proportion of
 unclassified/uncharacterized repetitive elements.  Pal., Palaeoptera%
 }}
+\label{fig:te-coverage}
 \end{center}
 \end{figure}
 
@@ -249,23 +250,23 @@ We assessed the TE content, that is, the ratio of TE versus non-TE
 nucleotides in the genome assembly, in 62 insect species as well as 10
 non-insect arthropods and a representative of Onychophora (velvet worms)
 as an outgroup. We tested whether there was a relationship between TE
-content and genome assembly size, and found a positive correlation (Fig.
-2 and supplemental table S1). This correlation is statistically
-significant (Spearman's rank sum test, \(p \lll 0.005\)). Genome size is
-significantly smaller in holometabolous insects than in
-non-holometabolous insects and Acercaria (one-way ANOVA, \(p =
-0.0001\)). Using the \texttt{ape} package v. 4.1 \citep{Paradis2004} for
-R \citep{RCoreTeam2017}, we tested for correlation between TE content
-and genome size using phylogenetically independent contrasts (PIC)
-\citep{Felsenstein1985}. The test confirmed a significant positive
-correlation (Pearson product moment correlation, \(p = 0.0001225\),
-corrected for phylogeny using PIC) between TE content and genome size.
-Additionally, genome size is correlated with TE diversity, that is, the
-number of different TE superfamilies found in a genome (Spearman, \(p
-\lll 0.005\)); this is also true under PIC (Pearson, \(p = 0.033\); Fig.
-S1).
+content and genome assembly size, and found a positive correlation (Figure
+\ref{fig:te-coverage-vs-size} and supplemental table S1). This
+correlation is statistically significant (Spearman's rank sum test, \(p
+\lll 0.005\)). Genome size is significantly smaller in holometabolous
+insects than in non-holometabolous insects and Acercaria (one-way ANOVA,
+\(p = 0.0001\)). Using the \texttt{ape} package v. 4.1
+\citep{Paradis2004} for R \citep{RCoreTeam2017}, we tested for
+correlation between TE content and genome size using phylogenetically
+independent contrasts (PIC) \citep{Felsenstein1985}. The test confirmed
+a significant positive correlation (Pearson product moment correlation,
+\(p = 0.0001225\), corrected for phylogeny using PIC) between TE content
+and genome size.  Additionally, genome size is correlated with TE
+diversity, that is, the number of different TE superfamilies found in a
+genome (Spearman, \(p \lll 0.005\)); this is also true under PIC
+(Pearson, \(p = 0.033\); Figure S1).
 
-\begin{figure}[h!]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.70\columnwidth]{te-coverage-vs-genome-size}
 \caption[TE content is positively correlated to genome size]{{TE content
@@ -276,6 +277,7 @@ also supported under phylogenetically independent contrasts
 = 0.0001225\)). Dots: Individual measurements; blue line: linear
 regression; grey area: confidence interval.%
 }}
+\label{fig:te-coverage-vs-size}
 \end{center}
 \end{figure}
 
@@ -285,26 +287,26 @@ sequences}\label{relative-contribution-of-different-te-types-to-arthropod-genome
 
 We assessed the relative contribution of the major TE groups (LTR, LINE,
 SINE retrotransposons, and DNA transposons) to the arthropod genome
-composition (Fig. 1). In most species, ``unclassified'' elements, which
-need further characterization, represent the largest fraction. They
-contribute up to 93 \% of the total TE coverage in the mayfly
-\species{Ephemera danica} or the copepod \species{Eurytemora affinis}.
-However, in most investigated \species{Drosophila} species the
-unclassifiable elements comprise less than 25 \% and in \species{D.
-simulans} only 11 \% of the entire TE content. Disregarding these
-unclassified TE sequences, LTR retrotransposons dominate the TE content
-in representatives of Diptera, in some cases contributing around 50 \%
-(e.g., in \species{D. simulans}). In Hymenoptera, on the other hand, DNA
-transposons are more prevalent, such as in Jerdon's jumping ant
-\species{Harpegnathos saltator}. LINE retrotransposons are most
-prominent in Hemiptera and Psocodea, with the exception of the human
-body louse \species{Pediculus humanus}, whose DNA transposons contribute
-the major part of the known TE content. SINE retrotransposons were found
-in all insect orders, but they never constituted the majority of the
-genomic TE content in any taxon in our sampling. In some lineages, such
-as Hymenoptera and most dipterans, SINEs contribute only a miniscule
-amount, whereas in Hemiptera and Lepidoptera the SINE coverage varies
-considerably.
+composition (Figure \ref{fig:te-coverage}). In most species,
+``unclassified'' elements, which need further characterization,
+represent the largest fraction. They contribute up to 93 \% of the total
+TE coverage in the mayfly \species{Ephemera danica} or the copepod
+\species{Eurytemora affinis}.  However, in most investigated
+\species{Drosophila} species the unclassifiable elements comprise less
+than 25 \% and in \species{D.  simulans} only 11 \% of the entire TE
+content. Disregarding these unclassified TE sequences, LTR
+retrotransposons dominate the TE content in representatives of Diptera,
+in some cases contributing around 50 \% (e.g., in \species{D.
+simulans}). In Hymenoptera, on the other hand, DNA transposons are more
+prevalent, such as in Jerdon's jumping ant \species{Harpegnathos
+saltator}. LINE retrotransposons are most prominent in Hemiptera and
+Psocodea, with the exception of the human body louse \species{Pediculus
+humanus}, whose DNA transposons contribute the major part of the known
+TE content. SINE retrotransposons were found in all insect orders, but
+they never constituted the majority of the genomic TE content in any
+taxon in our sampling. In some lineages, such as Hymenoptera and most
+dipterans, SINEs contribute only a miniscule amount, whereas in
+Hemiptera and Lepidoptera the SINE coverage varies considerably.
 
 
 
@@ -313,28 +315,29 @@ arthropods}\label{distribution-of-te-superfamilies-in-arthropods}
 
 We identified almost all known TE families in at least one insect
 species, and many were found to be widespread and present in all
-investigated species (Fig. 3, note that in this figure, TE families were
-summarized in superfamilies). Especially diverse and ubiquitous are DNA
-transposons, which represent 63 out of 70 identified TE superfamilies.
-Among the most widespread (present in all investigated species) DNA
-transposons are Academ, Chapaev and the other families in the CMC
-complex, Crypton, Dada, Ginger, hAT (Blackjack, Charlie, \emph{etc.}),
-Kolobok, Maverick, Harbinger, PiggyBac, Helitron (RC), Sola, TcMar
-(Mariner, Tigger, \emph{etc.}), and the P element. LINE non-LTR
-retrotransposons are similarly ubiquitous, though not as diverse. Among
-the most widespread LINEs are CR1, Jockey, L1, L2, LOA, Penelope, R1,
-R2, and RTE. Of the LTR retrotransposons, the most widespread are Copia,
-DIRS, Gypsy, Ngaro, and Pao as well as endogenous retrovirus particles
-(ERV). SINE elements are diverse, but show a more patchy distribution,
-with only the tRNA-derived superfamily present in all investigated
-species. We found the ID element in almost all species except the Asian
-long horned beetle, \species{Anoplophora glabripennis}, and the B4
-element absent from eight species. All other SINE superfamilies are
-absent in at least 13 species. The Alu element was found in 48 arthropod
-genomes, for example in the silkworm \species{Bombyx mori} (Fig. 4, all
-Alu alignments are shown in supplemental file 1).
+investigated species (Figure \ref{fig:presence-absence}, note that in
+this figure, TE families were summarized in superfamilies). Especially
+diverse and ubiquitous are DNA transposons, which represent 63 out of 70
+identified TE superfamilies.  Among the most widespread (present in all
+investigated species) DNA transposons are Academ, Chapaev and the other
+families in the CMC complex, Crypton, Dada, Ginger, hAT (Blackjack,
+Charlie, \emph{etc.}), Kolobok, Maverick, Harbinger, PiggyBac, Helitron
+(RC), Sola, TcMar (Mariner, Tigger, \emph{etc.}), and the P element.
+LINE non-LTR retrotransposons are similarly ubiquitous, though not as
+diverse. Among the most widespread LINEs are CR1, Jockey, L1, L2, LOA,
+Penelope, R1, R2, and RTE. Of the LTR retrotransposons, the most
+widespread are Copia, DIRS, Gypsy, Ngaro, and Pao as well as endogenous
+retrovirus particles (ERV). SINE elements are diverse, but show a more
+patchy distribution, with only the tRNA-derived superfamily present in
+all investigated species. We found the ID element in almost all species
+except the Asian long horned beetle, \species{Anoplophora glabripennis},
+and the B4 element absent from eight species. All other SINE
+superfamilies are absent in at least 13 species. The Alu element was
+found in 48 arthropod genomes, for example in the silkworm
+\species{Bombyx mori} (Figure \ref{fig:alu}, all Alu alignments are
+shown in supplemental file 1).
 
-\begin{figure}[h!]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\textwidth]{presence-absence-reduced-with-tree}
 \caption[TE diversity in arthropod genomes]{{TE diversity in arthropod genomes: Many known TE superfamilies were
@@ -345,10 +348,11 @@ after each species name show the number of different TE superfamilies;
 numbers in parentheses below clade names denote the average number of TE
 superfamilies in the corresponding taxon.%
 }}
+\label{fig:presence-absence}
 \end{center}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\textwidth]{Alu-in-Zootermopsis-nevadensis}
 \caption[The Alu element found in \species{Bombyx mori}]{{The Alu element
@@ -358,7 +362,7 @@ areas in the sequences are identical to the canonical Alu sequence. The
 sequence names follow the pattern ``identifier:start-end(strand)'' Image
 created using Geneious version 7.1 created by Biomatters. Available
 from~\textbackslash{}url\{\url{https://www.geneious.com}\}
-{\label{169157}}%
+{\label{fig:alu}}%
 }}
 \end{center}
 \end{figure}
@@ -407,7 +411,7 @@ species or a bacterial/viral infection.
 \subsection{Lineage-specific TE activity during arthropod
 evolution}\label{lineage-specific-te-activity-during-arthropod-evolution}
 
-\begin{figure}[h!]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\textwidth]{tree-with-landscapes-and-larger-plots}
 \caption[Arthropod repeat landscapes]{{Cladogram with repeat landscape
@@ -418,29 +422,30 @@ orders, the TE divergence distribution is similar, such as in Diptera or
 Hymenoptera. The large fraction of unclassified elements was omitted for
 these plots. Pal., Palaeoptera%
 }}
+\label{fig:landscapes}
 \end{center}
 \end{figure}
 
 We further analyzed sequence divergence measured by Kimura distance
-within each species-specific TE content (Fig. 5; note that for these
-plots, we omitted the large fraction of unclassified elements). Within
-Diptera, the most striking feature is that almost all investigated
-drosophilids show a large spike of LTR retroelement proliferation
-between Kimura distance 0 and around 0.08. This spike is only absent in
-\species{D. miranda}, but bi-modal in \species{D. pseudoobscura}, with a
-second peak around Kimura distance 0.15. This second peak, however, does
-not coincide with the age of inversion breakpoints on the third
-chromosome of \species{D. pseudoobscura}, which are only a million years
-old and have been associated with TE activity \citep{Wallace2011}. A
-bi-modal distribution was not observed in any other fly species. On the
-contrary, all mosquito species exhibit a large proportion of DNA
-transposons which show a divergence between Kimura distance 0.02 and
-around 0.3. This divergence is also present in the calyptrate flies
-\species{Musca domestica}, \species{Ceratitis capitata}, and
-\species{Lucilia cuprina}, but absent in all acalyptrate flies,
-including representatives of the \species{Drosophila} family. Likely,
-the LTR proliferation in drosophilids as well as the DNA transposon
-expansion in mosquitos and other flies was the result of a
+within each species-specific TE content (Figure \ref{fig:landscapes};
+note that for these plots, we omitted the large fraction of unclassified
+elements). Within Diptera, the most striking feature is that almost all
+investigated drosophilids show a large spike of LTR retroelement
+proliferation between Kimura distance 0 and around 0.08. This spike is
+only absent in \species{D. miranda}, but bi-modal in \species{D.
+pseudoobscura}, with a second peak around Kimura distance 0.15. This
+second peak, however, does not coincide with the age of inversion
+breakpoints on the third chromosome of \species{D. pseudoobscura}, which
+are only a million years old and have been associated with TE activity
+\citep{Wallace2011}. A bi-modal distribution was not observed in any
+other fly species. On the contrary, all mosquito species exhibit a large
+proportion of DNA transposons which show a divergence between Kimura
+distance 0.02 and around 0.3. This divergence is also present in the
+calyptrate flies \species{Musca domestica}, \species{Ceratitis
+capitata}, and \species{Lucilia cuprina}, but absent in all acalyptrate
+flies, including representatives of the \species{Drosophila} family.
+Likely, the LTR proliferation in drosophilids as well as the DNA
+transposon expansion in mosquitos and other flies was the result of a
 lineage-specific invasion and subsequent propagation into the different
 dipteran genomes.
 
@@ -480,13 +485,14 @@ with a divergence around Kimura distance 0.1. In the beetle species
 \species{L.  decemlineata}, this fraction consists mostly of LINE
 copies, while in \species{T. castaneum} and \species{A. glabripennis}
 DNA elements make up the major fraction. In all Coleoptera species, the
-amount of SINEs and Helitrons is small (cf.~Fig. 1). Interestingly,
-\species{Mengenilla moldrzyki}, a representative of Strepsiptera, which
-was previously determined to be the sister group of Coleoptera
-\citep{Niehuis2012}, shows more similarity in TE divergence distribution
-to Hymenoptera than to Coleoptera, with a large fraction of DNA elements
-covering Kimura distances 0.05 to around 0.3 and relatively small
-contributions from LINEs.
+amount of SINEs and Helitrons is small (\emph{cf}.~Figure
+\ref{fig:te-coverage}). Interestingly, \species{Mengenilla moldrzyki}, a
+representative of Strepsiptera, which was previously determined to be
+the sister group of Coleoptera \citep{Niehuis2012}, shows more
+similarity in TE divergence distribution to Hymenoptera than to
+Coleoptera, with a large fraction of DNA elements covering Kimura
+distances 0.05 to around 0.3 and relatively small contributions from
+LINEs.
 
 In apocritan Hymenoptera (\emph{i.e.}, those with a wasp waist), the DNA
 element divergence distribution exhibits a peak around Kimura distance
@@ -647,37 +653,38 @@ families that were previously thought to be restricted to, for example,
 primates, such as the SINE family Alu \citep{Kriegs2007} and the LINE
 family L1 \citep{Liu2003}, or to fungi, such as Tad1
 \citep{Cambareri1994}. Essentially, most known superfamilies were found
-in the investigated insect genomes (\emph{cf}. Fig. 3) and additionally,
-we identified highly abundant unclassifiable TEs in all insect species.
-These observations suggest that the insect mobilome (the entirety of
-mobile DNA elements) is more diverse than the well characterized
-vertebrate mobilome \citep{Chalopin2015} and requires more exhaustive
-characterization. We were able to reach these conclusions by relying on
-two essential non-standard analyses. First, our annotation strategy of
-\emph{de novo} repeat library construction and classification according
-to the RepBase database was more specific to each genome than the
-default RepeatMasker analysis using only the RepBase reference library.
-The latter approach is usually done when releasing a new genome assembly
-to the public. The second difference between our approach and the
-conventional application of the RepBase library was that we used the
-entire Metazoa-specific section of RepBase instead of restricting our
-search to Insecta. This broader scope allowed us to annotate TEs that
-were previously unknown from insects, and that would otherwise have been
-overlooked. Additionally, by removing results that matched non-TE
-sequences in the NCBI database, our annotation becomes more robust
-against false positives. The enormous previously overlooked diversity of
-TEs in insects does not seem to be surprising given the geological age
-and species richness of this clade. Insects originated more than 450
-million years ago \citep{Misof2014} and represent over 80 \% of the
-described metazoan species \citep{Grimaldi2005}. It remains to be
-analyzed in detail, however, whether insect TE diversity evolved
-independently within insects or is the result of multiple TE
-introgression into insect genomes. Further investigations will also show
-whether there is a connection between TE diversity or abundance and
-clade-specific genetic and genomic traits, such as the sex determination
-system (\emph{e.g.}, butterflies have Z and W chromosomes instead of X
-and Y \citep{Traut1997}) or the composition of telomeres, which have
-been shown in \species{D. melanogaster} to exhibit a high density of TEs
+in the investigated insect genomes (\emph{cf}.
+\ref{fig:presence-absence}) and additionally, we identified highly
+abundant unclassifiable TEs in all insect species.  These observations
+suggest that the insect mobilome (the entirety of mobile DNA elements)
+is more diverse than the well characterized vertebrate mobilome
+\citep{Chalopin2015} and requires more exhaustive characterization. We
+were able to reach these conclusions by relying on two essential
+non-standard analyses. First, our annotation strategy of \emph{de novo}
+repeat library construction and classification according to the RepBase
+database was more specific to each genome than the default RepeatMasker
+analysis using only the RepBase reference library.  The latter approach
+is usually done when releasing a new genome assembly to the public. The
+second difference between our approach and the conventional application
+of the RepBase library was that we used the entire Metazoa-specific
+section of RepBase instead of restricting our search to Insecta. This
+broader scope allowed us to annotate TEs that were previously unknown
+from insects, and that would otherwise have been overlooked.
+Additionally, by removing results that matched non-TE sequences in the
+NCBI database, our annotation becomes more robust against false
+positives. The enormous previously overlooked diversity of TEs in
+insects does not seem to be surprising given the geological age and
+species richness of this clade. Insects originated more than 450 million
+years ago \citep{Misof2014} and represent over 80 \% of the described
+metazoan species \citep{Grimaldi2005}. It remains to be analyzed in
+detail, however, whether insect TE diversity evolved independently
+within insects or is the result of multiple TE introgression into insect
+genomes. Further investigations will also show whether there is a
+connection between TE diversity or abundance and clade-specific genetic
+and genomic traits, such as the sex determination system (\emph{e.g.},
+butterflies have Z and W chromosomes instead of X and Y
+\citep{Traut1997}) or the composition of telomeres, which have been
+shown in \species{D. melanogaster} to exhibit a high density of TEs
 \citep{Levis1993}, whereas telomeres in other insects consist mostly of
 simple repeats.
 
@@ -733,18 +740,19 @@ In vertebrates, it is possible to trace lineage-specific contributions
 of different TE types \citep{Chalopin2015}. In insects, however, the TE
 composition is significantly, but weakly correlated to genome size.
 Instead, we can show that major differences both in TE abundance and
-diversity exist between species of the same lineage (Fig. 3). Using the
-Kimura nucleotide sequence distance, we observe distinct variation, but
-also similarities, in TE composition and activity between insect orders
-and among species of the same order. The number of recently active
-elements can be highly variable, such as LTR retrotransposons in fruit
-flies or DNA transposons in ants (Fig. 5). On the other hand, the shape
-of the TE coverage distributions can be fairly similar among species of
-the same order; this is particularly visible in Hymenoptera and Diptera.
+diversity exist between species of the same lineage (Figure
+\ref{fig:presence-absence}). Using the Kimura nucleotide sequence
+distance, we observe distinct variation, but also similarities, in TE
+composition and activity between insect orders and among species of the
+same order. The number of recently active elements can be highly
+variable, such as LTR retrotransposons in fruit flies or DNA transposons
+in ants (Figure \ref{fig:landscapes}). On the other hand, the shape of
+the TE coverage distributions can be fairly similar among species of the
+same order; this is particularly visible in Hymenoptera and Diptera.
 These findings suggest lineage-specific similarities in TE elimination
 mechanisms; possibly shared efficacies in the piRNA pathway that
 silences TEs during transcription \citep{LeThomas2013} that evolved once
-in these lineages. Another possible explanation would be recent
+in these lineages.  Another possible explanation would be recent
 horizontal transfers from, for example, parasite to host species (see
 below).
 
