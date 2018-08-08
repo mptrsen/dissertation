@@ -4,7 +4,7 @@
 
 The present thesis comprises research using a multitude of approaches
 from comparative genomics, ancestral reconstruction, phylogenetics,
-algorithm design and implementation. By using a standardized TE
+as well as algorithm design and implementation. By using a standardized TE
 annotation and a large taxon sampling that encompasses representatives
 from all major insect orders, it is able to draw conclusions that
 surpass inferences from intra-ordinal comparisons.  Additionally, the
@@ -44,21 +44,23 @@ approach and showed it to be accurate and efficient. The annotation
 results from six insect species \todo{how many did Jeanne use?} were
 used in investigations on the protein-coding gene repertoire in insects
 \todo{how to cite Jeanne?}. Another part of the TE annotation data was
-used by \citep{Provataris2018}, and the annotation pipeline (which might
+used by \citep{Provataris2018}, and the annotation pipeline (which may
 be published separately at a later time) was used to identify TEs in
 additional insect genomes. By combining several well-established
 algorithm implementations into an easy to use and fully automated
 pipeline, the shell script provides a tool to reliably annotate TEs in
 assembled genomes of non-model species. 
 
-The construction of a dated phylogeny for over 600 insect and arthropod
-species from the literature and publicly available DNA barcode data is
-unprecendented (chapter \ref{cha:dynamics}). This phylogeny will be
-valuable to researchers in many disciplines because it allows to set
-insights from other studies into context with the evolution of genome
-size in insects.  In fact, the phylogeny also allows to map other
-phenotypical characters and to infer ancestral states for them, which is
-often a means to study and understand their evolution.
+The integration of diverse public data sources has been a central part
+of the studies comprising this thesis. The construction of a dated
+phylogeny for over 613 insect and arthropod species from the literature
+and publicly available DNA barcode data is unprecendented (chapter
+\ref{cha:dynamics}). This phylogeny will be valuable to researchers in
+many disciplines because it allows to set insights from other studies
+into context with the evolution of genome size in insects.  In fact, the
+phylogeny also allows to map other phenotypical characters and to infer
+ancestral states for them, which is often a means to study and
+understand their evolution.
 
 Also in chapter \ref{cha:dynamics}, I inferred ancestral genome sizes
 for 613 arthropod taxa including 520 insect species using that dated
@@ -74,21 +76,32 @@ ancestral TEs in arthropod species that diverged from the common
 ancestor of their sister species earlier than about 100 Mya. This result
 is consistent with prior findings that inactive TEs become
 unrecognizable after more than 50 Mya due to genetic drift
-\citep{Shedlock2000}. This result leads to the hypothesis that the
-majority of TEs in extant genomes might be dormant and possibly
-suppressed by the host genome defenses. Only during a period of
-inefficient silencing would the TEs be able to successfully proliferate,
-leading to a burst in TE activity as often observed in the study in
-chapter \ref{cha:mobilome}. These findings are better explained by the
-burst model than by the equilibrium model of TE dynamics.
+\citep{Shedlock2000} and leads to the hypothesis that the majority of
+TEs in extant genomes might be dormant and possibly suppressed by the
+host genome defenses such as the RNAi or piRNA pathways. Save from
+sustaining a high gene deletion rate (along with its drawbacks), no
+mechanism for removing TEs has been identified in eukaryotes. Thus, the
+most efficient defense appears to be to reduce TE activity and let
+random mutation degrade the TEs.  Only during a period of inefficient
+silencing would the TEs be able to successfully proliferate, leading to
+a burst in TE activity as often observed in the study in chapter
+\ref{cha:mobilome}. These findings are better explained by the burst
+model than by the equilibrium model of TE dynamics.
+
+In a study on nematode genomes, \citet{Szitenberg2016} argue that
+long-term TE dynamics are largely independent of host genome defenses,
+and that TE evolution in the host genome is determined by genetic drift.
+The results from the present studies in insect genomes  with this
+suggestion. 
 
 \section{Roadmap}
 
-Orthograph (chapter \ref{cha:orthograph}) provides versatile tool ---
-not only for phylogenetics but also for other disciplines --- has been
-used in many studies --- mostly phylogenetics, but also evolutionary
-biology (Gómez-Zurita) --- not limited to transcriptomes but also useful
-with HE data --- etc --- phylogenetics important because provides the
-backbone phylogeny that is required for all evolutionary inferences ---
-in chapter \ref{cha:mobilome} the insect mobilome is characterized ---
-etc
+\todo{Implications on adaptive evolution, read review by
+\citet{Schrader2018}} --- Orthograph (chapter \ref{cha:orthograph})
+provides versatile tool --- not only for phylogenetics but also for
+other disciplines --- has been used in many studies --- mostly
+phylogenetics, but also evolutionary biology (Gómez-Zurita) --- not
+limited to transcriptomes but also useful with HE data --- etc ---
+phylogenetics important because provides the backbone phylogeny that is
+required for all evolutionary inferences --- in chapter
+\ref{cha:mobilome} the insect mobilome is characterized --- etc
