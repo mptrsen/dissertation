@@ -2,7 +2,7 @@ chapters := $(wildcard chapters/*.tex)
 figures  := $(wildcard figures/*.pdf)
 name     := dissertation
 
-$(name).pdf: $(name).tex $(chapters) $(figures) references.bib Dissertate.cls frontmatter/abstract.tex endmatter/colophon.tex
+$(name).pdf: $(name).tex $(chapters) $(figures) references.bib Dissertate.cls frontmatter/personalize.tex frontmatter/abstract.tex endmatter/colophon.tex
 	bash scripts/build
 
 clean:
