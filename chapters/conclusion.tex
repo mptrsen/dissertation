@@ -14,20 +14,20 @@ assess orthology within coding nucleotide data.
 The software Orthograph (chapter \ref{cha:orthograph} has proven to be a
 valuable asset which was used in a number of publications. Many of these
 aim to resolve order-level phylogenies from transcriptomic data (\eg,
-\citet{Peters2017, Bank2017, Kutty2018, Simon2018, Gillung2018,
-Johnson2018}). In other publications, it was used to map target
-enrichment data to the correct genes \citep{Mayer2016, Shin2018,
-Sann2018}, often also for phylogenetic analyses. However, Orthograph was
-designed to be versatile, and this shows in its application in studies
-that investigate the evolution of specific gene families
-\citep{Pauli2016, Dowling2017} or the distribution of DNA methylation in
-insects \citep{Provataris2018}.  Orthograph was reviewed in
-\citet{Nichio2017} and has recieved critical acclaim.
+\citet{Bank2017, Peters2017, Kutty2018, Gillung2018, Johnson2018,
+Simon2018}). In other publications, it was used to map target enrichment
+data to the correct genes \citep{Mayer2016, Sann2018, Shin2018}, often
+also for phylogenetic analyses. However, Orthograph was designed to be
+versatile, and this shows in its application in studies that investigate
+the evolution of specific gene families \citep{Pauli2016, Dowling2017}
+or the distribution of DNA methylation in insects
+\citep{Provataris2018}.  Orthograph was reviewed in \citet{Nichio2017}
+and has recieved critical acclaim.
 
-By providing a powerful and easy to use tool to identify orthologs in
-coding nucleotide data, the efforts described in chapter
-\ref{cha:orthograph} facilitate future phylogenetic analyses. The
-growing amount of available transcriptomic data for more and more
+By providing, with Orthograph, a powerful and easy to use tool to
+identify orthologs in coding nucleotide data, the efforts described in
+chapter \ref{cha:orthograph} facilitate future phylogenetic analyses.
+The growing amount of available transcriptomic data for more and more
 species enables researchers to further resolve phylogenies based on
 molecular datasets with increasing resolution and accuracy. Although for
 many species, molecular data will never be obtained (see page
@@ -36,15 +36,17 @@ relationships will develop. This endeavor continues to be important
 since all studies dealing with aspects of evolution --- also the ones in
 this thesis --- necessitate a concept of species interrelationships.
 Thus, Orthograph contributes to furthering the field of biological
-systematics. 
+(molecular) systematics, which in turn enables other fields such as
+evolutionary biology or comparative genomics to make meaningful
+inferences.
 
 The focus of the empirical studies in this thesis was on insect genomes.
-Insects are very different from vertebrates, plants, and fungi in both phenotype
-and genotype. This is also reflected in the processes that define their
-genome size with respect to the TE content. As in vertebrates, TE
-content is a predictor for genome size, however,  DNA gain and loss
-rates do not affect genome size in insects as much as they do in
-vertebrates \citep{Kapusta2017-1,Lindblad-Toh2005}.  Nevertheless,
+Insects are very different from vertebrates, plants, and fungi in both
+phenotype and genotype. This is also reflected in the processes that
+define their genome size with respect to the TE content. As in
+vertebrates, TE content is a predictor for genome size, however,  DNA
+gain and loss rates do not affect genome size in insects as much as they
+do in vertebrates \citep{Kapusta2017-1,Lindblad-Toh2005}.  Nevertheless,
 insect genome size does exhibit large fluctuations \citep{Alfsnes2017},
 but these cannot be explained by differential TE activity alone.
 Similarly, the patterns of DNA methylation, which has been hypothesized
@@ -56,27 +58,29 @@ size expansion. What else, then, could explain the large spread in
 insect genome size?
 
 The answer to that question is likely not straigthforward, and the
-present thesis does not have it. It does, however, provide pointers for
-future research. For example, the RNA interference pathway genes were
-implicated in TE inhibition \citep{Aravin2001,Czech2008} and are absent
-in some butterfly species that exhibited high TE content
-\citep{Dowling2017}.  The large number of available lepidopteran genomes
-provides ample opportunity to closely investigate these genes and shed
-more light on TE defense mechanisms.  The TE annotation data that were
-generated for the study in chapter \ref{cha:mobilome} are valuable as a
-resource to study the interaction of TEs with other genome components
-such as protein-coding genes. The annotation procedure is largely
+present thesis does not have it. It does, however, provide a broad array
+of pointers for future research. For example, the RNA interference
+pathway genes were implicated in TE inhibition
+\citep{Aravin2001,Czech2008} and are absent in some butterfly species
+that exhibited high TE content \citep{Dowling2017}. The large number of
+available lepidopteran genomes provides ample opportunity to closely
+investigate these genes and shed more light on TE defense mechanisms.
+The study in chapter \ref{cha:mobilome} characterizes the TE repertoire
+of 73 arthropod species, the largest taxon sampling for a comparative
+study on TE diversity in arthropods to date. The TE annotation data
+that were generated for the study are valuable as a resource to study
+the interaction of TEs with other genome components such as
+protein-coding genes. The annotation results from six insect species
+\todo{how many did Jeanne use?} were used in investigations on the
+protein-coding gene repertoire in insects \todo{how to cite Jeanne?}.
+Another part of the TE annotation data was used by
+\citep{Provataris2018}, and the annotation pipeline was used to identify
+TEs in additional insect genomes. The annotation procedure is largely
 identical to the one used by \citet{Reinar2016} who benchmarked the
-approach and showed it to be accurate and efficient. The annotation
-results from six insect species \todo{how many did Jeanne use?} were
-used in investigations on the protein-coding gene repertoire in insects
-\todo{how to cite Jeanne?}. Another part of the TE annotation data was
-used by \citep{Provataris2018}, and the annotation pipeline (which might
-be published separately at a later time) was used to identify TEs in
-additional insect genomes. By combining several well-established
-algorithm implementations into an easy to use and fully automated
-pipeline, the shell script provides a tool to reliably annotate TEs in
-assembled genomes of non-model species. 
+approach and showed it to be accurate and efficient. By combining
+several well-established algorithm implementations into an easy to use
+and fully automated pipeline, the shell script provides a tool to
+reliably annotate TEs in assembled genomes of non-model species. 
 
 The construction of a dated phylogeny for over 600 insect and arthropod
 species from the literature and publicly available DNA barcode data is
@@ -100,18 +104,21 @@ lineage-specific. The study shows that there are practically no
 ancestral TEs in arthropod species that diverged from the common
 ancestor of their sister species earlier than about 100 Mya. This result
 is consistent with prior findings that inactive TEs become
-unrecognizable after more than 50 Mya due to genetic drift
+unrecognizable after more than 50 Mya due to random mutations
 \citep{Shedlock2000} and leads to the hypothesis that the majority of
 TEs in extant genomes might be dormant and possibly suppressed by the
-host genome defenses such as the RNAi or piRNA pathways. Save from
-sustaining a high gene deletion rate (along with its drawbacks), no
-mechanism for removing TEs has been identified in eukaryotes. Thus, the
-most efficient defense appears to be to reduce TE activity and let
-random mutation degrade the TEs.  Only during a period of inefficient
-silencing would the TEs be able to successfully proliferate, leading to
-a burst in TE activity as often observed in the study in chapter
-\ref{cha:mobilome}. These findings are better explained by the burst
-model than by the equilibrium model of TE dynamics.
+host genome defenses such as the RNAi or piRNA pathways or DNA
+methylation. Save from sustaining a high gene deletion rate (along with
+its drawbacks), no mechanism for removing TEs has been identified in
+eukaryotes. Thus, the most efficient defense appears to be to reduce TE
+activity and let random mutation degrade the TEs.  Only during a period
+of inefficient silencing, for example due to relaxed epigenetic
+modification, would the TEs be able to successfully proliferate, leading
+to a burst in TE activity as often observed in the study in chapter
+\ref{cha:mobilome}. This connection has been reviewed by, \eg,
+\citet{Slotkin2007, Zeh2009, Rebollo2010}. The findings in chapter
+\ref{cha:mobilome} are better explained by the burst model than by the
+equilibrium model of TE dynamics.
 
 In a study on nematode genomes, \citet{Szitenberg2016} argue that
 long-term TE dynamics are largely independent of host genome defenses,
