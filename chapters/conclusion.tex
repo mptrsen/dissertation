@@ -4,35 +4,39 @@
 
 The present thesis comprises research using a multitude of approaches
 from comparative genomics, ancestral reconstruction, phylogenetics,
-algorithm design and implementation. By using a standardized TE
+as well as algorithm design and implementation. By using a standardized TE
 annotation and a large taxon sampling that encompasses representatives
 from all major insect orders, it is able to draw conclusions that
 surpass inferences from intra-ordinal comparisons.  Additionally, the
 development of a new software tool enables researchers to flexibly
 assess orthology within coding nucleotide data.
 
-The software Orthograph has proven to be a valuable asset which was used
-in a number of publications. Many of these aim to resolve order-level
-phylogenies from transcriptomic data (\eg, \citet{Peters2017, Bank2017,
-Kutty2018, Simon2018, Gillung2018, Johnson2018}). Orthograph is not only
-limited to transcriptomes, however: In other publications, it was used
-to map target enrichment data to the correct genes \citep{Mayer2016,
-Shin2017, Sann2018}, often also for phylogenetic analyses. Orthograph
-was designed to be versatile, and this shows in its application in
-studies that investigate the evolution of specific gene families
+The software Orthograph (chapter \ref{cha:orthograph} has proven to be a
+valuable asset which was used in a number of publications. Many of these
+aim to resolve order-level phylogenies from transcriptomic data (\eg,
+\citet{Peters2017, Bank2017, Kutty2018, Simon2018, Gillung2018,
+Johnson2018}). In other publications, it was used to map target
+enrichment data to the correct genes \citep{Mayer2016, Shin2018,
+Sann2018}, often also for phylogenetic analyses. However, Orthograph was
+designed to be versatile, and this shows in its application in studies
+that investigate the evolution of specific gene families
 \citep{Pauli2016, Dowling2017} or the distribution of DNA methylation in
-insects \citep{Provataris2018}. Orthograph was reviewed in
+insects \citep{Provataris2018}.  Orthograph was reviewed in
 \citet{Nichio2017} and has recieved critical acclaim.
 
-By developing Orthograph, I have contributed to facilitate phylogenetic
-analyses for researchers. While the backbone phylogeny for insects has
-been resolved \citep{Misof12014}, many systematic questions on order and
-family level relationships remain. A growing number of studies have
-attempted to resolve them, but a comprehensive insect phylogeny, at
-least on genus level, has not been proposed. Of course, this is also due
-to the sheer number of insect species (see Figure \ref{fig:biodiversity}
-on page \pageref{fig:biodiversity}) that would require monumental
-sampling efforts.
+By providing a powerful and easy to use tool to identify orthologs in
+coding nucleotide data, the efforts described in chapter
+\ref{cha:orthograph} facilitate future phylogenetic analyses. The
+growing amount of available transcriptomic data for more and more
+species enables researchers to further resolve phylogenies based on
+molecular datasets with increasing resolution and accuracy. Although for
+many species, molecular data will never be obtained (see page
+\pageref{mass-extinction}), our understanding of the remaining species'
+relationships will develop. This endeavor continues to be important
+since all studies dealing with aspects of evolution --- also the ones in
+this thesis --- necessitate a concept of species interrelationships.
+Thus, Orthograph contributes to furthering the field of biological
+systematics. 
 
 The focus of the empirical studies in this thesis was on insect genomes.
 Insects are very different from vertebrates, plants, and fungi in both phenotype
@@ -97,21 +101,26 @@ ancestral TEs in arthropod species that diverged from the common
 ancestor of their sister species earlier than about 100 Mya. This result
 is consistent with prior findings that inactive TEs become
 unrecognizable after more than 50 Mya due to genetic drift
-\citep{Shedlock2000}. This result leads to the hypothesis that the
-majority of TEs in extant genomes might be dormant and possibly
-suppressed by the host genome defenses. Only during a period of
-inefficient silencing would the TEs be able to successfully proliferate,
-leading to a burst in TE activity as often observed in the study in
-chapter \ref{cha:mobilome}. These findings are better explained by the
-burst model than by the equilibrium model of TE dynamics.
+\citep{Shedlock2000} and leads to the hypothesis that the majority of
+TEs in extant genomes might be dormant and possibly suppressed by the
+host genome defenses such as the RNAi or piRNA pathways. Save from
+sustaining a high gene deletion rate (along with its drawbacks), no
+mechanism for removing TEs has been identified in eukaryotes. Thus, the
+most efficient defense appears to be to reduce TE activity and let
+random mutation degrade the TEs.  Only during a period of inefficient
+silencing would the TEs be able to successfully proliferate, leading to
+a burst in TE activity as often observed in the study in chapter
+\ref{cha:mobilome}. These findings are better explained by the burst
+model than by the equilibrium model of TE dynamics.
+
+In a study on nematode genomes, \citet{Szitenberg2016} argue that
+long-term TE dynamics are largely independent of host genome defenses,
+and that TE evolution in the host genome is determined by genetic drift.
+The results from the present studies in insect genomes (agree|disagree)
+with this suggestion. 
 
 \section{Roadmap}
 
-Orthograph (chapter \ref{cha:orthograph}) provides versatile tool ---
-not only for phylogenetics but also for other disciplines --- has been
-used in many studies --- mostly phylogenetics, but also evolutionary
-biology (Gómez-Zurita) --- not limited to transcriptomes but also useful
-with HE data --- etc --- phylogenetics important because provides the
-backbone phylogeny that is required for all evolutionary inferences ---
-in chapter \ref{cha:mobilome} the insect mobilome is characterized ---
-etc
+\todo{Implications on adaptive evolution, read review by
+\citet{Schrader2018}}  --- in chapter
+\ref{cha:mobilome} the insect mobilome is characterized --- etc

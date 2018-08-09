@@ -2,6 +2,7 @@
 % Some details about the dissertation.
 \title{Title of the dissertation}
 \author{Malte Petersen}
+\authorBirthplace{Hamburg-Bergedorf}
 
 %If you have one advisor
 \advisor{Bernhard Misof}
@@ -12,10 +13,10 @@
 %If you are coadvised
 \coadvisorOne{Bernhard Misof}
 \coadvisorTwo{Lars Podsiadlowski}
-\committeeInternal{Person Inside}
+\committeeInternal{Dietmar Quandt}
 
 % Everyone has an External committee member
-\committeeExternal{Person Outside}
+\committeeExternal{Torsten Wappler}
 
 % ... about the degree.
 \degree{Doctor rerum naturalium (Dr. rer. nat.)}
@@ -35,7 +36,7 @@
 %\pdTwoYear{2021}
 
 % School name and location
-\university{Universität Bonn}
+\university{Rheinische Friedrich-Wilhelms-Universität Bonn}
 \universitycity{Bonn}
 \universitystate{Germany}
 
@@ -53,6 +54,28 @@
     filecolor=black,
     linkcolor=black,
     urlcolor=SchoolColor,
+}
+
+% change the title page a little because every university has different
+% requirements
+\renewcommand{\maketitle}{
+	\thispagestyle{empty}
+	\vspace*{\fill}
+	\vspace{100pt}
+	\begin{center}
+	\Huge \textcolor{SchoolColor}{\thetitle} \normalsize \\
+	\vspace{100pt}
+	\textsc{a dissertation presented \\ by\\
+	\theauthor\\ from\\ \authorBirthplace\\
+	to\\ the \department\\
+	\vspace{12pt}
+	in partial fulfillment of the requirements\\
+	for the doctoral degree of\\ \degree\\
+	%in the subject of\\ \field\\
+	\vspace{12pt}
+	\university\\ \universitycity, \universitystate\\
+	\degreemonth\ \degreeyear}
+	\end{center} \vspace*{\fill}
 }
 
 % some custom commands

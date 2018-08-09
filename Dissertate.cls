@@ -163,33 +163,36 @@
      \endlist}
 
 % Some definitions.
-\def\advisor#1{\gdef\@advisor{#1}}
-\def\coadvisorOne#1{\gdef\@coadvisorOne{#1}}
-\def\coadvisorTwo#1{\gdef\@coadvisorTwo{#1}}
-\def\committeeInternal#1{\gdef\@committeeInternal{#1}}
-\def\committeeInternalOne#1{\gdef\@committeeInternalOne{#1}}
-\def\committeeInternalTwo#1{\gdef\@committeeInternalTwo{#1}}
-\def\committeeExternal#1{\gdef\@committeeExternal{#1}}
-\def\degreeyear#1{\gdef\@degreeyear{#1}}
-\def\degreemonth#1{\gdef\@degreemonth{#1}}
-\def\degreeterm#1{\gdef\@degreeterm{#1}}
-\def\degree#1{\gdef\@degree{#1}}
-\def\department#1{\gdef\@department{#1}}
-\def\field#1{\gdef\@field{#1}}
-\def\university#1{\gdef\@university{#1}}
-\def\universitycity#1{\gdef\@universitycity{#1}}
-\def\universitystate#1{\gdef\@universitystate{#1}}
-\def\programname#1{\gdef\@programname{#1}}
-\def\pdOneName#1{\gdef\@pdOneName{#1}}
-\def\pdOneSchool#1{\gdef\@pdOneSchool{#1}}
-\def\pdOneYear#1{\gdef\@pdOneYear{#1}}
-\def\pdTwoName#1{\gdef\@pdTwoName{#1}}
-\def\pdTwoSchool#1{\gdef\@pdTwoSchool{#1}}
-\def\pdTwoYear#1{\gdef\@pdTwoYear{#1}}
+\def\authorBirthplace#1{\gdef\authorBirthplace{#1}}
+\def\advisor#1{\gdef\advisor{#1}}
+\def\coadvisorOne#1{\gdef\coadvisorOne{#1}}
+\def\coadvisorTwo#1{\gdef\coadvisorTwo{#1}}
+\def\committeeInternal#1{\gdef\committeeInternal{#1}}
+\def\committeeInternalOne#1{\gdef\committeeInternalOne{#1}}
+\def\committeeInternalTwo#1{\gdef\committeeInternalTwo{#1}}
+\def\committeeExternal#1{\gdef\committeeExternal{#1}}
+\def\degreeyear#1{\gdef\degreeyear{#1}}
+\def\degreemonth#1{\gdef\degreemonth{#1}}
+\def\degreeterm#1{\gdef\degreeterm{#1}}
+\def\degree#1{\gdef\degree{#1}}
+\def\department#1{\gdef\department{#1}}
+\def\field#1{\gdef\field{#1}}
+\def\university#1{\gdef\university{#1}}
+\def\universitycity#1{\gdef\universitycity{#1}}
+\def\universitystate#1{\gdef\universitystate{#1}}
+\def\programname#1{\gdef\programname{#1}}
+\def\pdOneName#1{\gdef\pdOneName{#1}}
+\def\pdOneSchool#1{\gdef\pdOneSchool{#1}}
+\def\pdOneYear#1{\gdef\pdOneYear{#1}}
+\def\pdTwoName#1{\gdef\pdTwoName{#1}}
+\def\pdTwoSchool#1{\gdef\pdTwoSchool{#1}}
+\def\pdTwoYear#1{\gdef\pdTwoYear{#1}}
 % School name and location
-\university{Monsters University}
-\universitycity{Monstropolis}
-\universitystate{Earth}
+%--------------------------------------------------
+% \university{Monsters University}
+% \universitycity{Monstropolis}
+% \universitystate{Earth}
+%-------------------------------------------------- 
 
 % School color found from university's graphic identity site:
 % http://isites.harvard.edu/icb/icb.do?keyword=k75408&pageid=icb.page392732
@@ -233,14 +236,15 @@
 	\Huge \textcolor{SchoolColor}{\thetitle} \normalsize \\
 	\vspace{100pt}
 	\textsc{a dissertation presented \\ by\\
-	\theauthor\\ to\\ The \@department\\
+	\theauthor\\ from\\ \authorBirthplace\\
+	to\\ the \department\\
 	\vspace{12pt}
 	in partial fulfillment of the requirements\\
-	for the degree of\\ \@degree\\
-	in the subject of\\ \@field\\
+	for the doctoral degree of\\ \degree\\
+	%in the subject of\\ \field\\
 	\vspace{12pt}
-	\@university\\ \@universitycity, \@universitystate\\
-	\@degreemonth\ \@degreeyear}
+	\university\\ \universitycity, \universitystate\\
+	\degreemonth\ \degreeyear}
 	\end{center} \vspace*{\fill}
 }
 
@@ -259,11 +263,11 @@
 	\pagenumbering{roman}
 	\setcounter{page}{3}
 	\pagestyle{fancy}
-	\lhead{Thesis advisor: \@advisor} \rhead{\@author}
+	\lhead{Thesis advisor: \advisor} \rhead{\theauthor}
 	\renewcommand{\headrulewidth}{0.0pt}
 	\vspace*{35pt}
 	\begin{center}
-	\Large \textcolor{SchoolColor}{\@title} \normalsize \\
+	\Large \textcolor{SchoolColor}{\thetitle} \normalsize \\
 	\vspace*{20pt}
 	\scshape Abstract \\ \rm
 	\end{center}
