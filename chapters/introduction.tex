@@ -308,14 +308,14 @@ clustering nucleotide or amino acid sequences based on their similarity
 than to all other genes in the genomes under comparison
 \citep{Altenhoff2012a}, the orthology hypothesis can be tested via a
 bi-directional search for similarity applying a best reciprocal hit
-(BRH) criterion: Only if the gene in question returns the best search
-hit in both directions (\ie, the genes are more similar to each other
-than to all other genes) it can be assumed to be orthologous. By
-grouping genes that share BRH relations, one can form clusters of
-orthologous genes or simply orthologous groups (OGs)
+(BRH) criterion: Only if the genes in question form the best search hit
+in both directions (\ie, the genes are more similar to each other than
+to all other genes) they can be assumed to be orthologous. By grouping
+genes from multiple species that share BRH relations, one can form
+clusters of orthologous genes or simply orthologous groups (OGs)
 \citep{Altenhoff2012}. This approach has been implemented in several
 software packages for use in genomic datasets \citep{Li2003,
-Tatusov2003, Berglund2008, Zdobnov2017}. Obtaining a complete and
+Tatusov2003, Berglund2008, Zdobnov2017}.  Obtaining a complete and
 accurate genome sequence is, however, associated with technical
 difficulties and a cost that depends on the genome size. For these
 reasons, many phylogenetic studies employ transcriptomes: the nucleotide
@@ -328,13 +328,13 @@ RNA sample. While this is usually not a problem for phylogenetic
 analyses \citep{Wiens2006}, it means that the above-mentioned methods to
 \emph{de novo} infer orthology designed for genomes cannot not be used
 on transcriptomic data. To infer orthology among transcripts, one
-usually applies a reference-based strategy, that maps transcripts to
+usually applies a reference-based strategy that maps transcripts to
 known OGs. In the study by \citet{Misof2014}, we used a software that
 implements this approach \citep{Ebersberger2009}, however, during the
 analyses, it became obvious that it had several design issues that were
-non-trivial to fix. Therefore, I concepted and wrote a
+non-trivial to fix.  Therefore, I concepted and wrote a
 re-implementation of the reference-based BRH orthology inference
-strategy that mitigates those issues while delivering equal performance
+approach that mitigates those issues while delivering equal performance
 \citep{Petersen2017}. The software, Orthograph, is described in chapter
 \ref{cha:orthograph}.
 
@@ -393,15 +393,15 @@ the inference of the ancestral insect TE content.
 % b) TE content is a predictor for genome size
 
 In chapter \ref{cha:mobilome}, I characterize the insect TE repertoire
-in a comparative study based on genomic sequence data from 73 insect and
-non-insect arthropod species encompassing all major orders. The results
-highlight differential TE abundance and composition in comparisons
-between and within insect orders. The study also demonstrates that the
-TE diversity in insects is much larger than previously thought. The
-correlation between TE content and genome size in insects is
-substantiated. Additionally, the chapter shows that the TE copy age
-distribution is highly diverse and that some TEs are recently active
-among insects.
+in a comparative standardized study based on genomic sequence data from
+73 insect and non-insect arthropod species encompassing all major
+orders. The results highlight differential TE abundance and composition
+in comparisons between and within insect orders. The study also
+demonstrates that the TE diversity in insects is much larger than
+previously thought. The correlation between TE content and genome size
+in insects is substantiated. Additionally, the chapter shows that the TE
+copy divergence distribution is highly diverse and that some TEs are
+recently active among insects.
 
 % Warum? ``Da sind unterschiede zwischen verts und insekten, aber. . .
 % weiss man noch nicht und dabei koennte . . . herauskommen''
@@ -442,10 +442,10 @@ Appendix \ref{app:other-publications} lists an additional seven
 co-authored publications. Among others, \citet{Misof2014} (page
 \pageref{app:Misof2014}) consummates the inference of a robust
 phylogenetic backbone tree of 145 insect species from all major insect
-orders. The analysis includes node dating with a comprehensive
-calibration dataset of 37 fossils. The study presents a semi-automated
-and documented reproducible workflow that facilitates phylogeny
-inference from transcriptomic data of many species. It also provides the
-backbone phylogeny and node dates for the study in chapter
-\ref{cha:dynamics} and the breeding ground for the development of
-Orthograph (chapter \ref{cha:orthograph}).
+orders. I was a major contributor to the study. The analysis includes
+node dating with a comprehensive calibration dataset of 37 fossils. The
+study presents a semi-automated and documented reproducible workflow
+that facilitates phylogeny inference from transcriptomic data of many
+species. It also provides the backbone phylogeny and node dates for the
+study in chapter \ref{cha:dynamics} and the breeding ground for the
+development of Orthograph (chapter \ref{cha:orthograph}).
