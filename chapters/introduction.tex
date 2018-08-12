@@ -13,7 +13,7 @@ include introns (non-coding sections of genes, around \p{26}), but by
 far the most voluminous chunk consists of repetitive elements: DNA
 segments that occur in sometimes many copies throughout the genome.
 More than half of the three billion base pairs (Gbp) of the human genome
-(\p{52}) is occupied by repetitive elements \citep{deKoning2011,Lander2001}.
+(\p{52}) is occupied by repetitive elements \citep{Lander2001,deKoning2011}.
 The major part of these repetitive elements in the human genome, also called
 repeats, is formed by transposable elements (\p{45} of the genome).
 
@@ -102,7 +102,7 @@ mutation rate (\emph{i.e.}, the damage caused by deleterious mutations),
 and the cost of mechanisms that reduce the mutation rate
 \citep{Bernstein1987, Altenberg2011}.
 
-\section{Impact of transposable element dynamics on the genome}
+\section{Impact of transposable element on the genome}
 
 The presence and activity of TEs can have disruptive influence on the
 genome architecture. By inserting at critical positions, TEs can disable
@@ -150,10 +150,10 @@ does not even have the methyltransferase enzyme in its gene repertoire. Likewise
 butterfly species have lost RNAi pathway genes \citep{Pauli2016}. Thus,
 these genome defenses appear to be modular and complementary to one
 another. They are effective to a certain extent: permanently inactive
-TEs become genetic ``cruft'' and are degraded by genetic drift (random
-mutations over time) like other parts of the genome that are not subject
-to selection \citep{Szitenberg2016}. As a result of these extensive
-silencing techniques, it is not surprising that most of the TE
+TEs become genomic ``cruft'' and are degraded by random mutations over
+time and genetic drift like other parts of the genome that are not
+subject to selection \citep{Szitenberg2016}. As a result of these
+extensive silencing techniques, it is not surprising that most of the TE
 population in extant genomes is inactive \citep{Yoder1997,
 Zilberman2007}.
 
@@ -232,11 +232,12 @@ species, we will never be able to obtain the genomic source code, and
 this will hamper our understanding of the roles these species occupied
 in the interaction network of their habitats.
 
-\label{mass-extinction}
-As we are currently experiencing a mass extinction event that parallels
-other episodes in earth's history with high rates of biodiversity
-decline \citep{Pimm1995, Dirzo2003, Schipper2008, Barnosky2011,
-Dirzo2014}. Other than the five previous major extinction events
+\label{mass-extinction}%
+This not only affects insects, but all kingdoms of life: we are
+currently experiencing a mass extinction event that parallels other
+episodes in earth's history with high rates of biodiversity decline
+\citep{Pimm1995, Dirzo2003, Schipper2008, Barnosky2011, Dirzo2014}.
+Other than the five previous major extinction events
 \citep{Kolbert2014}, it is anthropogenic in origin \citep{Leakey1996,
 Ceballos2015} and is associated with global warming \citep{Cook2016,
 Wuebbles2017}, large-scale deforestation \citep{Wright2005}, destruction
@@ -307,34 +308,35 @@ clustering nucleotide or amino acid sequences based on their similarity
 than to all other genes in the genomes under comparison
 \citep{Altenhoff2012a}, the orthology hypothesis can be tested via a
 bi-directional search for similarity applying a best reciprocal hit
-(BRH) criterion: Only if the gene in question returns the best hit in
-both directions (\ie, the genes are more similar to each other than to
-all other genes) it can be assumed to be orthologous. By grouping genes
-that share BRH relations, one can form clusters of orthologous genes or
-simply orthologous groups (OGs) \citep{Altenhoff2012}. This approach has
-been implemented in several software packages for use in genomic
-datasets \citep{Li2003, Tatusov2003, Berglund2008, Zdobnov2017}.
-Obtaining a complete and accurate genome sequence is, however,
-associated with technical difficulties and a cost that depends on the
-genome size. For these reasons, many phylogenetic studies employ
-transcriptomes: the nucleotide sequences of transcripts present in the
-sample at the time of RNA fixation \citep{Wang2009}. Transcriptomes can
-be sequenced at a fixed cost, however, in contrast to genomes,
-transcriptomes are inherently incomplete with regard to the gene set,
-simply because not all genes are expressed all the time and may
-therefore be absent from the sequenced RNA sample. While this is usually
-not a problem for phylogenetic analyses \citep{Wiens2006}, it means that
-the above-mentioned methods to \emph{de novo} infer orthology designed
-for genomes cannot not be used on transcriptomic data. To infer
-orthology among transcripts, one usually applies a reference-based
-strategy, that maps transcripts to known OGs. In the study by
-\citet{Misof2014}, we used a software that implements this approach
-\citep{Ebersberger2009}, however, during the analyses, it became obvious
-that it had several design issues that were non-trivial to fix.
-Therefore, I concepted and wrote a re-implementation of the
-reference-based BRH orthology inference strategy that mitigates those
-issues while delivering equal performance \citep{Petersen2017}.  The
-software, Orthograph, is described in chapter \ref{cha:orthograph}.
+(BRH) criterion: Only if the gene in question returns the best search
+hit in both directions (\ie, the genes are more similar to each other
+than to all other genes) it can be assumed to be orthologous. By
+grouping genes that share BRH relations, one can form clusters of
+orthologous genes or simply orthologous groups (OGs)
+\citep{Altenhoff2012}. This approach has been implemented in several
+software packages for use in genomic datasets \citep{Li2003,
+Tatusov2003, Berglund2008, Zdobnov2017}. Obtaining a complete and
+accurate genome sequence is, however, associated with technical
+difficulties and a cost that depends on the genome size. For these
+reasons, many phylogenetic studies employ transcriptomes: the nucleotide
+sequences of transcripts present in the sample at the time of RNA
+fixation \citep{Wang2009}. Transcriptomes can be sequenced at a fixed
+cost, however, in contrast to genomes, transcriptomes are inherently
+incomplete with regard to the gene set, simply because not all genes are
+expressed all the time and may therefore be absent from the sequenced
+RNA sample. While this is usually not a problem for phylogenetic
+analyses \citep{Wiens2006}, it means that the above-mentioned methods to
+\emph{de novo} infer orthology designed for genomes cannot not be used
+on transcriptomic data. To infer orthology among transcripts, one
+usually applies a reference-based strategy, that maps transcripts to
+known OGs. In the study by \citet{Misof2014}, we used a software that
+implements this approach \citep{Ebersberger2009}, however, during the
+analyses, it became obvious that it had several design issues that were
+non-trivial to fix. Therefore, I concepted and wrote a
+re-implementation of the reference-based BRH orthology inference
+strategy that mitigates those issues while delivering equal performance
+\citep{Petersen2017}. The software, Orthograph, is described in chapter
+\ref{cha:orthograph}.
 
 \begin{table}
 \centering\footnotesize
