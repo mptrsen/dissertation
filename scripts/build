@@ -1,14 +1,16 @@
 #!/bin/sh
-BASEDIR=$(dirname $0)
-cd $BASEDIR
+basedir=$(dirname $0)
+cd "$basedir"
 cd ..
 
-# Build the dissertation.
-xelatex dissertation
-bibtex dissertation
-xelatex dissertation
-xelatex dissertation
+dissertation="$1"
 
-# Hide the log.
-mv "dissertation.log" ".logged"
+# Build the dissertation.
+xelatex "$dissertation"
+bibtex "$dissertation"
+xelatex "$dissertation"
+xelatex "$dissertation"
+
+# Don't hide the log.
+#mv "$dissertation.log" ".logged"
 
