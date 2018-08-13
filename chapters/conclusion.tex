@@ -14,9 +14,9 @@ orthology within coding nucleotide data.
 The software Orthograph (chapter \ref{cha:orthograph} has proven to be a
 valuable asset which was used in a number of publications. Many of these
 aim to resolve order-level or family-level phylogenies from
-transcriptomic data (\eg, Vespidae \citep{Bank2017}, Hymenoptera
-\citep{Peters2017}, Diptera \citep{Kutty2018}, Acroceridae
-\citep{Gillung2018}, Hemiptera \citep{Johnson2018}, Palaeoptera
+transcriptomic data (\eg, Hymenoptera: Vespidae \citep{Bank2017},
+Hymenoptera \citep{Peters2017}, Diptera: Acroceridae \citep{Gillung2018},
+Hemiptera \citep{Johnson2018}, Diptera \citep{Kutty2018}, Palaeoptera
 \citep{Simon2018}). In other publications, it was used to map target
 enrichment data to the correct genes \citep{Mayer2016, Sann2018,
 Shin2018}, often also for phylogenetic analyses. However, Orthograph was
@@ -42,44 +42,44 @@ Thus, Orthograph contributes to furthering the field of biological
 evolutionary biology or comparative genomics to make meaningful
 inferences.
 
-The focus of the empirical studies in this thesis was on insect genomes.
-Insects are very different from vertebrates, plants, and fungi in both
-phenotype and genotype. This is also reflected in the processes that
-define their genome size with respect to the TE content. As in
-vertebrates, TE content is a predictor for genome size, however,  DNA
-gain and loss rates do not affect genome size in insects as much as they
-do in vertebrates \citep{Kapusta2017-1,Lindblad-Toh2005}.  Nevertheless,
-insect genome size does exhibit large fluctuations \citep{Alfsnes2017},
-but these cannot be explained by differential TE activity alone.
-Similarly, the patterns of DNA methylation, which has been hypothesized
-to be involved in TE defense mechanisms, in insect genomes are
-drastically different from what has been observed in vertebrates or
-plants \citep{Provataris2018,Suzuki2008}.  Apparently, insects do not
-rely on DNA methylation to inhibit TE proliferation and thereby genome
-size expansion. What else, then, could explain the large spread in
-insect genome size?
+The focus of the empirical comparative studies in this thesis was on
+insect genomes. Insects are very different from vertebrates, plants,
+and fungi in both phenotype and genotype. This is also reflected in the
+processes that define their genome size with respect to the TE content.
+As in vertebrates, TE content is a predictor for genome size, however,
+DNA gain and loss rates do not affect genome size in insects as much as
+they do in vertebrates \citep{Kapusta2017-1, Lindblad-Toh2005}.
+Nevertheless, insect genome size does exhibit large fluctuations
+\citep{Alfsnes2017}, but these cannot be explained by differential TE
+activity alone.  Similarly, the patterns of DNA methylation, which has
+been hypothesized to be involved in TE defense mechanisms, in insect
+genomes are drastically different from what has been observed in
+vertebrates or plants \citep{Provataris2018, Suzuki2008}. Apparently,
+insects do not rely on DNA methylation to inhibit TE proliferation and
+thereby genome size expansion. What else, then, could explain the large
+spread in insect genome size?
 
 The answer to that question is likely not straigthforward, and the
 present thesis does not have it. It does, however, provide a broad array
 of pointers for future research. For example, the RNA interference
-pathway genes were implicated in TE inhibition
-\citep{Aravin2001,Czech2008} and are absent in some butterfly species
-that exhibited high TE content \citep{Dowling2017}. The large number of
-available lepidopteran genomes provides ample opportunity to closely
-investigate these genes and shed more light on TE defense mechanisms.
-The study in chapter \ref{cha:mobilome} characterizes the TE repertoire
-of 73 arthropod species, the largest taxon sampling for a comparative
-study on TE diversity in arthropods to date. The TE annotation data that
-were generated for the study are valuable as a resource to investigate
-the interaction of TEs with other genome components such as
-protein-coding genes. The annotation results from six insect species
-\todo{how many did Jeanne use?} were used in investigations on the
-protein-coding gene repertoire in insects \todo{how to cite Jeanne?}.
-Another part of the TE annotation data was used by
-\citep{Provataris2018}, and the annotation pipeline was used to identify
-TEs in additional insect genomes. The annotation procedure is largely
-identical to the one used by \citet{Reinar2016} who benchmarked the
-approach and showed it to be accurate and efficient. By combining
+pathway genes were implicated in TE inhibition \citep{Aravin2001,
+Czech2008} and are absent in some butterfly species that exhibited high
+TE content \citep{Dowling2017}. The large number of publicly available
+lepidopteran genomes provides ample opportunity to closely investigate
+these genes and shed more light on TE defense mechanisms. Incorporating
+some of these genomes, the study in chapter \ref{cha:mobilome}
+characterizes the TE repertoire of 73 arthropod species, the largest
+taxon sampling for a comparative study on TE diversity in arthropods to
+date. The TE annotation data that were generated for the study are
+valuable as a resource to investigate the interaction of TEs with other
+genome components such as protein-coding genes. The annotation results
+from six insect species \todo{how many did Jeanne use?} were used in
+investigations on the protein-coding gene repertoire in insects
+\todo{how to cite Jeanne?}. Another part of the TE annotation data was
+used by \citep{Provataris2018}, and the annotation pipeline was used to
+identify TEs in additional insect genomes. The annotation procedure is
+largely identical to the one used by \citet{Reinar2016} who benchmarked
+the approach and showed it to be accurate and efficient. By combining
 several well-established algorithm implementations into an easy to use
 and fully automated pipeline, the shell script provides a tool to
 reliably annotate TEs in assembled genomes of non-model species. 
@@ -101,8 +101,8 @@ database to set extant insect genome size into context with other
 phenotypic traits \citep{Alfsnes2017, Gregory2011}, none had information
 on the ancestral states of these traits due to lack of a phylogeny with
 branch lengths. Using the obtained ancestral genome size estimates, it
-was possible to classify the TE content into ancestral and
-lineage-specific. The study shows that there are practically no
+was possible to classify the annotated TE content into ancestral and
+lineage-specific TEs. The study shows that there are practically no
 ancestral TEs in arthropod species that diverged from the common
 ancestor of their sister species earlier than about 100 Mya. This result
 is consistent with prior findings that inactive TEs become
@@ -111,15 +111,16 @@ unrecognizable after more than 50 Mya due to random mutations
 TEs in extant genomes might be dormant and possibly suppressed by the
 host genome defenses such as the RNAi or piRNA pathways or DNA
 methylation. Save from sustaining a high gene deletion rate (along with
-its drawbacks), no mechanism for removing TEs has been identified in
-eukaryotes. Thus, the most efficient defense appears to be to reduce TE
-activity and let random mutation degrade the TEs. Only during a period
-of inefficient silencing, for example due to relaxed epigenetic
-modification, would the TEs be able to successfully proliferate
-\citep{Slotkin2007, Zeh2009, Rebollo2010}, leading to a burst in TE
-activity as often observed in the study in chapter \ref{cha:mobilome}.
-These periods of epigenetic silencing could be caused by environmental
-stress \citep{Horvath2017, Horvath2017-1}.
+its drawbacks), no mechanism for targeted removal of TEs has been
+identified in eukaryotes. Thus, the most efficient defense appears to be
+to reduce TE activity and let random mutation degrade the TEs. Only
+during a period of inefficient silencing, for example due to relaxed
+epigenetic modification, would the TEs be able to successfully
+proliferate \citep{Slotkin2007, Zeh2009, Rebollo2010}, leading to a
+burst in TE activity as often observed in the study in chapter
+\ref{cha:mobilome}.  These periods of epigenetic silencing could be
+caused by environmental stress \citep{Horvath2017, Horvath2017-1}, an
+opportunity for adaptive evolution to work.
 
 In general, the role of TEs in adaptive evolution cannot be disregarded.
 After decades of being viewed as mainly deleterious or neutral in effect
@@ -138,8 +139,8 @@ Therefore, the rate of beneficial or destructive effects due to TE
 activity is no different than that of random nucleotide substitutions,
 however, the effects are more profound when they are caused by TEs
 because they affect a larger region of the genome and can cause
-chromosomal rearrangements due to ectopic recombination
-\citep{Gray2000}. In \species{Drosophila melanogaster} and \species{D.
+chromosomal rearrangements due to ectopic recombination \citep{Gray2000,
+Fiston-Lavier2007}. In \species{Drosophila melanogaster} and \species{D.
 miranda}, which exhibit similar rates of adaptation \citep{Bachtrog2008}
 (\species{Drosophila melanogaster} also shows a high rate of TE-induced
 adaptation \citep{Gonzalez2008}), the study in chapter
@@ -149,7 +150,7 @@ exhibits a smaller current population size \citep{Bachtrog2008}, where
 the impact of genetic drift is amplified. The rate of fixation of a
 mutation is also higher in small populations \citep{Kimura1969}, thus it
 is not surprising that a lower TE content in \species{D. miranda}, as
-found in chapter \ref{cha:mobilome} is not reflected in a lower rate of
+found in chapter \ref{cha:mobilome}, is not reflected in a lower rate of
 adaptation.
 
 What to do with these?
