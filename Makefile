@@ -23,4 +23,4 @@ clean:
 	$(RM) .logged
 
 mrproper: clean
-	$(RM) $(name).pdf
+	$(RM) $(name).pdf $(finalname).pdf $(finalname).tex

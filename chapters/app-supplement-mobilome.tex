@@ -1,28 +1,24 @@
 \chapter{Appendix to chapter \ref{cha:mobilome}}
 
 \section{Supplementary Figures}
-%--------------------------------------------------
-% 
-% \begin{figure}[h]
-% \centering
-% \caption{<+caption text+>}
-% \label{fig:<+label+>}
-% \end{figure}<++>
-% 
-% \begin{figure}[<+htpb+>]
-% \centering
-% \caption{<+caption text+>}
-% \label{fig:<+label+>}
-% \end{figure}<++>
-% 
-%-------------------------------------------------- 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{te-families-vs-genome-size}
+\caption[The number of TE superfamilies is significantly correlated to
+genome size]{The number of TE superfamilies is significantly correlated to
+genome size as well.}
+\label{fig:te-families-vs-genome-size}
+\end{figure}
 
 \section{Supplementary Tables}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[]
-\caption{{\label{tab:coverage}}}
+\caption[TE coverage data]{{TE coverage by classes in 73 arthropod
+genomes.%
+\label{tab:coverage}}}
 \begin{tabular}{@{}lllllllll@{}}
 \toprule
 Species                    & Genome size & DNA       & LINE      & LTR       & SINE      & Unknown    & Total      & Coverage {[}\%{]} \\ \midrule
@@ -105,7 +101,9 @@ Zootermopsis nevadensis    & 485009472   & 14695064  & 26646385  & 236056    & 9
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[]
-\caption{{\label{tab:urls}}}
+\caption[Genome assembly download URLs]{{Download URLs for the genome
+assemblies of 73 arthropod species.%
+\label{tab:urls}}}
 \begin{tabular}{@{}lll@{}}
 \toprule
 Species                     & Order         & URL                                                                                                                                              \\ \midrule
@@ -188,7 +186,9 @@ Trichogramma pretiosum        & Hymenoptera   & ftp://ftp.hgsc.bcm.edu/I5K-pilot
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[]
-\caption{{\label{tab:patterns}}}
+\caption[Word patterns to exclude non-TE search hits]{{Patterns employed to exclude non-TE search hits. Note
+that these are regular expression for use with a compatible parser such
+as GNU grep or Perl.\label{tab:patterns}}}
 \centering
 \begin{tabular}{@{}l@{}}
 \toprule
