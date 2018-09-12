@@ -6,13 +6,6 @@ XeLaTeX source of my PhD thesis including figures and bibliography. To compile, 
 
 Requires XeTeX.
 
-## To Do
-
-Missing figures:
-
-- te-coverage-in-insect-genomes-both
-- COI-tree-with-genome-sizes-log
-
 ## Acknowledgements
 
 This beautiful thesis was possible using the [Dissertate](https://github.com/suchow/Dissertate) LaTeX template by [Jordan Suchow](http://suchow.io). Thank you for making it available!
