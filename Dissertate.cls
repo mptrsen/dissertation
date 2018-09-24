@@ -125,7 +125,7 @@
 % References.
 \renewcommand\bibname{References}
 %\RequirePackage[super,comma,numbers]{natbib}
-\RequirePackage[comma,authoryear]{natbib}
+\RequirePackage[authoryear]{natbib}
 \RequirePackage{bibentry}
 \nobibliography*
 \renewcommand{\bibnumfmt}[1]{[#1]}
