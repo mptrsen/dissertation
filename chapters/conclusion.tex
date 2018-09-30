@@ -2,14 +2,14 @@
 \chapter{General Conclusion}
 \label{conclusion}
 
-The present thesis comprises research using a multitude of approaches
-from comparative genomics, ancestral reconstruction, phylogenetics, as
-well as algorithm design and implementation. By using a standardized TE
-annotation and a large taxon sampling that encompasses representatives
-from all major insect orders, it is able to draw conclusions that
-surpass inferences from intra-ordinal comparisons. Additionally, the
-development of a new software tool enables researchers to easily assess
-orthology within coding nucleotide data.
+\newthought{The present thesis} comprises research using a multitude of
+approaches from comparative genomics, ancestral reconstruction,
+phylogenetics, as well as algorithm design and implementation. By using
+a standardized TE annotation and a large taxon sampling that encompasses
+representatives from all major insect orders, it is able to draw
+conclusions that surpass inferences from intra-ordinal comparisons.
+Additionally, the development of a new software tool enables researchers
+to easily assess orthology within coding nucleotide data.
 
 The software Orthograph (chapter \ref{cha:orthograph} has proven to be a
 valuable asset which was used in a number of publications. Many of these
@@ -42,7 +42,7 @@ Thus, Orthograph contributes to furthering the field of biological
 evolutionary biology or comparative genomics to make meaningful
 inferences.
 
-The focus of the empirical comparative studies in this thesis was on
+The focus of the empirical comparative studies in this thesis is on
 insect genomes. Insects are very different from vertebrates, plants,
 and fungi in both phenotype and genotype. This is also reflected in the
 processes that define their genome size with respect to the TE content.
@@ -81,8 +81,8 @@ identify TEs in additional insect genomes. The annotation procedure is
 largely identical to the one used by \citet{Reinar2016} who benchmarked
 the approach and showed it to be accurate and efficient. By combining
 several well-established algorithm implementations into an easy to use
-and fully automated pipeline, the shell script provides a tool to
-reliably annotate TEs in assembled genomes of non-model species. 
+and fully automated pipeline, the method provides a tool to reliably
+annotate TEs in assembled genomes of non-model species. 
 
 The construction of a dated phylogeny for over 600 insect and arthropod
 species from the literature and publicly available DNA barcode data is
@@ -113,9 +113,12 @@ host genome defenses such as the RNAi or piRNA pathways or DNA
 methylation. Save from sustaining a high gene deletion rate (along with
 its drawbacks), no mechanism for targeted removal of TEs has been
 identified in eukaryotes. Thus, the most efficient defense appears to be
-to reduce TE activity and let random mutation degrade the TEs. Only
-during a period of inefficient silencing, for example due to relaxed
-epigenetic modification, would the TEs be able to successfully
+to reduce TE activity and let random mutation degrade the TEs. In fact,
+in a study on nematode genomes, \citet{Szitenberg2016} argue that
+long-term TE dynamics are largely independent of host genome defenses,
+and that TE evolution in the host genome is determined by genetic drift.
+Only during a period of inefficient silencing, for example due to
+relaxed epigenetic modification, would the TEs be able to successfully
 proliferate \citep{Slotkin2007, Zeh2009, Rebollo2010}, leading to a
 burst in TE activity as often observed in the study in chapter
 \ref{cha:mobilome}.  These periods of epigenetic silencing could be
@@ -152,17 +155,6 @@ mutation is also higher in small populations \citep{Kimura1969}, thus it
 is not surprising that a lower TE content in \species{D. miranda}, as
 found in chapter \ref{cha:mobilome}, is not reflected in a lower rate of
 adaptation.
-
-What to do with these?
-
-\begin{itemize}
-\item In a study on nematode genomes, \citet{Szitenberg2016} argue that
-long-term TE dynamics are largely independent of host genome defenses,
-and that TE evolution in the host genome is determined by genetic drift.
-
-\item The findings in chapter \ref{cha:dynamics} are better explained by the
-burst model than by the equilibrium model of TE dynamics. 
-\end{itemize}
 
 \section{Roadmap}
 
