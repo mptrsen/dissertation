@@ -128,7 +128,7 @@ performance is on par with HaMStR's while not suffering from redundant
 transcript assignment. Further, we emphasize the flexibility of
 Orthograph and highlight features that are likely of particular interest
 for a wide array of analyses in molecular evolutionary biology and in
-comparative genomics in particular.
+	comparative genomics in particular.
 
 \section{Implementation}\label{implementation}
 
@@ -219,18 +219,18 @@ clarity, documentation, and reproducibility.
 \begin{center}
 \includegraphics[width=\textwidth]{orthograph-workflow}
 \caption[Orthograph workflow]{Orthograph workflow. From a set of
-	reference proteins (1), the proteins are clustered to form orthologous groups
-	(OGs) (2). These OGs are aligned to construct profile hidden Markov models
-	(pHMMs) (3). The pHMMs are used to search for candidate orthologs in the
-	target library (4). Each of the obtained hit amino acid sequences (5) is used
-	as a query for a BLAST search in a database comprising all reference proteins
-	(including the ones forming OGs) (6). Search results from both forward and
-	reverse searches (7) are collated and sorted by bit score, with the reverse
-	search result order being subordinated to the forward result order (8). This
-	list is evaluated in descending order: if the reverse search hit a protein
-	that is part of the OG used for the forward search, the candidate ortholog is
-	mapped to the OG (9).}
-	\label{fig:orthograph-workflow}
+reference proteins (1), the proteins are clustered to form orthologous groups
+(OGs) (2). These OGs are aligned to construct profile hidden Markov models
+(pHMMs) (3). The pHMMs are used to search for candidate orthologs in the
+target library (4). Each of the obtained hit amino acid sequences (5) is used
+as a query for a BLAST search in a database comprising all reference proteins
+(including the ones forming OGs) (6). Search results from both forward and
+reverse searches (7) are collated and sorted by bit score, with the reverse
+search result order being subordinated to the forward result order (8). This
+list is evaluated in descending order: if the reverse search hit a protein
+that is part of the OG used for the forward search, the candidate ortholog is
+mapped to the OG (9).}
+\label{fig:orthograph-workflow}
 \end{center}
 \end{figure}
 
@@ -280,21 +280,22 @@ in two sets: one without entries from \species{A. mellifera}, and one
 without entries from \species{H.  saltator}). Of the 4,625
 protein-coding genes that we searched for, Orthograph identified 4,582
 (99.07 \%) in the RGS of \species{A. mellifera} and 4,590 (99.24 \%) in
-the RGS of \species{H. saltator} (Table \ref{tab:orthograph-tests} on page
-\pageref{tab:orthograph-tests}). In the case of \species{A.  mellifera},
-five proteins were assigned to other OGs than they were assigned by
-OrthoDB. We found a similar result for three proteins of the RGS of
-\species{H. saltator}. Visual inspection of these proteins suggested
-that the orthology assignment of these proteins in the OrthoDB database
-is not correct (for an in-depth assessment and discussion of an example
-see Supplemental Material, Figure S5). The low fraction (less than 1 \%)
-of non-recalled genes were caused by a comparable effect (Figure S5).
-Thus, the sensitivity (true positive rate), defined as the ratio of true
-positives to true positives plus false negatives, was 0.9896 for the
-\species{A. mellifera} RGS and 0.9918 for the \species{H.  saltator}
-RGS. The accuracy, defined as the ratio of true positives plus true
-negatives to the total number of genes in the RGS, was 0.9965 for the
-\species{A. mellifera} RGS and 0.9978 for the \species{H. saltator} RGS.
+the RGS of \species{H. saltator} (Table \ref{tab:orthograph-tests} on
+page \pageref{tab:orthograph-tests}). In the case of \species{A.
+mellifera}, five proteins were assigned to other OGs than they were
+assigned by OrthoDB. We found a similar result for three proteins of the
+RGS of \species{H. saltator}. Visual inspection of these proteins
+suggested that the orthology assignment of these proteins in the OrthoDB
+database is not correct (for an in-depth assessment and discussion of an
+example see Supplemental Material, Figure S5). The low fraction (less
+than 1 \%) of non-recalled genes were caused by a comparable effect
+(Figure S5).  Thus, the sensitivity (true positive rate), defined as the
+ratio of true positives to true positives plus false negatives, was
+0.9896 for the \species{A. mellifera} RGS and 0.9918 for the \species{H.
+saltator} RGS. The accuracy, defined as the ratio of true positives plus
+true negatives to the total number of genes in the RGS, was 0.9965 for
+the \species{A. mellifera} RGS and 0.9978 for the \species{H. saltator}
+RGS.
 
 For comparison, HaMStR v13.2.3 was run on the same datasets with
 comparable parameters. HaMStR identified 4,589 genes (99.22 \%) in the
