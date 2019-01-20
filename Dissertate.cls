@@ -127,6 +127,7 @@
 %\RequirePackage[super,comma,numbers]{natbib}
 \RequirePackage[authoryear]{natbib}
 \RequirePackage{bibentry}
+\RequirePackage{chapterbib}
 \nobibliography*
 \renewcommand{\bibnumfmt}[1]{[#1]}
 \RequirePackage[palatino]{quotchap}
@@ -297,8 +298,11 @@
 \renewcommand{\backmatter}{
     \input{endmatter/personalize}
     \clearpage
-    \bibliography{references}
-    \addcontentsline{toc}{chapter}{\bibname}
-    \bibliographystyle{apalike2}
+    %\addcontentsline{toc}{chapter}{\bibname}
+    %\bibliographystyle{apalike2}
+    %\bibliography{references}
+		%\clearpage
+		\include{endmatter/declaration}
+		\include{endmatter/cv}
     \include{endmatter/colophon}
 }

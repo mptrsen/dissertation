@@ -3,7 +3,7 @@ figures  := $(wildcard figures/*.pdf)
 name     := dissertation
 finalname := dissertation.final
 
-$(name).pdf: $(name).tex $(chapters) $(figures) references.bib Dissertate.cls frontmatter/personalize.tex frontmatter/abstract.tex frontmatter/thanks.tex frontmatter/dedication.tex endmatter/colophon.tex
+$(name).pdf: $(name).tex $(chapters) $(figures) references.bib Dissertate.cls frontmatter/personalize.tex frontmatter/abstract.tex frontmatter/thanks.tex frontmatter/dedication.tex endmatter/colophon.tex endmatter/declaration.tex endmatter/cv.tex
 	bash scripts/build $(name)
 
 draft: $(name).pdf
