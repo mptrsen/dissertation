@@ -8,7 +8,7 @@ dissertation="$1"
 # Build the dissertation.
 xelatex "$dissertation"
 bibtex "$dissertation"
-for f in chapters/*.tex; do bibtex ${f%.tex}; done
+for f in chapters/*.tex; do bibtex "${f%.tex}"; done
 xelatex "$dissertation"
 xelatex "$dissertation"
 
