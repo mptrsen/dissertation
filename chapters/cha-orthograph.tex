@@ -16,16 +16,23 @@ doi:\href{https://dx.doi.org/10.1186/s12859-017-1529-8}{10.1186/s12859-017-1529-
 
 \bibentry{Petersen2017}
 
+Author contributions to the original article:\\
+MP, BM, and ON conceived the Orthograph algorithm. MP wrote the
+Orthograph software. ON, AV, AD, BM, and KM contributed with suggestions,
+code review, and helper scripts to the Orthograph package. MP, KM, AD, DD,
+SL, RSP, LP, XZ, and ON contributed to the apoid wasp transcriptomics. MP,
+BM, and ON wrote the manuscript.
+
 \section{Background}\label{background}
 
 Inferring the evolution of gene families, the phylogeny of species, and
 tracing the biogeography of populations depend on reliable delineation
 of orthologous genes and paralogous copies of them. While delineation
 and identification of orthologous and paralogous genes has been firmly
-established for studying genomic data (reviewed by \cite{Kristensen2011}
-and benchmarked by \cite{Trachana2011}), few approaches are currently
+established for studying genomic data (reviewed by \citep{Kristensen2011}
+and benchmarked by \citep{Trachana2011}), few approaches are currently
 available for assessing transcripts in the same manner (proposed by,
-\emph{e.g.}, \cite{Ebersberger2009} and \cite{Schreiber2009}). Each of
+\emph{e.g.}, \citep{Ebersberger2009} and \citep{Schreiber2009}). Each of
 these approaches exhibits, and suffers from, specific problems,
 potentially leading to erroneous species and gene tree inference (see
 below). We developed a novel software pipeline, called Orthograph, for
@@ -43,29 +50,29 @@ compared species. Each of the delineated orthologous groups (OGs) can
 also include species- or lineage-specific gene copies
 (\emph{inparalogs}), that evolved by gene duplication after the
 evolutionary split of the ancestor into different species
-\cite{Koonin2005}. Finally, horizontal gene transfer can give rise to
+\citep{Koonin2005}. Finally, horizontal gene transfer can give rise to
 xenologous gene copies (\emph{xenologs}) from a single ancestral gene
-\cite{Koonin2005}.
+\citep{Koonin2005}.
 
 Two fundamentally different approaches to identify potential orthologs,
 paralogs, and xenologs have been established: tree-based and graph-based
 approaches. The benefit of graph-based approaches, which we will
 subsequently focus on, is their computational efficiency and scalability
 (for reviews and a comprehensive discussion of the benefits of the
-different approaches, see \cite{Dutilh2007} or \cite{Kristensen2011}).
+different approaches, see \citep{Dutilh2007} or \citep{Kristensen2011}).
 In general, graph-based approaches assessing gene orthology make use of
 the genome-wide best reciprocal hit (BRH) criterion. It rests on the
 assumption that orthologs in two genomes are more similar to each other
 than to any other gene in the compared genomes, since they are direct
 and exclusive descendants from a single ancestral gene
-\cite{Altenhoff2012}.
+\citep{Altenhoff2012}.
 
 Various graph-based approaches based on the BRH criterion have been
 developed that \emph{de novo} infer orthology among genes and proteins
 in the gene or protein sets of sequenced and annotated organisms, such
-as OrthoMCL \cite{Li2003}, COCO-CL \cite{Jothi2006}, OrthoDB
-\cite{Kriventseva2015}, InParanoid \cite{Sonnhammer2015}, OrthoFinder
-\cite{Emms2015}, and OMA \cite{Altenhoff2015}. The reliability of these
+as OrthoMCL \citep{Li2003}, COCO-CL \citep{Jothi2006}, OrthoDB
+\citep{Kriventseva2015}, InParanoid \citep{Sonnhammer2015}, OrthoFinder
+\citep{Emms2015}, and OMA \citep{Altenhoff2015}. The reliability of these
 methods critically depend on the fact that differential gene loss is the
 exception and that gene or protein repertoires are complete. This means
 that in order to apply a graph-based approach to infer gene orthology
@@ -78,7 +85,7 @@ be missing in a given transcript library simply because the gene was not
 (sufficiently highly) expressed at the time of RNA preservation. Given
 that transcriptome sequencing represents an extremely valuable and
 cost-efficient strategy to sample coding nucleotide sequences of a large
-fraction of an organism's gene repertoire \cite{Misof2014}, several
+fraction of an organism's gene repertoire \citep{Misof2014}, several
 graph-based approaches have been developed that are dedicated to
 ortholog identification in transcript libraries.
 
@@ -88,9 +95,9 @@ relationships have already been reliably inferred, rather than to infer
 orthology of these genes \emph{de novo} from the transcripts. Knowledge
 of the genealogical relationships of genes can be derived from
 comparative genomic analyses and may be retrievable from public
-databases such as OrthoDB \cite{Kriventseva2015}. This approach has been
-implemented in OrthoSelect \cite{Schreiber2009} and HaMStR
-\cite{Ebersberger2009}. However, OrthoSelect does not implement the BRH
+databases such as OrthoDB \citep{Kriventseva2015}. This approach has been
+implemented in OrthoSelect \citep{Schreiber2009} and HaMStR
+\citep{Ebersberger2009}. However, OrthoSelect does not implement the BRH
 criterion, but a unidirectional search. OrthoSelect is thus prone to
 false positives. HaMStR, on the other hand is more sophisticated since
 it applies a BRH orthology prediction strategy. Specifically, HaMStR
@@ -112,7 +119,7 @@ evaluations for other OGs and keeping track of what transcripts have
 already been assigned, it is possible that a given transcript is mapped
 to more than one gene. This issue of redundant transcript assignments
 can result in a misled inference of phylogenetic relationships, as has
-been shown \cite{Struck2011,Kvist2013}, and can potentially compromise
+been shown \citep{Struck2011,Kvist2013}, and can potentially compromise
 downstream analyses. In HaMStR, it would be conceivable to prevent
 redundant transcript assignment by implementing a record of previously
 assigned transcripts. However, such a first-come-first-serve approach
@@ -154,7 +161,7 @@ optimize parameters) quickly without re-running the computationally
 expensive searches.
 
 Orthograph builds on the transcript orthology assessment strategy via
-BRH suggested by \cite{Ebersberger2009}. In contrast to the
+BRH suggested by \citep{Ebersberger2009}. In contrast to the
 implementation of this strategy in HaMStR, Orthograph assigns a given
 transcript to the \emph{globally} best matching OGs while making sure
 that no transcript is assigned more than once. It additionally
@@ -209,7 +216,7 @@ analyses:
 Orthograph performs several post-processing steps on transcripts
 assigned to OGs. By aligning the transcript fulfilling the BRH criterion
 to the most similar orthologous amino acid sequence of a reference
-species using Exonerate \cite{Slater2005}, it infers a
+species using Exonerate \citep{Slater2005}, it infers a
 frameshift-corrected open reading frame (ORF). Orthograph allows to
 extend the ORF beyond the pHMM alignment sequence section for which the
 BRH criterion was fulfilled while making sure that the orthologous
@@ -270,16 +277,16 @@ orthologs}\label{sensitivity-and-accuracy-when-searching-for-single-copy-ortholo
 
 To assess the sensitivity and accuracy of Orthograph, we employed it to
 identify genes of known orthology in the RGS of the honeybee,
-\species{Apis mellifera} (15,314 genes, \cite{Honeybee2006}), and
+\species{Apis mellifera} (15,314 genes, \citep{Honeybee2006}), and
 Jerdon's jumping ant, \species{Harpegnathos saltator} (18,564 genes,
-\cite{Bonasio2010}).  Specifically, we searched the RGS for 4,625
-protein-coding genes provided by OrthoDB 5 \cite{Waterhouse2011a} as
+\citep{Bonasio2010}).  Specifically, we searched the RGS for 4,625
+protein-coding genes provided by OrthoDB 5 \citep{Waterhouse2011a} as
 being single-copy across four species of Hymenoptera (\species{Apis
-mellifera} \cite{Honeybee2006}, \species{Camponotus floridanus}
-\cite{Bonasio2010}, \species{Harpegnathos saltator} \cite{Bonasio2010},
-\species{Nasonia vitripennis} \cite{Werren2010}) and the outgroup beetle
+mellifera} \citep{Honeybee2006}, \species{Camponotus floridanus}
+\citep{Bonasio2010}, \species{Harpegnathos saltator} \citep{Bonasio2010},
+\species{Nasonia vitripennis} \citep{Werren2010}) and the outgroup beetle
 \species{Tribolium castaneum}
-\cite{TriboliumGenomeSequencingConsortium2008} (download URLs are listed
+\citep{TriboliumGenomeSequencingConsortium2008} (download URLs are listed
 in the Supplemental Material, Table S3). Note that we removed all
 entries of the respective taxon whose RGS we analyzed for assessing the
 sensitivity and accuracy of Orthograph from this ortholog set (resulting
@@ -315,8 +322,8 @@ saltator} RGS.
 
 The input data on ortholog relations were retrieved from OrthoDB which
 contains OG information inferred in a purely automated fashion
-\cite{Waterhouse2011a}. OrthoDB has been attested low numbers of false
-positives and spurious assignments \cite{Trachana2011}; the proportion
+\citep{Waterhouse2011a}. OrthoDB has been attested low numbers of false
+positives and spurious assignments \citep{Trachana2011}; the proportion
 of less than 1 \% of the genes that were recalled wrongly by Orthograph
 are in line with these benchmarks. Orthograph and HaMStR perform roughly
 equally in accuracy and sensitivity when it comes to identifying
@@ -417,7 +424,7 @@ inparalogs}\label{identification-of-inparalogs}
 In order to demonstrate Orthograph's capabilities to detect inparalogous
 gene copies, we used it to assess genes that are known to have
 inparalogous copies in the RGS of the leafcutter ant, \species{Atta
-cephalotes} \cite{Suen2011}. Specifically, we retrieved an ortholog set
+cephalotes} \citep{Suen2011}. Specifically, we retrieved an ortholog set
 from OrthoDB 5 comprising 301 OGs that contain genes that are known to
 be single copy in the genomes of \species{A. mellifera}, \species{C.
 floridanus}, \species{H. saltator}, \species{N. vitripennis}, and
@@ -443,14 +450,14 @@ transcripts}\label{non-redundant-mapping-of-transcripts}
 
 In order to test whether Orthograph indeed does not assign transcripts
 to more than one OG, we re-analyzed the dataset published by
-\cite{Struck2014}, who used HaMStR version 8 \cite{Ebersberger2009}.
+\citep{Struck2014}, who used HaMStR version 8 \citep{Ebersberger2009}.
 Orthograph assigned transcripts to 1,253 OGs, the same number as
-obtained by \cite{Struck2014}. However, Orthograph found transcripts of
+obtained by \citep{Struck2014}. However, Orthograph found transcripts of
 the analyzed genes in, on average, slightly more taxa (Orthograph:
-28.079, \cite{Struck2014}: 26.699). None of the transcripts was assigned
-to more than one OG. In the dataset published by \cite{Struck2014}, 274
+28.079, \citep{Struck2014}: 26.699). None of the transcripts was assigned
+to more than one OG. In the dataset published by \citep{Struck2014}, 274
 transcripts were assigned redundantly, however the orthologous regions
-were not overlapping. As \cite{Struck2014} removed a total of 1.3 \% of
+were not overlapping. As \citep{Struck2014} removed a total of 1.3 \% of
 their sequences from the dataset due to redundantly assigned
 transcripts, Orthograph yielded 1.4 \% more taxa per gene, leading to a
 denser data matrix for downstream (phylogenetic) analyses.
@@ -470,7 +477,7 @@ correlation (Spearman rank correlation, $S = 1,430$, $p = 0.069$).
 
 Given that next-generation RNAseq datasets tend to be large and current
 comparative genomic investigations analyze hundreds, if not thousands of
-genes (\emph{e.g.}, \cite{Misof2014}, \cite{Jarvis2014}, the 1000 plants
+genes (\emph{e.g.}, \citep{Misof2014}, \citep{Jarvis2014}, the 1000 plants
 initiative (\url{https://sites.google.com/a/ualberta.ca/onekp/})), with
 a linear runtime increase Orthograph does not pose a time bottleneck for
 current and future large-scale studies such as the numerous
@@ -491,7 +498,7 @@ setup using the MySQL database backend, the database management overhead
 is solely handled by the server, freeing CPU resources for the alignment
 searches on the clients. For installation in a grid computing
 environment where adding a dedicated database server is not feasible,
-the SQLite database backend \cite{Hipp2016} is provided. The file-based
+the SQLite database backend \citep{Hipp2016} is provided. The file-based
 SQLite database system can be applied anywhere thanks to its portable
 and performant implementation (and is installed by default in most Linux
 distributions and Mac OS X), thus it is the default database backend in
@@ -505,7 +512,7 @@ well as orthology prediction tools that assess orthology among genes in
 completely sequenced and annotated genomes, such as OrthoMCL, OrthoDB,
 OMA, or InParanoid. In contrast, tree-based orthology prediction
 strategies such as TreeFam, Ensembl Compara, or the one implemented in
-\cite{Capella-Gutierrez2014}, employ an algorithm that reconciles a
+\citep{Capella-Gutierrez2014}, employ an algorithm that reconciles a
 phylogenetic tree topology of a gene or gene set with the topology of
 the respective species phylogenetic tree. This requires a) a multiple
 sequence alignment (MSA) of a gene's amino acid or nucleotide sequences,
@@ -516,7 +523,7 @@ bidirectional alignment search compared to a phylogenetic tree inference
 enables Orthograph to run on standard workstation computers without
 necessitating a high-performance computing environment. A number of
 graph-based and tree-based orthology assessment methods have been
-reviewed by \cite{Trachana2011}.
+reviewed by \citep{Trachana2011}.
 
 \subsection{Reference-based orthology search accuracy depends on
 reference database
@@ -536,7 +543,7 @@ structural and functional gene annotation; thus, the importance of
 continued genome sequencing and rigorous annotation efforts must not be
 underestimated. Likewise, many assembled (draft) genomes are far from
 complete in terms of having properly identified their \emph{actual} gene
-content \cite{Denton2014}, which also hinders reliable inference of
+content \citep{Denton2014}, which also hinders reliable inference of
 orthology among them.
 
 \subsection{Reciprocal search by using HMMER and
@@ -546,7 +553,7 @@ Orthograph makes use of both pHMM-based and BLAST search technology. By
 combining these two fundamentally different alignment search algorithms,
 it draws considerable sensitivity and accuracy. Profile HMM-based
 similarity searches have been shown to be more sensitive than BLAST when
-it comes to detecting remotely related sequences \cite{Eddy2011}. By
+it comes to detecting remotely related sequences \citep{Eddy2011}. By
 restricting the reverse BLAST search to only the (sub)sequence that was
 found to be putatively homologous during the pHMM search, the BLAST
 query becomes more informative. Therefore, the practice of using BLAST
@@ -558,7 +565,7 @@ Figures S1 and S2.
 
 BLAST uses a heuristic algorithm and does not guarantee an optimal local
 alignment. To also support a non-heuristic Smith-Waterman algorithm, we
-have, in addition to BLAST, implemented SWIPE \cite{Rognes2011}, which
+have, in addition to BLAST, implemented SWIPE \citep{Rognes2011}, which
 is also used in OrthoDB. SWIPE uses a BLAST database, thus the BLAST
 package is required to generate the database; however the SWIPE search
 algorithm does not result in inconsistencies that are possible with
@@ -572,8 +579,8 @@ reference OGs. Orthology or paralogy relations between genes of more
 than one species cannot be established using transcriptomic datasets as
 they are inherently incomplete. For assessing orthology among genes in
 completely sequenced and annotated genomes, specialized tools exist,
-such as OrthoMCL \cite{Li2003}, InParanoid \cite{Sonnhammer2015}, or the
-OrthoDB toolset, which is now public \cite{Kriventseva2015}.
+such as OrthoMCL \citep{Li2003}, InParanoid \citep{Sonnhammer2015}, or the
+OrthoDB toolset, which is now public \citep{Kriventseva2015}.
 Additionally, alternative transcripts or splice variants are difficult
 to distinguish in a \emph{de novo} transcriptome assembly without
 additional read coverage data, which is why Orthograph refrains from
@@ -599,7 +606,7 @@ designed to point users to possibly existing alternative transcripts and
 paralogous genes, thereby significantly broadening the scope of the
 software. The wide applicability of Orthograph has been demonstrated by
 its application in a phylogenomic study on apoid wasps using target DNA
-sequencing baits \cite{Mayer2016} and the numerous subprojects of the
+sequencing baits \citep{Mayer2016} and the numerous subprojects of the
 international 1KITE project, which investigate intraordinal phylogenetic
 relationships of insects. Orthograph provides researchers with a
 convenient, performant, general-purpose tool for analyses in a plethora

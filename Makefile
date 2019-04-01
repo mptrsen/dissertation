@@ -19,7 +19,7 @@ $(finalname).tex:
 clean:
 	$(RM) $(name).aux $(name).bbl $(name).blg $(name).out $(name).toc $(name).lof $(name).lot $(name).bcf $(name).log
 	$(RM) $(finalname).aux $(finalname).bbl $(finalname).blg $(finalname).out $(finalname).toc $(finalname).lof $(finalname).lot $(finalname).bcf $(finalname).log
-	$(RM) chapters/*.{aux,bbl,blg}
+	$(RM) chapters/*.aux chapters/*.bbl chapters/*.blg
 	$(RM) .logged
 
 mrproper: clean

@@ -1,21 +1,27 @@
 \chapter{Appendix to chapter \ref{cha:dynamics}}
 
-TODO: Add supplement!
-
-\ifdraft{%
-}%
-{%
-}%
-
 Supplemental methods, figures, and data tables:
 
 \begin{itemize}
-	\item Figure \ref{fig:alignment-regions}: Short description (page \pageref{fig:alignment-regions})
+	\item Figure \ref{fig:agesplit}: Most insect TEs are clade-specific (page \pageref{fig:agesplit})
+	\item Figure \ref{fig:loss-coefficient}: DNA loss coefficient correlations, with and without PIC (page \pageref{fig:loss-coefficient})
+	\item Figure \ref{fig:te-content-vs-size}: TE content is a predictor for genome size (page \pageref{fig:te-content-vs-size})
+	\item Figure \ref{fig:loss-coefficient-plots-flight}: TE content is a predictor for genome size, irrespective of flight ability (page \pageref{fig:loss-coefficient-plots-flight})
+	\item Figure \ref{fig:ancient-lineage-specific}: TE age classification explanation (page \pageref{fig:ancient-lineage-specific})
 \end{itemize}
 
 \begin{itemize}
-	\item Table \ref{tab:species}: Short description (page \pageref{tab:species})
+	\item Table \ref{tab:genome-assemblies}: NCBI accession numbers and references for the genome assemblies (page \pageref{tab:genome-assemblies})
+	\item Table \ref{tab:genome-size-estimates}: Genome size estimates (page \pageref{tab:genome-size-estimates})
+	\item Table \ref{tab:species-not-in-bold-but-in-tree}: Species not represented in BOLD database (page \pageref{tab:species-not-in-bold-but-in-tree})
+	\item Table \ref{tab:species-divergence-times}: Divergence times and MRCA splits (page \pageref{tab:species-divergence-times})
+	\item Table \ref{tab:gain-loss}: DNA gain and loss (page \pageref{tab:gain-loss})
+	\item Table \ref{tab:order-divergence-times}: Divergence times and clade-specific substitution rates (page \pageref{tab:order-divergence-times})
+	\item Table \ref{tab:calibration-points}: Branch length calibration points from Misof et al. (2014) (page \pageref{tab:calibration-points})
+	\item Table \ref{tab:phylogeny-sources}: Literature sources for the constraint phylogeny (page \pageref{tab:phylogeny-sources})
+	\item Table \ref{tab:genome-size-spread}: Genome size spread in Eukaryotes (page \pageref{tab:genome-size-spread})
 \end{itemize}
+
 
 \section{Supplemental figures}
 
@@ -34,7 +40,7 @@ Supplemental methods, figures, and data tables:
 \bigskip
 
 \includegraphics[width=\textwidth]{loss-coefficient-plots-PICs}
-\caption[]{Insect genome size dynamics and TE content are governed by the DNA loss coefficient. Top: without phylogenetic independent contrasts (PIC), bottom: with PIC. A: While TE content determines the genome size (Figure \ref{fig:te-content-vs-size}), the TE content is not dependent on the DNA loss coefficient $k$. There is no correlation despite a visible trend in the regression (Pearson, $p = 0.15$). Obviously, genome (assembly) size decreases with higher $k$ (B, $p = 0.0002$), as does the amount of DNA gained (D, $p = 0.01$). Surprisingly, the assembly size appears to remain more or less stable despite increasing amounts of DNA loss (C). A strong negative correlation is, however, found by testing for it (section \ref{sec:correlation-tests}; $p \ll 0.005$).}
+\caption[DNA loss coefficient correlations, with and without PIC]{Insect genome size dynamics and TE content are governed by the DNA loss coefficient. Top: without phylogenetic independent contrasts (PIC), bottom: with PIC. A: While TE content determines the genome size (Figure \ref{fig:te-content-vs-size}), the TE content is not dependent on the DNA loss coefficient $k$. There is no correlation despite a visible trend in the regression (Pearson, $p = 0.15$). Obviously, genome (assembly) size decreases with higher $k$ (B, $p = 0.0002$), as does the amount of DNA gained (D, $p = 0.01$). Surprisingly, the assembly size appears to remain more or less stable despite increasing amounts of DNA loss (C). A strong negative correlation is, however, found by testing for it (section \ref{sec:correlation-tests}; $p \ll 0.005$).}
 \label{fig:loss-coefficient}
 \end{figure}
 
@@ -750,14 +756,10 @@ The resulting tree was rendered ultrametric using the following short Python scr
 
 \begin{verbatim}
 #!/usr/bin/python3
-
 import sys
 from ete3 import Tree
-
 t = Tree(sys.argv[1])
-
 t.convert_to_ultrametric()
-
 print(t.write())
 \end{verbatim}
 \end{minipage}
@@ -767,7 +769,7 @@ print(t.write())
 \centering
 \caption[Literature sources for the constraint phylogeny]{References for the constraint phylogeny.}
 \label{tab:phylogeny-sources}
-\begin{tabular}{@{}ll@{}}
+\begin{tabular}{lp{25em}}
 \toprule
 Clade         & Sources \\
 \midrule

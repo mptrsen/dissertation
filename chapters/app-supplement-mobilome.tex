@@ -1,5 +1,17 @@
 \chapter{Appendix to chapter \ref{cha:mobilome}}
 
+Supplemental methods, figures, and data tables:
+
+\begin{itemize}
+	\item Figure \ref{fig:te-families-vs-genome-size}: The number of TE superfamilies is significantly correlated to genome size (page \pageref{fig:te-families-vs-genome-size})
+\end{itemize}
+
+\begin{itemize}
+	\item Table \ref{tab:coverage}: TE coverage data (page \pageref{tab:coverage})
+	\item Table \ref{tab:urls}: Genome assembly download URLs (page \pageref{tab:urls})
+	\item Table \ref{tab:patterns}: Word patterns to exclude non-TE search hits (page \pageref{tab:patterns})
+\end{itemize}
+
 \section{Supplementary Figures}
 
 \begin{figure}[h]
@@ -11,7 +23,38 @@ genome size as well.}
 \label{fig:te-families-vs-genome-size}
 \end{figure}
 
+
+\clearpage
+
 \section{Supplementary Tables}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[h]
+\caption[Word patterns to exclude non-TE search hits]{{Patterns employed to
+exclude non-TE search hits. Note that these are regular expressions for use
+with a compatible parser such as GNU grep or Perl.\label{tab:patterns}}}
+\centering
+\begin{tabular}{@{}l@{}}
+\toprule
+Pattern               \\ \midrule
+transcripta           \\
+transpos              \\
+gag{[}-/{]}pol        \\
+env(elope)? protein   \\
+env\textbackslash{}b  \\
+pol p(olyp)?rotein    \\
+gag(-like)? protein   \\
+reverse transcrpitase \\
+retro                 \\
+integras              \\
+replicas              \\
+t-element             \\
+transporase           \\
+piggybac              \\
+copia                 \\ \bottomrule
+\end{tabular}
+\end{table}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
@@ -114,7 +157,7 @@ Species                    & Genome size & DNA       & LINE      & LTR       & S
 \end{landscape}
 
 \begin{landscape}
-\begin{longtable}[]{@{}lll@{}}
+\begin{longtable}[]{llp{35em}}
 \caption[Genome assembly download URLs]{{Download URLs for the genome
 assemblies of 73 arthropod species.}
 \label{tab:urls}}
@@ -210,31 +253,3 @@ Species                     & Order         & URL                               
 \species{Trichogramma pretiosum}        & Hymenoptera   & \url{ftp://ftp.hgsc.bcm.edu/I5K-pilot/Trichogramma\_pretiosum/Tpre\_scaffolds.50.fa}                                                                   \\
 \end{longtable}
 \end{landscape}
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-\begin{table}[]
-\caption[Word patterns to exclude non-TE search hits]{{Patterns employed to
-exclude non-TE search hits. Note that these are regular expressions for use
-with a compatible parser such as GNU grep or Perl.\label{tab:patterns}}}
-\centering
-\begin{tabular}{@{}l@{}}
-\toprule
-Pattern               \\ \midrule
-transcripta           \\
-transpos              \\
-gag{[}-/{]}pol        \\
-env(elope)? protein   \\
-env\textbackslash{}b  \\
-pol p(olyp)?rotein    \\
-gag(-like)? protein   \\
-reverse transcrpitase \\
-retro                 \\
-integras              \\
-replicas              \\
-t-element             \\
-transporase           \\
-piggybac              \\
-copia                 \\ \bottomrule
-\end{tabular}
-\end{table}
