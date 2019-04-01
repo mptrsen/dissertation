@@ -23,7 +23,7 @@ code review, and helper scripts to the Orthograph package. MP, KM, AD, DD,
 SL, RSP, LP, XZ, and ON contributed to the apoid wasp transcriptomics. MP,
 BM, and ON wrote the manuscript.
 
-\section{Background}\label{background}
+\section{Background}
 
 Inferring the evolution of gene families, the phylogeny of species, and
 tracing the biogeography of populations depend on reliable delineation
@@ -144,7 +144,7 @@ Orthograph and highlight features that are likely of particular interest
 for a wide array of analyses in molecular evolutionary biology and in
 	comparative genomics in particular.
 
-\section{Implementation}\label{implementation}
+\section{Implementation}
 
 The Orthograph software package is divided into three main tools that
 handle (i) database management (manager), (ii) forward and reverse
@@ -272,10 +272,10 @@ in the Supplemental Material (Figures
 \ref{fig:alignment-regions}-\ref{fig:orthodb-alignments}, Tables
 \ref{tab:species}-\ref{tab:1kite-apoid-wasps-accessions}).
 
-\section{Results and discussion}\label{results-and-discussion}
+\section{Results and discussion}
 
 \subsection{Sensitivity and accuracy when searching for single-copy
-orthologs}\label{sensitivity-and-accuracy-when-searching-for-single-copy-orthologs}
+orthologs}
 
 To assess the sensitivity and accuracy of Orthograph, we employed it to
 identify genes of known orthology in the RGS of the honeybee,
@@ -360,7 +360,7 @@ Orthograph & inparalogs  & 647    & \textit{A. cephalotes} & 18,093    & 583    
 \end{sidewaystable}
 
 \subsection{Identification of splice variants or
-isoforms}\label{identification-of-splice-variants-or-isoforms}
+isoforms}
 
 We used Orthograph to assess orthologous amino acid sequences including
 isoforms in the RGS of the Florida carpenter ant, \species{Camponotus
@@ -403,7 +403,7 @@ artifacts).
 
 \subsubsection{Protein isoforms and splice variants in the reference
 ortholog set can lead to systematic errors and false
-positives}\label{protein-isoforms-and-splice-variants-in-the-reference-ortholog-set-can-lead-to-systematic-errors-and-false-positives}
+positives}
 
 The presence of isoforms and splice variants in an RGS dataset can lead
 to wrong clustering to OGs and/or false negatives (discarded sequences
@@ -421,7 +421,7 @@ that matter), or the OGs should be extended to also include the
 isoforms.
 
 \subsection{Identification of
-inparalogs}\label{identification-of-inparalogs}
+inparalogs}
 
 In order to demonstrate Orthograph's capabilities to detect inparalogous
 gene copies, we used it to assess genes that are known to have
@@ -448,7 +448,7 @@ analyses, including full-length gene sequences for reference-based
 orthology assessment.
 
 \subsection{Non-redundant mapping of
-transcripts}\label{non-redundant-mapping-of-transcripts}
+transcripts}
 
 In order to test whether Orthograph indeed does not assign transcripts
 to more than one OG, we re-analyzed the dataset published by
@@ -465,7 +465,7 @@ transcripts, Orthograph yielded 1.4 \% more taxa per gene, leading to a
 denser data matrix for downstream (phylogenetic) analyses.
 
 \subsection{Computational performance of
-Orthograph}\label{computational-performance-of-orthograph}
+Orthograph}
 
 To demonstrate the computational performance of Orthograph, we searched
 24 apoid wasp transcriptome assemblies for 5,561 selected OGs (sequence
@@ -507,7 +507,7 @@ distributions and Mac OS X), thus it is the default database backend in
 Orthograph.
 
 \subsection{Advantages of graph-based orthology prediction
-strategies}\label{advantages-of-graph-based-orthology-prediction-strategies}
+strategies}
 
 Orthograph uses a graph-based approach, like HaMStR and OrthoSelect as
 well as orthology prediction tools that assess orthology among genes in
@@ -529,7 +529,7 @@ reviewed by \citep{Trachana2011}.
 
 \subsection{Reference-based orthology search accuracy depends on
 reference database
-quality}\label{reference-based-orthology-search-accuracy-depends-on-reference-database-quality}
+quality}
 
 Reference-based algorithms for assessing transcript orthology can only
 be as accurate as the content of the database providing reference OGs.
@@ -549,7 +549,7 @@ content \citep{Denton2014}, which also hinders reliable inference of
 orthology among them.
 
 \subsection{Reciprocal search by using HMMER and
-BLAST}\label{reciprocal-search-by-using-hmmer-and-blast}
+BLAST}
 
 Orthograph makes use of both pHMM-based and BLAST search technology. By
 combining these two fundamentally different alignment search algorithms,
@@ -574,7 +574,7 @@ algorithm does not result in inconsistencies that are possible with
 BLAST's alignment heuristic. Users can opt to use the SWIPE algorithm
 with appropriate configuration settings.
 
-\subsection{Limits of the methods}\label{limits-of-the-methods}
+\subsection{Limits of the methods}
 
 Orthograph is intended to map transcripts of a single species to
 reference OGs. Orthology or paralogy relations between genes of more
@@ -590,7 +590,7 @@ explicitly predicting them. Orthograph does, however, report transcripts
 that are potential alternative transcripts or splice variants in order
 to allow researchers to further investigate them.
 
-\section{Conclusion}\label{orthograph-conclusion}
+\section{Conclusion}
 
 With Orthograph, we provide a software solution to accurately assign
 transcripts (and other coding sequences) to known groups (clusters) of

@@ -25,7 +25,7 @@ wasp transcriptomes that were released with the Orthograph publication (page \pa
 
 \section{Supplementary Methods}
 
-\subsection{Apoid wasp transcriptomes}\label{apoid-wasp-transcriptomes}
+\subsection{Apoid wasp transcriptomes}
 
 We \emph{de novo} sequenced whole body transcript libraries of 24 apoid
 wasp species in the context of the international 1KITE project (Table
@@ -72,16 +72,16 @@ the Umbrella BioProject ID
 \href{http://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA183205}{PRJNA183205}
 (``The 1KITE project: evolution of insects'').
 
-\subsection{Orthograph}\label{orthograph}
+\subsection{Orthograph}
 
-\subsubsection{Orthograph dependencies}\label{orthograph-dependencies}
+\subsubsection{Orthograph dependencies}
 
 Orthograph requires the software packages HMMER3 \citep{Eddy2011}, NCBI
 BLAST+ \citep{Camacho2009}, MAFFT \citep{Katoh2013}, and Exonerate
 \citep{Slater2005} as well as either MySQL or SQLite (for specific
 version see Table \ref{tab:software}).
 
-\subsubsection{Ortholog reference set}\label{ortholog-reference-set}
+\subsubsection{Ortholog reference set}
 
 The user must provide Orthograph with a set of reference OGs to which
 transcripts are mapped. For this purpose, Orthograph requires the amino
@@ -125,7 +125,7 @@ performance of Orthograph, we used a different set (see below).
 
 \subsubsection{Scan for candidate transcripts using profile hidden
 Markov
-models}\label{scan-for-candidate-transcripts-using-profile-hidden-markov-models}
+models}
 
 Orthograph creates a multiple sequence alignment (MSA) from the
 individual amino acid sequences that are part of a given OG using MAFFT
@@ -146,7 +146,7 @@ one computer acting as a database server; the latter when running
 Orthograph on a HPC cluster.
 
 \subsubsection{Establishing BRH criterion using
-BLAST+}\label{establishing-brh-criterion-using-blast}
+BLAST+}
 
 A BLAST database is generated from all amino acid sequences of all
 reference proteomes. Orthograph uses the predicted amino acid sequence
@@ -159,7 +159,7 @@ the algorithm in HaMStR, Orthograph attempts no orthology delineation at
 this point.
 
 \subsubsection{Extension of clusters of orthologous
-genes}\label{extension-of-clusters-of-orthologous-genes}
+genes}
 
 Orthograph retrieves the results from all pHMM searches from the
 database sorted by descending alignment bit score. Sorting by bit score
@@ -181,7 +181,7 @@ walking, Orthograph does not consider transcript sections of fewer than
 changed by the user, if necessary.
 
 \subsubsection{Frameshift-corrected ORF
-inference}\label{frameshift-corrected-orf-inference}
+inference}
 
 To infer ORFs and to correct for frameshift errors, which may be present
 in NGS products, Orthograph employs the alignment program Exonerate
@@ -198,10 +198,10 @@ has been inferred (Figure \ref{fig:alignment-regions}). This is done to obtain a
 retaining orthology information for the majority of its length.
 
 \subsection{Reanalysis of publicly available
-data}\label{reanalysis-of-publicly-available-data}
+data}
 
 \subsubsection{Sensitivity and accuracy when searching for single-copy
-orthologs}\label{sensitivity-and-accuracy-when-searching-for-single-copy-orthologs}
+orthologs}
 
 From the OrthoDB 7 database \citep{Waterhouse2013}, a set of OGs was
 obtained for four species of Hymenoptera and an outgroup beetle. The
@@ -220,7 +220,7 @@ using default parameters. Evaluation was performed using custom-made
 Bash scripts.
 
 \subsubsection{Identification of splice variants or
-isoforms}\label{identification-of-splice-variants-or-isoforms}
+isoforms}
 
 To identify splice variants or isoforms, we used the ortholog set
 derived from five reference species with 4,625 OGs from the analysis for
@@ -234,7 +234,7 @@ using default parameters. The results were evaluated using custom-made
 Bash scripts.
 
 \subsubsection{Identification of
-inparalogs}\label{identification-of-inparalogs}
+inparalogs}
 
 We complemented the ortholog set from the analysis for testing
 Orthograph sensitivity and accuracy when searching for single-copy
@@ -253,7 +253,7 @@ ran the analysis using default parameters. The results were evaluated
 using custom-made Bash and Perl scripts.
 
 \subsection{Non-redundant mapping of
-transcripts}\label{non-redundant-mapping-of-transcripts}
+transcripts}
 
 The dataset from Struck \emph{et al}. \cite{Struck2014} was obtained
 from the Dryad database
@@ -267,7 +267,7 @@ ran the analysis with parameters that closely resemble the settings in
 HaMStR used by \emph{Struck et al}. \cite{Struck2014}. Evaluation of the
 annotation result was performed using custom-made Bash and Perl scripts.
 
-\subsection{Computational performance}\label{computational-performance}
+\subsection{Computational performance}
 
 We tested the computational performance of Orthograph by running
 analyses on a workstation computer with an Intel Core i7 quad-core
