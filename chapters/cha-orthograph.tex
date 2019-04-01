@@ -268,7 +268,9 @@ lower or upper bound since the selection depends on the research
 question. Orthograph runtime increases linearly with each additional OG.
 
 Detailed methods, data sources as well as system requirements are listed
-in the Supplemental Material (Figures S1-S5, Tables S1-S3).
+in the Supplemental Material (Figures
+\ref{fig:alignment-regions}-\ref{fig:orthodb-alignments}, Tables
+\ref{tab:species}-\ref{tab:1kite-apoid-wasps-accessions}).
 
 \section{Results and discussion}\label{results-and-discussion}
 
@@ -287,7 +289,7 @@ mellifera} \citep{Honeybee2006}, \species{Camponotus floridanus}
 \species{Nasonia vitripennis} \citep{Werren2010}) and the outgroup beetle
 \species{Tribolium castaneum}
 \citep{TriboliumGenomeSequencingConsortium2008} (download URLs are listed
-in the Supplemental Material, Table S3). Note that we removed all
+in the Supplemental Material, Table \ref{tab:ogs}). Note that we removed all
 entries of the respective taxon whose RGS we analyzed for assessing the
 sensitivity and accuracy of Orthograph from this ortholog set (resulting
 in two sets: one without entries from \species{A. mellifera}, and one
@@ -301,9 +303,9 @@ assigned by OrthoDB. We found a similar result for three proteins of the
 RGS of \species{H. saltator}. Visual inspection of these proteins
 suggested that the orthology assignment of these proteins in the OrthoDB
 database is not correct (for an in-depth assessment and discussion of an
-example see Supplemental Material, Figure S5). The low fraction (less
+example see Supplemental Material, Figure \ref{fig:orthodb-alignments}). The low fraction (less
 than 1 \%) of non-recalled genes were caused by a comparable effect
-(Figure S5).  Thus, the sensitivity (true positive rate), defined as the
+(Figure \ref{fig:orthodb-alignments}).  Thus, the sensitivity (true positive rate), defined as the
 ratio of true positives to true positives plus false negatives, was
 0.9896 for the \species{A. mellifera} RGS and 0.9918 for the \species{H.
 saltator} RGS. The accuracy, defined as the ratio of true positives plus
@@ -471,7 +473,7 @@ data are deposited at NCBI GenBank; accession numbers are listed in
 Additional file 2). The analysis time when using a single thread
 increases linearly with total transcriptome assembly length (Spearman
 rank correlation, $S = 326$, $p \ll 0.001$, Supplemental Material,
-Figure S3). Single-threaded analysis time also increases with the number
+Figure \ref{fig:runtime-vs-length}). Single-threaded analysis time also increases with the number
 of assembled transcripts, showing a linear trend, but no significant
 correlation (Spearman rank correlation, $S = 1,430$, $p = 0.069$).
 
@@ -485,7 +487,7 @@ group-specific subprojects of the 1KITE consortium
 (\url{http://1kite.org/subprojects.html}). For employment in
 high-performance cluster computing environments, Orthograph supports
 multi-threading: it offers a linear speedup of about 1x until up to four
-threads (Fig. S4). Orthograph scales well with a speedup of 15 to 80 \%
+threads (Fig. \ref{fig:runtime-speedup}). Orthograph scales well with a speedup of 15 to 80 \%
 per additional thread up to 12 threads. Using 16 threads reduces
 Orthograph running time to around 11 \% compared to a single-threaded
 analysis.
@@ -561,7 +563,7 @@ for the reverse search in Orthograph improves confidence in the
 subsequent orthology hypothesis by applying a conservative search
 criterion. For an illustration of the interrelations between the search
 results and their respective subsequences, see Supplemental Material,
-Figures S1 and S2.
+Figures \ref{fig:alignment-regions} and \ref{fig:orf-overlap}.
 
 BLAST uses a heuristic algorithm and does not guarantee an optimal local
 alignment. To also support a non-heuristic Smith-Waterman algorithm, we

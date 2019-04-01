@@ -70,7 +70,7 @@ we exploited the BOLD database \citep{Ratnasingham2007}
 1,571,820 COI barcode nucleotide sequences for 105,397 arthropod
 species. Of these, we identified 605 species that were represented in
 both databases. We included our own genome size estimates for eight
-additional species (supplemental Table S2), bringing the total number of
+additional species (supplemental Table \ref{tab:genome-size-estimates}), bringing the total number of
 species to 613.
 
 For the dipluran \emph{Catajapyx aquilonaris}, which was not represented
@@ -78,7 +78,7 @@ in the BOLD database, we added COI data by retrieving a COI sequence
 from the closely related species \emph{Gollumjapyx smeagol} (GenBank ID
 DQ993154.1) and using it as query in a BLAST search in the genome
 assembly provided by the i5k initiative (source see supplementary Table
-S1). We received two hits and used the longer one
+\ref{tab:genome-assemblies}). We received two hits and used the longer one
 (scaffold131247\_cov1551 positions 852-1522) as query in a BLAST search
 in GenBank. The reciprocal search hit the mitochondrial genome of
 \emph{Japyx solifugus} (Accession AY771989.1), another closely related
@@ -93,7 +93,7 @@ using MAFFT v7.309. We removed redundant sequences and sequences that
 could not be translated without having stop codons, and inferred ML
 phylogenies for each order using RAxML v8.2.11. We manually corrected
 these order-specific topologies using published phylogenies (reference
-list in supplemental Table S8). For those species without placement from
+list in supplemental Table \ref{tab:phylogeny-sources}). For those species without placement from
 the literature, we used the COI topology under majority-rule consensus
 in case there were more than one COI sequence. We combined the
 order-specific trees into a large tree and used that topology as
@@ -102,7 +102,7 @@ constraint to estimate branch lengths using RAxML.
 The resulting tree was rendered ultrametric by a short Python script
 using the ETE toolkit \citep{Huerta-Cepas2016} (see Supplemental Material). To
 time-calibrate the phylogeny, we selected calibration points from
-\citep{Misof2014} (Table S7) and used the \texttt{chronos} function
+\citep{Misof2014} (Table \ref{tab:calibration-points}) and used the \texttt{chronos} function
 from the ape package in R to adjust the branch lengths. We used the
 upper and lower bounds of the 95 \% confidence interval as minimum and
 maximum node ages. We set \(\lambda\) to 2 and used the discrete
@@ -115,13 +115,14 @@ the Ornstein-Uhlenbeck model for each node along the tree including 95
 estimates}\label{genomic-datasets-and-genome-size-estimates}
 
 The genome assembly accession numbers and data sources of 96 arthropod
-species are listed in supplemental Table S1. The genome assemblies were
+species are listed in supplemental Table \ref{tab:genome-assemblies}. The genome assemblies were
 downloaded from NCBI (69 species) or from the i5k FTP server (27
 species). Genome size estimates were obtained from the Animal Genome
 Size Database (\citet{Gregory2018}, \url{http://genomesize.com}),
 measured in our own lab using flow cytometry (FCM), or estimated using a
 \emph{k}-mer peak method adopted from \citet{Hozza2015}. Our own
-estimate results are listed in supplemental Table S2.
+estimate results are listed in supplemental Table
+\ref{tab:genome-size-estimates}.
 
 \subsection*{Transposable element
 annotation}\label{transposable-element-annotation}
@@ -148,7 +149,8 @@ Github repository}. We used a time-calibrated phylogeny of insects
 \citep{Misof2014} and multiple sequence alignments of 1,478
 protein-coding genes from 144 arthropod species \citep{Misof2014} to
 infer order-specific nucleotide substitution rates by using the weighted
-arithmetic mean of substitution rates (see equation (S1) in supplemental
+arithmetic mean of substitution rates (see equation
+(\ref{eqn:weighted-arithmetic-mean}) in supplemental
 material). The program also takes into account that TE annotations
 sometimes overlap each other by distributing the count of affected
 nucleotide positions as fractions evenly among overlapping TE copies.
@@ -165,7 +167,7 @@ classified as ancient if it was older than the most recent split of the
 clade it was found in to the sister clade, otherwise as
 lineage-specific). For Chelicerata and Myriapoda, we took clade
 divergence times from \citet{Misof2014} (all divergence times are
-listed in Table S4). We calculated the amount of DNA gained by TE
+listed in Table \ref{tab:species-divergence-times}). We calculated the amount of DNA gained by TE
 proliferation as the amount of clade-specific TEs.
 
 With the ancestral genome sizes and the inferred amounts of DNA gained
@@ -182,7 +184,9 @@ the amount of extant ancestral sequence in the genome assembly,
 \(A\) the total ancestral assembly size, and
 \(t\) the time since the split from the last ancestor.
 
-\[k = \ln{\frac{A}{E}}/t\]
+\begin{equation}
+k = \frac{\ln{\frac{A}{E}}}{t}
+\end{equation}
 
 \section{Results}
 
@@ -191,24 +195,43 @@ reconstruction}\label{ancestral-genome-size-reconstruction}
 
 We reconstructed ancestral genome sizes (see Methods) of 613 arthropod
 species with published phylogenetic relationships (refs. listed in
-Supplemental Table S8), amended with branch lengths inferred from COI
+Supplemental Table \ref{tab:phylogeny-sources}), amended with branch lengths inferred from COI
 barcode sequences, and genome size estimates for extant species obtained
 from the genome size database \citep{Gregory2018}. We inferred an
 ancestral genome size for the root node of hexapods (node \textbf{1})
-between 782 and 1943 Mbp (95 \% confidence interval) (Figure 1). This
+between 782 and 1943 Mbp (95 \% confidence interval) (Figure
+\ref{fig:tree-with-ancestral-sizes}). This
 inferred genome size is well above the maximum of many holometabolous
 clades such as Diptera (node \textbf{2}, 272 to 545 Mbp), Lepidoptera
 (node \textbf{3}, 318 to 738 Mbp), or Hymenoptera (node \textbf{4}, 303
-to 633 Mbp) (Table 1), but within the range of hemimetabolan orders,
+to 633 Mbp) (Table \ref{tab:ancestral-sizes}), but within the range of hemimetabolan orders,
 except for Orthoptera (node \textbf{5}), of which the ancestral size was
 inferred to be between 3,677 and 9,473 Mbp. This is not surprising given
 the genome sizes of extant representatives of Orthoptera between 2 Gbp
 in \emph{Acheta domesticus} and 16.5 Gbp in \emph{Podisma pedestris}.
 
-\begin{table}[h!]
-\centering
-\normalsize\begin{tabular}{lrrrr}
+\begin{longtable}{lrrrr}
+\caption[Inferred ancestral genome size for major arthropod orders]{Inferred ancestral genome sizes for major arthropod orders using the
+Ornstein-Uhlenbeck model. Ancestral size refers to the median, upper and
+lower bounds refer to the bounds of the 95\% confidence interval (CI).
+All values in Mbp.
+\label{tab:ancestral-sizes}}%
+\footnotesize
+\endfirsthead
+
+
+\multicolumn{5}{c}{%
+{\tablename\ \thetable{} --continued}} \\
+\toprule
 Clade & Node & Ancestral size & Lower bound & Upper bound \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+Clade & Node & Ancestral size [Mbp] & Lower bound & Upper bound \\
+\midrule
 Diptera & 2 & 340.65 & 251.41 & 461.57 \\
 Diptera:Telmatogeton+Chironomus & 17 & 242.47 & 165.97 & 354.25 \\
 Diptera:Drosophila & 18 & 268.96 & 201.7 & 358.65 \\
@@ -258,13 +281,9 @@ Copepoda+Branchiopoda &  & 1364.13 & 773.59 & 2405.49 \\
 Branchiopoda &  & 973.39 & 524.83 & 1805.31 \\
 Copepoda &  & 1256.67 & 714.34 & 2210.73 \\
 Malacostraca &  & 3186.87 & 1774.25 & 5724.16 \\
-\end{tabular}
-\caption[Inferred ancestral genome size for major arthropod orders]{{Inferred ancestral genome sizes for major arthropod orders using the
-Ornstein-Uhlenbeck model. Ancestral size refers to the median, upper and
-lower bounds refer to the bounds of the 95\% confidence interval (CI).
-{\label{984909}}%
-}}
-\end{table}
+\end{longtable}
+
+\bigskip
 
 In some orders, we inferred a dynamic pattern of genome size evolution.
 For example within Lepidoptera, Papilionidae (node \textbf{6}) have the
@@ -296,7 +315,7 @@ estimated from COI nucleotide sequences. The branch coloration
 represents the inferred ancestral genome size (red: small, green:
 medium, blue: large). Red arrows denote species that are included in the
 TE age analysis.
-{\label{103608}}%
+{\label{fig:tree-with-ancestral-sizes}}%
 }}
 \end{center}
 \end{figure}
@@ -339,19 +358,21 @@ pipeline that combines RepeatModeler \citep{Smit2015a} and RepeatMasker
 \(p = 0.0003484\)). We also inferred the age in million years for each
 TE copy using order-specific nucleotide substitution rates and the
 Kimura 2-parameter distance of each TE copy from the TE family consensus
-reported by RepeatMasker (see Methods). The median ages (Figure 2) of
-all TE classes within species are significantly correlated with the
-divergence times of the respective species, but only LINEs show this
-correlation also when applying PIC (Kendall's rank correlation,
-\(p = 0.04\)).
+reported by RepeatMasker (see Methods). The median ages (Figure
+\ref{fig:age-mediane}, page \pageref{fig:age-mediane}) of all TE classes within species are
+significantly correlated with the divergence times of the respective
+species, but only LINEs show this correlation also when applying PIC
+(Kendall's rank correlation, \(p = 0.04\)).
 
 Using divergence times from the dated phylogeny based on the literature
 (see above), we classified the TE content into lineage-specific copies
 (younger than the age of the lineage, \emph{i.e.}, the split of the
 species with its last common ancestor) and ancient copies (older than
 the lineage). In 36 out of 53 insect species that were represented in
-the dated tree, we found more than 99 \% lineage-specific TEs (Figure 3,
-Supplemental Figure S1). Notable exceptions included the termite
+the dated tree, we found more than 99 \% lineage-specific TEs (Figure
+\ref{fig:age-vs-perc-ancestral} on page
+\pageref{fig:age-vs-perc-ancestral},
+Supplemental Figure \ref{fig:agesplit}). Notable exceptions included the termite
 \emph{Zootermopsis} with 86.3 \% ancestral TEs, the bumblebee
 \emph{Bombus terrestris} with 81.1 \% ancestral TEs, and the dragonfly
 \emph{Calopteryx splendens} with 82 \% ancestral TEs. The closely
@@ -370,8 +391,8 @@ phylogenetically independent contrasts (PIC) (Kendall,
 \caption[Median ages of transposable elements in arthropods]{{The median ages of six TE subclasses in all sampled species show
 variation between and within subclasses. Clade relationships after Misof
 et al. (2014). Species relationships within clades are based on the
-published phylogenies listed in Table S8.
-{\label{301428}}%
+published phylogenies listed in Table \ref{tab:phylogeny-sources}.
+{\label{fig:age-mediane}}%
 }}
 \end{center}
 \end{figure}
@@ -384,7 +405,7 @@ published phylogenies listed in Table S8.
 \textasciitilde{} 120 Mya. Dots: individual measurements; red line:
 polynomial regression. ``Split'' refers to the most recent common
 ancestor of the clade and its sister clade.
-{\label{807049}}%
+{\label{fig:age-vs-perc-ancestral}}%
 }}
 \end{center}
 \end{figure}
@@ -397,8 +418,9 @@ lineage-specific TEs (DNA gained since the split of the sister-species
 present in our tree) from the assembly size of each species. To compute
 the amount of DNA lost, we subtracted the amount of ancestral DNA from
 the inferred ancestral genome size of each species. This analysis
-revealed highly dynamic genome sizes among species and clades (Figure 3,
-Table S5). In 75 out of 89 species (we omitted the chelicerates and
+revealed highly dynamic genome sizes among species and clades (Figure
+\ref{gain-loss} on page \pageref{gain-loss},
+Table \ref{tab:gain-loss}). In 75 out of 89 species (we omitted the chelicerates and
 myriapods which were not represented in the dated phylogeny), the amount
 of DNA loss exceeds the amount of DNA gained through the accumulation of
 TEs. These 75 species include five dipterans, in particular two
@@ -415,7 +437,7 @@ reductions in insects, but not all. The opposite is true, however: for
 species with negative loss coefficients we inferred increased genome
 sizes compared to other species in the same order, sometimes drastically
 so.
-{\label{700745}}%
+{\label{fig:gain-loss}}%
 }}
 \end{center}
 \end{figure}
@@ -451,7 +473,7 @@ Interestingly, genome assembly size and DNA loss coefficient are
 negatively correlated (Kendall, PIC, \(p = 0.001\)) in contrast to
 a weak positive correlation between TE content and DNA loss coefficient
 (Pearson, PIC, \(p = 0.03\)). However, using PIC there is no
-correlation at all (Supplemental Figure S2), neither among all species
+correlation at all (Supplemental Figure \ref{fig:loss-coefficient}), neither among all species
 nor when subsampling the dataset to Holometabola/Hemimetabola or by
 taxonomic order. Instead, genome size appears to remain more or less
 constant (albeit with a large spread) despite changing coefficients of
@@ -459,7 +481,7 @@ DNA loss. This is in stark contrast to the findings by
 \citet{Kapusta2017a} who also reported a negative correlation between DNA
 loss coefficient and genome size in birds and mammals, but a significant
 positive correlation supported by PIC between TE content and DNA loss
-coefficient (Supplemental Figure S3).
+coefficient (Supplemental Figure \ref{fig:te-content-vs-size}).
 
 
 \section{Discussion}\label{discussion}
@@ -467,7 +489,7 @@ coefficient (Supplemental Figure S3).
 We present the most comprehensive analysis of genome size dynamics in
 arthropods, focusing on gain and loss of TE-derived DNA. In arthropods,
 and particularly in hexapods, genome size variation, which reaches an
-amplitude of up to 1,600 \% (Figure 1), which substantially exceeds
+amplitude of up to 1,600 \% (Figure \ref{fig:tree-with-ancestral-sizes}), which substantially exceeds
 variation in mammals and birds \citep{Kapusta2017a}. \citet{Kapusta2017a}
 proposed an explanation for the relatively invariant genome sizes within
 mammals and birds, which can be observed despite the active propagation
@@ -485,15 +507,16 @@ macrodeletions compatible with the action of ectopic recombination.
 Given the proposed mechanistic explanation of the ``accordion'' model,
 it should also apply to arthropod genomes. In fact, we inferred a
 similar balance of DNA loss and gain within the major insect orders:
-Large genome sizes are correlated with high TE content (Figure S3) and
-high amounts of DNA loss (Figure S2), but the ``accordion'' model does
+Large genome sizes are correlated with high TE content (Figure
+\ref{fig:te-content-vs-size}) and
+high amounts of DNA loss (Figure \ref{fig:loss-coefficient}), but the ``accordion'' model does
 not explain the large periodic shifts in genome size between the major
 insect orders. Instead, insect genomes appear to cope with TE influx in
 an entirely different manner than vertebrate genomes. Where in mammals,
 a high rate of DNA loss leads to a smaller extant genome size, in
 insects the genome size remains more or less constant (within the large
 range of dispersion) according to our DNA loss coefficient inferences
-(Figure S2). These results suggest that in insect genomes, even a high
+(Figure \ref{fig:loss-coefficient}). These results suggest that in insect genomes, even a high
 rate of DNA loss is barely able to cope with the high rate of DNA influx
 due to TE activity and and potentially transfection keep the genome size
 stable -- we did not observe a stable trend towards genome shrinkage in
@@ -514,7 +537,8 @@ hummingbirds, have smaller genomes than flightless birds
 removal over time if powered flight should play a role. However, we
 observe a different situation: in flightless arthropods, genome size
 shows a trend to increase with the DNA loss coefficient, while in
-insects capable of flight, the trend is downwards (Fig. S4). Hence, the
+insects capable of flight, the trend is downwards (Figure
+\ref{fig:loss-coefficient-plots-flight}). Hence, the
 metabolic rate is likely not a predictor of genome size in insects,
 regardless of flight capability.
 
@@ -522,12 +546,14 @@ regardless of flight capability.
 unrecognizable}\label{ancient-tes-become-unrecognizable}
 
 We found almost no ancestral TEs in species that diverged earlier than
-100 Mya from their sister species (Figure 3). This is most likely a
+100 Mya from their sister species (Figure
+\ref{fig:age-vs-perc-ancestral}). This is most likely a
 consequence of the TE nucleotide sequence similarity decaying over time
 and thus sequence homology becoming undetectable. Its effect is easily
 visualized when plotting the TE content distribution over the sequence
 divergence (or age, if conversion is available) and dividing the
-landscape in two parts, separated at the age of the species (Figure S5).
+landscape in two parts, separated at the age of the species (Figure
+\ref{fig:ancient-lineage-specific}).
 These findings are in line with other studies suggesting that inactive
 TEs become unrecognizable beyond 50 Mya due to high sequence divergence
 (\emph{e.g.}, SINES \citep{Shedlock2000}).
@@ -567,8 +593,8 @@ genomes}\label{limitations-of-the-methods-in-insect-genomes}
 This analysis is of course heavily influenced by the node dating of the
 underlying phylogeny, and our approach using COI barcode sequences
 cannot rival the accuracy of phylogenomic studies (\emph{e.g.},
-\citep{Misof2014}). However, using calibration points from
-\citep{Misof2014} enabled us to estimate node ages with reasonable
+\citet{Misof2014}). However, using calibration points from
+\citet{Misof2014} enabled us to estimate node ages with reasonable
 accuracy and therefore provide a robust dated phylogeny for the TE age
 classification. Unfortunately, for some species there were no closely
 related species in the dataset, which forced us to select an ancestral
@@ -591,7 +617,7 @@ vertebrate lineage. These are lacking in our dataset simply because
 whole genome alignments are difficult in insects due to low conservation
 of synteny: while the human genome aligns with over 98 \% to the
 chimpanzee genome and with around 70 \% to the mouse genome
-\cite{Mural2002} this is not the case in insects across larger
+\citep{Mural2002} this is not the case in insects across larger
 evolutionary time scales. For example, the honey bee \emph{A. mellifera}
 genome aligns to less than 20 \% of the turnip sawfly \emph{Athalia
 rosae} genome, also a representative of the order Hymenoptera (A.
