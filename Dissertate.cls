@@ -11,7 +11,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{Dissertate}[2014/03/25 v2.0 Dissertate Class]
-\LoadClass[12pt, oneside, a4paper]{book}
+\LoadClass[12pt, a4paper, openright]{book}
 
 %
 % Options
@@ -63,6 +63,7 @@
 
 % Text layout.
 \RequirePackage[a4paper]{geometry}
+\geometry{bindingoffset=1cm}
 \usepackage{ragged2e}
 \RaggedRight
 \RequirePackage{graphicx}
@@ -114,6 +115,7 @@
 \usepackage[titles]{tocloft}
 \usepackage[titletoc]{appendix}
 \usepackage{pdfpages} % for adding entire PDF pages to the appendix
+\usepackage{emptypage} % clear page after each chapter
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchapfont}{\normalsize \scshape}
 %\renewcommand\listfigurename{Listing of figures}
@@ -213,8 +215,8 @@
 \renewcommand{\frontmatter}{
 	\input{frontmatter/personalize}
 	\maketitle
-	\copyrightpage
 	\abstractpage
+	\copyrightpage
 	\currentpdfbookmark{\contentsname}{contents}
 	\tableofcontents
 	\cleardoublepage
@@ -225,6 +227,7 @@
 	\phantomsection
 	\addcontentsline{toc}{chapter}{\listtablename}
 	\listoftables
+	\cleardoublepage
 	\dedicationpage
 	\acknowledgments
 }
@@ -250,18 +253,13 @@
 }
 
 \newcommand{\copyrightpage}{
-	\newpage
-	\thispagestyle{empty}
-	\null
-	\newpage
+	\cleardoublepage
 	\thispagestyle{empty}
 	\vspace*{\fill}
 	\scshape \noindent \small \href{https://creativecommons.org/licenses/by-nc-nd/4.0}{\ccbyncsaeu} ~ \small \degreeyear\hspace{3pt}-- \theauthor
 	\vspace*{\fill}
 	\rm
-	\newpage
-	\thispagestyle{empty}
-	\null
+	\cleardoublepage
 }
 
 \newcommand{\abstractpage}{
@@ -287,6 +285,7 @@
 	\newpage \thispagestyle{fancy} \vspace*{\fill}
 	\scshape \noindent \input{frontmatter/dedication}
 	\vspace*{\fill} \newpage \rm
+	\cleardoublepage
 }
 
 \newcommand{\acknowledgments}{
@@ -294,20 +293,23 @@
 	\chapter*{Acknowledgments}
 	\noindent
 	\input{frontmatter/thanks}
-	\vspace*{\fill} \newpage
+	\vspace*{\fill}
+	\cleardoublepage
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
+
 }
 
 
 \renewcommand{\backmatter}{
-    \input{endmatter/personalize}
-    \clearpage
-    %\addcontentsline{toc}{chapter}{\bibname}
-    %\bibliographystyle{apalike2}
-    %\bibliography{references}
-		%\clearpage
-		\include{endmatter/declaration}
-		\include{endmatter/cv}
-    \include{endmatter/colophon}
+	\input{endmatter/personalize}
+	%\addcontentsline{toc}{chapter}{\bibname}
+	%\bibliographystyle{apalike2}
+	%\bibliography{references}
+	\cleardoublepage
+	\include{endmatter/declaration}
+	\cleardoublepage
+	\include{endmatter/cv}
+	\cleardoublepage
+	\include{endmatter/colophon}
 }

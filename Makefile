@@ -13,6 +13,7 @@ final: $(finalname).pdf
 $(finalname).pdf: $(finalname).tex
 	bash scripts/build $(finalname)
 
+.PHONY: $(finalname).tex
 $(finalname).tex:
 	sed -e 's/^\\documentclass\[draft\]/\\documentclass/' $(name).tex > $(finalname).tex
 
