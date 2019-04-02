@@ -252,17 +252,22 @@
 \newcommand{\copyrightpage}{
 	\newpage
 	\thispagestyle{empty}
-	\vspace*{\fill}
-	\scshape \noindent \small \href{https://creativecommons.org/licenses/by-nc-nd/4.0}{\ccbyncsaeu} ~ \small 2018\hspace{3pt}-- \theauthor
-	\vspace*{\fill}
+	\null
 	\newpage
+	\thispagestyle{empty}
+	\vspace*{\fill}
+	\scshape \noindent \small \href{https://creativecommons.org/licenses/by-nc-nd/4.0}{\ccbyncsaeu} ~ \small \degreeyear\hspace{3pt}-- \theauthor
+	\vspace*{\fill}
 	\rm
+	\newpage
+	\thispagestyle{empty}
+	\null
 }
 
 \newcommand{\abstractpage}{
 	\newpage
 	\pagenumbering{roman}
-	\setcounter{page}{3}
+	\setcounter{page}{1}
 	\pagestyle{fancy}
 	\lhead{Thesis advisor: \advisor} \rhead{\theauthor}
 	\renewcommand{\headrulewidth}{0.0pt}
