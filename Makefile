@@ -12,6 +12,7 @@ $(name).pdf: $(name).tex $(frontmatter) $(chapters) $(figures) $(endmatter) refe
 
 %.pdf: %.tex
 	bash scripts/build $^
+	cp $@ $(name).pdf
 
 draft: $(draftname).pdf
 $(draftname).tex: $(files)
