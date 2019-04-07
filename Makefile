@@ -1,21 +1,25 @@
-chapters := $(wildcard chapters/*.tex)
-figures  := $(wildcard figures/*.pdf)
-name     := dissertation
-finalname := dissertation.final
+chapters    := $(wildcard chapters/*.tex)
+frontmatter := $(wildcard frontmatter/*.tex)
+endmatter   := $(wildcard endmatter/*.tex)
+figures     := $(wildcard figures/*.pdf)
+files       := $(chapters) $(frontmatter) $(endmatter) $(figures)
+name        := dissertation
+finalname   := $(name).final
+draftname   := $(name).draft
 
-$(name).pdf: $(name).tex $(chapters) $(figures) references.bib Dissertate.cls frontmatter/personalize.tex frontmatter/abstract.tex frontmatter/thanks.tex frontmatter/dedication.tex endmatter/colophon.tex endmatter/declaration.tex endmatter/cv.tex
+$(name).pdf: $(name).tex $(frontmatter) $(chapters) $(figures) $(endmatter) references.bib Dissertate.cls 
 	bash scripts/build $(name)
 
-draft: $(name).pdf
+%.pdf: %.tex
+	bash scripts/build $^
+
+draft: $(draftname).pdf
+$(draftname).tex: $(files)
+	sed -e 's/^\\documentclass.\+/\\documentclass[draft]{Dissertate}/' $(name).tex > $(draftname).tex
 
 final: $(finalname).pdf
-
-$(finalname).pdf: $(finalname).tex
-	bash scripts/build $(finalname)
-
-.PHONY: $(finalname).tex
-$(finalname).tex:
-	sed -e 's/^\\documentclass\[draft\]/\\documentclass/' $(name).tex > $(finalname).tex
+$(finalname).tex: $(files)
+	sed -e 's/^\\documentclass.\+/\\documentclass{Dissertate}/' $(name).tex > $(finalname).tex
 
 clean:
 	$(RM) $(name).aux $(name).bbl $(name).blg $(name).out $(name).toc $(name).lof $(name).lot $(name).bcf $(name).log
