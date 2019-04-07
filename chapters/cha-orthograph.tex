@@ -29,10 +29,10 @@ Inferring the evolution of gene families, the phylogeny of species, and
 tracing the biogeography of populations depend on reliable delineation
 of orthologous genes and paralogous copies of them. While delineation
 and identification of orthologous and paralogous genes has been firmly
-established for studying genomic data (reviewed by \citep{Kristensen2011}
-and benchmarked by \citep{Trachana2011}), few approaches are currently
+established for studying genomic data (reviewed by \citet{Kristensen2011}
+and benchmarked by \citet{Trachana2011}), few approaches are currently
 available for assessing transcripts in the same manner (proposed by,
-\emph{e.g.}, \citep{Ebersberger2009} and \citep{Schreiber2009}). Each of
+\emph{e.g.}, \citet{Ebersberger2009} and \citet{Schreiber2009}). Each of
 these approaches exhibits, and suffers from, specific problems,
 potentially leading to erroneous species and gene tree inference (see
 below). We developed a novel software pipeline, called Orthograph, for
@@ -59,7 +59,7 @@ paralogs, and xenologs have been established: tree-based and graph-based
 approaches. The benefit of graph-based approaches, which we will
 subsequently focus on, is their computational efficiency and scalability
 (for reviews and a comprehensive discussion of the benefits of the
-different approaches, see \citep{Dutilh2007} or \citep{Kristensen2011}).
+different approaches, see \citet{Dutilh2007} or \citet{Kristensen2011}).
 In general, graph-based approaches assessing gene orthology make use of
 the genome-wide best reciprocal hit (BRH) criterion. It rests on the
 assumption that orthologs in two genomes are more similar to each other
@@ -161,7 +161,7 @@ optimize parameters) quickly without re-running the computationally
 expensive searches.
 
 Orthograph builds on the transcript orthology assessment strategy via
-BRH suggested by \citep{Ebersberger2009}. In contrast to the
+BRH suggested by \citet{Ebersberger2009}. In contrast to the
 implementation of this strategy in HaMStR, Orthograph assigns a given
 transcript to the \emph{globally} best matching OGs while making sure
 that no transcript is assigned more than once. It additionally
@@ -279,9 +279,9 @@ orthologs}
 
 To assess the sensitivity and accuracy of Orthograph, we employed it to
 identify genes of known orthology in the RGS of the honeybee,
-\species{Apis mellifera} (15,314 genes, \citep{Honeybee2006}), and
+\species{Apis mellifera} (15,314 genes, \citet{Honeybee2006}), and
 Jerdon's jumping ant, \species{Harpegnathos saltator} (18,564 genes,
-\citep{Bonasio2010}).  Specifically, we searched the RGS for 4,625
+\citet{Bonasio2010}).  Specifically, we searched the RGS for 4,625
 protein-coding genes provided by OrthoDB 5 \citep{Waterhouse2011a} as
 being single-copy across four species of Hymenoptera (\species{Apis
 mellifera} \citep{Honeybee2006}, \species{Camponotus floridanus}
@@ -452,14 +452,14 @@ transcripts}
 
 In order to test whether Orthograph indeed does not assign transcripts
 to more than one OG, we re-analyzed the dataset published by
-\citep{Struck2014}, who used HaMStR version 8 \citep{Ebersberger2009}.
+\citet{Struck2014}, who used HaMStR version 8 \citep{Ebersberger2009}.
 Orthograph assigned transcripts to 1,253 OGs, the same number as
-obtained by \citep{Struck2014}. However, Orthograph found transcripts of
+obtained by \citet{Struck2014}. However, Orthograph found transcripts of
 the analyzed genes in, on average, slightly more taxa (Orthograph:
-28.079, \citep{Struck2014}: 26.699). None of the transcripts was assigned
-to more than one OG. In the dataset published by \citep{Struck2014}, 274
+28.079, \citet{Struck2014}: 26.699). None of the transcripts was assigned
+to more than one OG. In the dataset published by \citet{Struck2014}, 274
 transcripts were assigned redundantly, however the orthologous regions
-were not overlapping. As \citep{Struck2014} removed a total of 1.3 \% of
+were not overlapping. As \citet{Struck2014} removed a total of 1.3 \% of
 their sequences from the dataset due to redundantly assigned
 transcripts, Orthograph yielded 1.4 \% more taxa per gene, leading to a
 denser data matrix for downstream (phylogenetic) analyses.
@@ -479,7 +479,7 @@ correlation (Spearman rank correlation, $S = 1,430$, $p = 0.069$).
 
 Given that next-generation RNAseq datasets tend to be large and current
 comparative genomic investigations analyze hundreds, if not thousands of
-genes (\emph{e.g.}, \citep{Misof2014}, \citep{Jarvis2014}, the 1000 plants
+genes (\emph{e.g.}, \citet{Misof2014}, \citet{Jarvis2014}, the 1000 plants
 initiative (\url{https://sites.google.com/a/ualberta.ca/onekp/})), with
 a linear runtime increase Orthograph does not pose a time bottleneck for
 current and future large-scale studies such as the numerous
@@ -514,7 +514,7 @@ well as orthology prediction tools that assess orthology among genes in
 completely sequenced and annotated genomes, such as OrthoMCL, OrthoDB,
 OMA, or InParanoid. In contrast, tree-based orthology prediction
 strategies such as TreeFam, Ensembl Compara, or the one implemented in
-\citep{Capella-Gutierrez2014}, employ an algorithm that reconciles a
+\citet{Capella-Gutierrez2014}, employ an algorithm that reconciles a
 phylogenetic tree topology of a gene or gene set with the topology of
 the respective species phylogenetic tree. This requires a) a multiple
 sequence alignment (MSA) of a gene's amino acid or nucleotide sequences,
@@ -525,7 +525,7 @@ bidirectional alignment search compared to a phylogenetic tree inference
 enables Orthograph to run on standard workstation computers without
 necessitating a high-performance computing environment. A number of
 graph-based and tree-based orthology assessment methods have been
-reviewed by \citep{Trachana2011}.
+reviewed by \citet{Trachana2011}.
 
 \subsection{Reference-based orthology search accuracy depends on
 reference database
