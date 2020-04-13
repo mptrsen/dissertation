@@ -15,3 +15,5 @@ xelatex "$dissertation"
 # Don't hide the log.
 #mv "$dissertation.log" ".logged"
 
+# also build the extra poster page
+pdflatex extra/tree-large
