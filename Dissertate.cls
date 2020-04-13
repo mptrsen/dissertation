@@ -239,9 +239,13 @@
 	\begin{center}
 	\Huge \textcolor{SchoolColor}{\thetitle} \normalsize \\
 	\vspace{100pt}
-	\textsc{a dissertation presented \\ by\\
-	\theauthor\\ from\\ \authorBirthplace\\
-	to\\ the \department\\
+	\textsc{a dissertation presented \\
+	by\\
+	\theauthor \\
+	from\\
+	\authorBirthplace\\
+	to\\
+	the \department\\
 	\vspace{12pt}
 	in partial fulfillment of the requirements\\
 	for the doctoral degree of\\ \degree\\
